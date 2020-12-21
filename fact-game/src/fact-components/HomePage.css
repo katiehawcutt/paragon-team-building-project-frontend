@@ -1,0 +1,21 @@
+* {
+    text-align: center;
+    margin: 0;
+}
+
+body {
+    max-width: 100%;
+    height: auto;
+    background-image: url(../Images/dice.jpg);
+    background-size: 100%;
+    background-repeat: none;
+}
+
+.title-container {
+    margin: 10%;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 60px;
+    color: white;
+    text-shadow: 2px 2px 2px #888888;
+}
