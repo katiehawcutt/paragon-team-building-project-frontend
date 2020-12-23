@@ -1,0 +1,49 @@
+h1 {
+    font-family: 'Roboto';
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.timer-wrapper {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    left: 42%;
+    bottom: 56%;
+    animation: transitionIn 0.75s;
+    animation-timing-function: ease-in-out;
+}
+
+.timer {
+    font-family: 'Questrial';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text {
+    color: #aaa;
+}
+
+.value {
+    font-size: 40px;
+}
+
+.info {
+    max-width: 360px;
+    margin: 40px auto 0;
+    text-align: center;
+    font-size: 16px;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: translate(-100px, 0px);
+    }
+    to {
+        opacity: 1;
+        tranform: translate(0px, 0px);
+    }
+}
