@@ -2,15 +2,16 @@ import './App.css'
 import CreateNewGame from './fact-components/CreateNewGame'
 import HomePage from './fact-components/HomePage'
 import EnterFactPage from './fact-components/EnterFactPage'
-// import CountDownTimer from './fact-components/CountDownTimer'
+import WhoseFactReveal from './fact-components/WhoseFactReveal'
 
 function App() {
     return (
         <div className="App">
             {/* <HomePage /> */}
             {/* <CreateNewGame /> */}
-            <EnterFactPage />
+            {/* <EnterFactPage /> */}
             {/* <CountDownTimer /> */}
+            <WhoseFactReveal />
         </div>
     )
 }
