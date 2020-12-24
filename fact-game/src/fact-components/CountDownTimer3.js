@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 
-import './CountDownTimer2.css'
+import './CountDownTimer3.css'
 
 const renderTime = ({ remainingTime }) => {
     if (remainingTime === 0) {

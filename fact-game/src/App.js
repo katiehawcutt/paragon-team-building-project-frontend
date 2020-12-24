@@ -3,6 +3,8 @@ import CreateNewGame from './fact-components/CreateNewGame'
 import HomePage from './fact-components/HomePage'
 import EnterFactPage from './fact-components/EnterFactPage'
 import WhoseFactReveal from './fact-components/WhoseFactReveal'
+import ChooseFalseFact from './fact-components/ChooseFalseFact'
+import FalseFactReveal from './fact-components/FalseFactReveal'
 
 function App() {
     return (
@@ -11,7 +13,9 @@ function App() {
             {/* <CreateNewGame /> */}
             {/* <EnterFactPage /> */}
             {/* <CountDownTimer /> */}
-            <WhoseFactReveal />
+            {/* <WhoseFactReveal /> */}
+            {/* <ChooseFalseFact /> */}
+            <FalseFactReveal />
         </div>
     )
 }

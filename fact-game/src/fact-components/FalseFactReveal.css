@@ -1,0 +1,63 @@
+.falseFact-container {
+    margin-top: 50px;
+}
+
+.falseFact-container > h2 {
+    text-align: center !important;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.25) !important;
+}
+
+.whoseFact-name2 {
+    background-color: #6d44d9;
+    width: 350px;
+    height: auto;
+    border-radius: 45px;
+    margin: auto;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+
+    animation: unHide 0s 5.75s forwards;
+    visibility: hidden;
+}
+
+.name-container2 > p {
+    font-family: 'Questrial';
+    color: white;
+    font-size: 24px;
+    line-height: 2;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+    top: 200px;
+    margin-top: 255px;
+}
+
+.name-container2 {
+    animation: unHide 0s 5.75s forwards;
+    visibility: hidden;
+}
+
+.fact-info2 {
+    background-color: #6d44d9;
+    width: 500px;
+    height: 250px;
+    text-shadow: 5px 3px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 13px 18px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    color: white;
+    font-family: 'Questrial';
+    text-align: center;
+    padding-top: 20px;
+    margin: auto;
+    margin-top: 20px;
+    animation: unHide 0s 5.75s forwards;
+    visibility: hidden;
+}
+
+@keyframes unHide {
+    to {
+        visibility: visible;
+    }
+}
+@keyframes unHide2 {
+    to {
+        visibility: visible;
+    }
+}
