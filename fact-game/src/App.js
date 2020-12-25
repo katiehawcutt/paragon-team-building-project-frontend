@@ -5,6 +5,7 @@ import EnterFactPage from './fact-components/EnterFactPage'
 import WhoseFactReveal from './fact-components/WhoseFactReveal'
 import ChooseFalseFact from './fact-components/ChooseFalseFact'
 import FalseFactReveal from './fact-components/FalseFactReveal'
+import FinalPage from './fact-components/FinalPage'
 
 function App() {
     return (
@@ -15,7 +16,8 @@ function App() {
             {/* <CountDownTimer /> */}
             {/* <WhoseFactReveal /> */}
             {/* <ChooseFalseFact /> */}
-            <FalseFactReveal />
+            {/* <FalseFactReveal /> */}
+            <FinalPage />
         </div>
     )
 }
