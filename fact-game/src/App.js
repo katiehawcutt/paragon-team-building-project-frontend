@@ -10,14 +10,14 @@ import FinalPage from './fact-components/FinalPage'
 function App() {
     return (
         <div className="App">
-            {/* <HomePage /> */}
+            <HomePage />
             {/* <CreateNewGame /> */}
             {/* <EnterFactPage /> */}
             {/* <CountDownTimer /> */}
             {/* <WhoseFactReveal /> */}
             {/* <ChooseFalseFact /> */}
             {/* <FalseFactReveal /> */}
-            <FinalPage />
+            {/* <FinalPage /> */}
         </div>
     )
 }

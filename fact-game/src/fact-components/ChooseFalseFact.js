@@ -10,6 +10,9 @@ const useStyles = makeStyles({
         width: '340px',
         borderRadius: '28px',
         backgroundColor: '#454b82',
+        '&:hover': {
+            background: '#2B2F53',
+        },
         border: 'none',
         outline: 'none',
         fontFamily: 'Questrial',
