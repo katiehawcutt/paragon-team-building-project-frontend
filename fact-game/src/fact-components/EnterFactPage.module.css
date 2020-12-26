@@ -1,33 +1,25 @@
-.enter-fact-wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    width: 960px;
-}
-
 textarea {
     display: flex;
     flex-direction: column;
-    text-align: left;
-    font-family: 'Questrial';
+    margin-top: 10px;
+    padding: 20px;
     height: 100px;
     width: 410px;
-    margin-top: 10px;
-    background-color: #454b82;
     outline: none;
     border: none;
-    padding: 20px;
     border-radius: 40px;
-    box-shadow: 13px 18px 20px rgba(0, 0, 0, 0.25);
-    color: white;
     font-size: 26px;
+    text-align: left;
+    font-family: 'Questrial';
+    background-color: #454b82;
+    color: white;
+    box-shadow: 13px 18px 20px rgba(0, 0, 0, 0.25);
 }
 
-.input-container {
+.input_container {
     display: flex;
     flex-direction: column;
-    align-items: left;
     margin-left: 100px;
-    margin-top: 0;
     width: 600px;
     animation: transitionIn 0.75s;
     animation-timing-function: ease-in-out;
@@ -38,17 +30,15 @@ h2 {
     font-family: 'Questrial';
     font-weight: 100;
     font-size: 45px;
+    text-align: left;
     color: white;
     text-shadow: 2px 2px 4px rbga(f, f, f, 0.25);
-    text-align: left;
 }
 
-.EnterFact-Page-container {
-    /* margin: 10%; */
+.EnterFact_Page_container {
     margin-top: 50px;
     margin-bottom: 70px;
     font-family: 'Questrial';
-    font-weight: 100;
     font-size: 60px;
     color: white;
 }
@@ -56,11 +46,10 @@ h2 {
 .falseInputandBtn {
     display: flex;
     flex-direction: column;
-    width: 100%;
     padding-top: 30px;
 }
 
-.lobbby-container {
+.lobby_container {
     height: 75vh;
     border-radius: 28px;
     background-color: #6d44d9;
@@ -72,13 +61,13 @@ h2 {
     box-shadow: 13px 18px 20px rgba(0, 0, 0, 0.25);
 }
 
-.lob-title-container {
+.lobby_title {
     text-align: center !important;
     padding-top: 20px;
     padding-bottom: 60px;
 }
 
-.lobby-name-container {
+.lobby_names {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -100,8 +89,6 @@ p {
 
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
 li {

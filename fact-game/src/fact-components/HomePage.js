@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './HomePage.css'
+import styles from './HomePage.module.css'
 import { makeStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import Avatar from '@material-ui/core/Avatar'
@@ -11,98 +11,63 @@ import MenuItem from '@material-ui/core/MenuItem'
 import MenuList from '@material-ui/core/MenuList'
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        display: 'flex',
-    },
     btnText: {
-        adding: '20px',
         height: '100px',
         width: '300px',
-        marginRight: '10px',
         borderRadius: '28px',
+        border: 'none',
+        outline: 'none',
+        fontFamily: 'Questrial',
+        fontSize: '30px',
+        textTransform: 'capitalize',
+        lineHeight: '35px',
+        paddingLeft: '20px',
+        color: 'white',
         backgroundColor: '#6D44D9',
         '&:hover': {
             background: '#5B38B6',
         },
-        border: 'none',
-        outline: 'none',
-        fontFamily: 'Questrial',
-        fontSize: '30px',
-        color: 'white',
         textShadow: '5px 3px 5px rgba(0, 0, 0, 0.25)',
-        textAlign: 'left',
         boxShadow: '13px 18px 20px rgba(0, 0, 0, 0.25)',
-        textTransform: 'capitalize',
-        lineHeight: '35px',
-        paddingLeft: '20px',
     },
     dropDownText: {
         marginRight: theme.spacing(2),
-        adding: '20px',
+        marginTop: '20px',
+        marginLeft: '20px',
         height: '100px',
         width: '280px',
-        marginTop: '20px',
-        marginRight: '10px',
+        paddingBottom: '20px',
         borderRadius: '28px',
-        backgroundColor: '#6D44D9 !important',
-        '&:hover': {
-            background: '#5B38B6 !important',
-        },
-        border: 'none',
-        outline: 'none',
         fontFamily: 'Questrial',
         fontSize: '30px',
-        color: 'white',
-        textShadow: '5px 3px 5px rgba(0, 0, 0, 0.25)',
         justifyContent: 'center',
-        boxShadow: '13px 18px 20px rgba(0, 0, 0, 0.25)',
         textTransform: 'capitalize',
         lineHeight: '35px',
-        paddingBottom: '20px',
-        marginLeft: '15px',
+        textShadow: '5px 3px 5px rgba(0, 0, 0, 0.25)',
+        boxShadow: '13px 18px 20px rgba(0, 0, 0, 0.25)',
+        color: 'white',
+        backgroundColor: '#6D44D9 !important',
+        '&:hover': {
+            background: '#8152FF !important',
+        },
     },
-
     newG: {
         padding: '20px',
         height: '100px',
         width: '300px',
         marginRight: '90px',
         borderRadius: '28px',
+        fontFamily: 'Questrial',
+        fontSize: '30px',
+        textTransform: 'capitalize',
+        lineHeight: '35px',
+        textShadow: '5px 3px 5px rgba(0, 0, 0, 0.25)',
+        boxShadow: '13px 18px 20px rgba(0, 0, 0, 0.25)',
+        color: 'white',
         backgroundColor: '#454b82',
         '&:hover': {
             background: '#3F4477',
         },
-        border: 'none',
-        outline: 'none',
-        fontFamily: 'Questrial',
-        fontSize: '30px',
-        color: 'white',
-        textShadow: '5px 3px 5px rgba(0, 0, 0, 0.25)',
-        textAlign: 'right',
-        boxShadow: '13px 18px 20px rgba(0, 0, 0, 0.25)',
-        textTransform: 'capitalize',
-        lineHeight: '35px',
-    },
-    existingG: {
-        padding: '20px',
-        height: '100px',
-        width: '300px',
-        marginRight: '10px',
-        borderRadius: '28px',
-        backgroundColor: '#6D44D9',
-        '&:hover': {
-            background: '#5B38B6',
-        },
-        border: 'none',
-        outline: 'none',
-        fontFamily: 'Questrial',
-        fontSize: '30px',
-        color: 'white',
-        textShadow: '5px 3px 5px rgba(0, 0, 0, 0.25)',
-        textAlign: 'left',
-        boxShadow: '13px 18px 20px rgba(0, 0, 0, 0.25)',
-        textTransform: 'capitalize',
-        lineHeight: '35px',
     },
 }))
 
@@ -158,15 +123,14 @@ function HomePage() {
         existingGame.map((item) => {
             console.log(item)
             return <button key={item.id}>{item.name}</button>
-            //Button not be rendered on the page.
-            //item.id and item.name info needed from backend
+            //This can be implemented with existing dropdown list.
         })
     }
 
     return (
-        <div className="hompage-container">
-            <h1 className="title-container">Fact Game</h1>
-            <div className="button-container">
+        <div className={styles.hompage_container}>
+            <h1 className={styles.title_container}>Fact Game</h1>
+            <div className={styles.button_container}>
                 <Button
                     className={classes.newG}
                     variant="contained"

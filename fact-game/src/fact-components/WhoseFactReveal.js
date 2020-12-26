@@ -1,14 +1,14 @@
 import React from 'react'
 import CountDownTimer2 from './CountDownTimer2'
-import './WhoseFactReveal.css'
+import styles from './WhoseFactReveal.module.css'
 
 function WhoseFactReveal() {
     return (
-        <div className="whoseFact-container">
+        <div className={styles.whoseFact_container}>
             <h2>Whose Fact was it?</h2>
             <CountDownTimer2 />
-            <div className="name-container">
-                <p className="whoseFact-name">Name Goes Here</p>
+            <div className={styles.name_container}>
+                <p className={styles.whoseFact_name}>Name Goes Here</p>
             </div>
         </div>
     )

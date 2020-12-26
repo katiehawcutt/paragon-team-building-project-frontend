@@ -4,13 +4,13 @@ h1 {
     margin-bottom: 40px;
 }
 
-.timer-wrapper {
+.timer_wrapper {
     display: flex;
     justify-content: center;
     position: absolute;
     align-items: center;
     left: 625px;
-    bottom: 355px;
+    bottom: 435px;
     animation: fadeIn 0.75s;
     animation-timing-function: ease-in-out;
 }
