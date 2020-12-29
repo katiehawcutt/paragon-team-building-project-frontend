@@ -50,6 +50,7 @@ function FinalPage({ leaderboard, top3 }) {
                         />
                         <h2 className={styles.positionNum3}>3</h2>
                     </div>
+                    <h2>{top3[2].displayName}</h2>
                 </div>
                 <div className={styles.fistPlace_container}>
                     <img
@@ -65,6 +66,7 @@ function FinalPage({ leaderboard, top3 }) {
                         />
                         <h2 className={styles.positionNum1}>1</h2>
                     </div>
+                    <h2>{top3[0].displayName}</h2>
                 </div>
                 <div className={styles.secondPlace_container}>
                     <img
@@ -80,16 +82,20 @@ function FinalPage({ leaderboard, top3 }) {
                         />
                         <h2 className={styles.positionNum2}>2</h2>
                     </div>
+                    <h2>{top3[1].displayName}</h2>
                 </div>
             </div>
-            <h2 className={styles.winnerName}>{top3[0].displayName}</h2>
-            <Button
+            {/* <h2 className={styles.winnerName}>{top3[0].displayName}</h2> */}
+            {/* <Button
                 className={classes.submitBtn}
                 variant="contained"
                 color="primary"
             >
                 Exit
-            </Button>
+            </Button> */}
+            <p>
+                {leaderboard[0].displayName}:{leaderboard[0].score}
+            </p>
         </div>
     )
 }

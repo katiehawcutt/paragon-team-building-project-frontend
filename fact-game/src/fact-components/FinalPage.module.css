@@ -110,3 +110,7 @@
         transform: scale(1);
     }
 }
+
+h2 {
+    text-align: center;
+}
