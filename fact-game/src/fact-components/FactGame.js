@@ -13,11 +13,14 @@ import FinalPage from './FinalPage'
 const eventToComponentMap = {
     // TODO: GAME_STARTED
     GUESS_WHO_TIMER: WhoseFact,
-    // TODO: GUESS_WHO_CHOICE -- back end job
+    // BACK END TODO: GUESS_WHO_CHOICE
     REVEAL_WHO_TIMER: CountDownTimer,
     REVEAL_WHO: WhoseFactReveal,
+    // Team 1 work above.
+    // ==============================================
+    // Team 2 work below
     GUESS_FAKE_FACT_TIMER: ChooseFalseFact,
-    // GUESS_FAKE_FACT_CHOICE: GuessFakeFactChoice -- back end job
+    // BACK END GUESS_FAKE_FACT_CHOICE: GuessFakeFactChoice
     REVEAL_FAKE_FACT_TIMER: CountDownTimer,
     REVEAL_FAKE_FACT: FalseFactReveal,
     PODIUM: FinalPage,

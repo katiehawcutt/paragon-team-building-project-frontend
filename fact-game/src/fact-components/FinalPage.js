@@ -24,13 +24,13 @@ const useStyles = makeStyles({
     },
 })
 
-function FinalPage() {
-    const leaderboard = [{ displayName: 'A', score: 0 }]
-    const top3 = [
-        { displayName: 'B', score: 0 },
-        { displayName: 'C', score: 0 },
-        { displayName: 'D', score: 0 },
-    ]
+function FinalPage({ leaderboard, top3 }) {
+    // const leaderboard = [{ displayName: 'A', score: 0 }]
+    // const top3 = [
+    //     { displayName: 'B', score: 0 },
+    //     { displayName: 'C', score: 0 },
+    //     { displayName: 'D', score: 0 },
+    // ]
 
     const classes = useStyles()
     return (
