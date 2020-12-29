@@ -13,14 +13,21 @@
 }
 
 h1 {
-    font-family: Roboto;
-    font-weight: bold;
+    font-family: 'Questrial';
     font-size: 60px;
     color: white;
     text-shadow: 2px 2px 2px #888888;
+    margin-top: -300px;
+    margin-bottom: 100px;
 }
 
-input {
-    text-align: left;
-    padding-left: 2px;
+body {
+    background-color: #2e345c;
+}
+
+#filled-basic {
+    font-family: 'Questrial';
+    font-size: 20px;
+    color: white;
+    padding: 30px;
 }

@@ -11,13 +11,13 @@ function App() {
     return (
         <div className="App">
             {/* <HomePage /> */}
-            {/* <CreateNewGame /> */}
+            <CreateNewGame />
             {/* <EnterFactPage /> */}
             {/* <CountDownTimer /> */}
             {/* <WhoseFactReveal /> */}
             {/* <ChooseFalseFact /> */}
             {/* <FalseFactReveal /> */}
-            <FinalPage />
+            {/* <FinalPage /> */}
         </div>
     )
 }
