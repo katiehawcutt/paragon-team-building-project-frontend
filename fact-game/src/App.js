@@ -8,11 +8,40 @@ import FalseFactReveal from './fact-components/FalseFactReveal'
 import FinalPage from './fact-components/FinalPage'
 import FactGame from './fact-components/FactGame'
 
+import useFactsGame from './hooks-folder/UseFactsGame'
+import * as messageHandlers from './messageHandlers/messageHandlers'
+
 function App() {
+    const factsGame = useFactsGame({
+        webSocketUrl: 'ws://localhost:8080',
+        messageHandlers,
+    })
+
+    if (factsGame.game.error) {
+        return <p>An error occcurred, please try again later.</p>
+    }
+
+    if (!factsGame.game.started) {
+        return (
+            // Need to show create game/join game
+
+            <CreateNewGame handleClick={factsGame.createAndJoinGame} />
+
+            // <StartFactsGame
+            //     handleClick={factsGame.createAndJoinGame}
+            //     requestSent={factsGame.game.requestSent}
+            //     responseReceived={factsGame.game.responseReceived}
+            // />
+        )
+    }
+
     return (
         <div className="App">
             {/* <HomePage /> */}
-            <FactGame />
+            <FactGame
+                action={factsGame.currentStageInGame.action}
+                otherProps={factsGame.currentStageInGame.otherProps}
+            />
             {/* <CreateNewGame /> */}
             {/* <EnterFactPage /> */}
             {/* <CountDownTimer /> */}

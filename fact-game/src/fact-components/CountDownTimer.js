@@ -17,18 +17,21 @@ const renderTime = ({ remainingTime }) => {
     )
 }
 
-function App() {
+function App({ roundNumber, secondsLeft }) {
     return (
         <div className={styles.App}>
             <div className={styles.timer_wrapper}>
-                <CountdownCircleTimer
+                <p>Round # {roundNumber}</p>
+                <p>Seconds left # {secondsLeft}</p>
+
+                {/* <CountdownCircleTimer
                     isPlaying
                     duration={5}
                     colors={[['#6D44D9', 0.33], ['#6D44D9', 0.33], ['#6D44D9']]}
                     onComplete={() => [true, 10000]}
                 >
                     {renderTime}
-                </CountdownCircleTimer>
+                </CountdownCircleTimer> */}
             </div>
         </div>
     )

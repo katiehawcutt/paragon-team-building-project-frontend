@@ -26,17 +26,24 @@ const useStyles = makeStyles({
     },
 })
 
-function ChooseFalseFact() {
+function ChooseFalseFact({
+    roundNumber,
+    facts,
+    handleClick,
+    secondsLeft,
+    turnId,
+}) {
     const classes = useStyles()
     return (
         <div className={styles.chooseFalseFact_container}>
             <CountDownTimer3 />
             <h2>Which Fact is False</h2>
+            <p>
+                Round #{roundNumber} (Seconds left: {secondsLeft})
+            </p>
             <div className={styles.facts_container}>
                 <div className={styles.fact1_container}>
-                    <div className={styles.fact_info}>
-                        Fact 1 info goes here.
-                    </div>
+                    <div className={styles.fact_info}>{facts[0]}</div>
                     <Button
                         className={classes.submitBtn}
                         variant="contained"
@@ -46,9 +53,7 @@ function ChooseFalseFact() {
                     </Button>
                 </div>
                 <div className={styles.fact2_container}>
-                    <div className={styles.fact_info}>
-                        Fact2 info goes here.
-                    </div>
+                    <div className={styles.fact_info}>{facts[1]}</div>
                     <Button
                         className={classes.submitBtn}
                         variant="contained"

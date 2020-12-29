@@ -16,8 +16,8 @@
     border-radius: 45px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
     background-color: #d99444;
-    animation: unHide 0s 5.75s forwards;
-    visibility: hidden;
+    /* animation: unHide 0s 5.75s forwards;
+    visibility: hidden; */
     /* animation: nameFade 0.5s;
     animation-timing-function: ease-in-out;
     animation-delay: 6s; */
