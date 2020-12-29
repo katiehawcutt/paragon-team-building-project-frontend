@@ -6,12 +6,14 @@ import WhoseFactReveal from './fact-components/WhoseFactReveal'
 import ChooseFalseFact from './fact-components/ChooseFalseFact'
 import FalseFactReveal from './fact-components/FalseFactReveal'
 import FinalPage from './fact-components/FinalPage'
+import FactGame from './fact-components/FactGame'
 
 function App() {
     return (
         <div className="App">
             {/* <HomePage /> */}
-            <CreateNewGame />
+            <FactGame />
+            {/* <CreateNewGame /> */}
             {/* <EnterFactPage /> */}
             {/* <CountDownTimer /> */}
             {/* <WhoseFactReveal /> */}
