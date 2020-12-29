@@ -3,6 +3,7 @@ import './CreateNewGame.css'
 import Button from '@material-ui/core/Button'
 import { makeStyles } from '@material-ui/core'
 import TextField from '@material-ui/core/TextField'
+import useWebSocket, { ReadyState } from 'react-use-websocket'
 
 const useStyles = makeStyles({
     createGameButton: {
@@ -25,24 +26,22 @@ const useStyles = makeStyles({
 
 // To do >>>>> Need to post pageData to server.
 
-function CreateNewGame() {
+function CreateNewGame({ handleClick }) {
+    console.log(handleClick)
     const [gameName, setGameName] = useState('')
+    const [trueFact, setTrueFact] = useState('I like cake')
+    const [falseFact, setFalseFact] = useState('I do not like cake')
     const [numberOfRounds, setNumberOfRounds] = useState(1)
     const [pageData, setPageData] = useState({})
     const classes = useStyles()
 
-    function handleClick() {
-        console.log(gameName)
-        console.log(numberOfRounds)
-        setPageData([gameName, numberOfRounds])
-    }
     console.log({ gameName })
     console.log({ numberOfRounds })
     console.log({ pageData })
     return (
         <div className="create-game-container">
             <h1>Create New Game</h1>
-            <div>
+            {/* <div>
                 <form
                     className={classes.gameNameForm}
                     noValidate
@@ -56,7 +55,7 @@ function CreateNewGame() {
                         variant="filled"
                     />
                 </form>
-            </div>
+            </div> */}
             <div>
                 <form
                     className={classes.numberOfRoundsForm}
@@ -73,11 +72,50 @@ function CreateNewGame() {
                 </form>
             </div>
             <div>
+                <form
+                    className={classes.numberOfRoundsForm}
+                    noValidate
+                    autoComplete="off"
+                    onChange={(e) => setGameName(e.target.value)}
+                    value={trueFact}
+                >
+                    <TextField
+                        id="filled-basic"
+                        label="True fact..."
+                        variant="filled"
+                        value={trueFact}
+                    />
+                </form>
+            </div>
+            <div>
+                <form
+                    className={classes.numberOfRoundsForm}
+                    noValidate
+                    autoComplete="off"
+                    onChange={(e) => setGameName(e.target.value)}
+                    value={falseFact}
+                >
+                    <TextField
+                        id="filled-basic"
+                        label="False fact..."
+                        variant="filled"
+                        value={falseFact}
+                    />
+                </form>
+            </div>
+            <div>
                 <Button
                     className={classes.createGameButton}
                     variant="contained"
                     color="primary"
-                    onClick={() => handleClick({ gameName, numberOfRounds })}
+                    onClick={() =>
+                        handleClick({
+                            displayName: 'Arshi',
+                            fact: trueFact,
+                            lie: falseFact,
+                            playerId: '9b02d6d5-e812-4fda-999c-5625b87c62cc',
+                        })
+                    }
                 >
                     Create Game
                 </Button>

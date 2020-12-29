@@ -24,7 +24,14 @@ const useStyles = makeStyles({
     },
 })
 
-function FinalPage() {
+function FinalPage({ leaderboard, top3 }) {
+    // const leaderboard = [{ displayName: 'A', score: 0 }]
+    // const top3 = [
+    //     { displayName: 'B', score: 0 },
+    //     { displayName: 'C', score: 0 },
+    //     { displayName: 'D', score: 0 },
+    // ]
+
     const classes = useStyles()
     return (
         <div className={styles.podium_container}>
@@ -75,7 +82,7 @@ function FinalPage() {
                     </div>
                 </div>
             </div>
-            <h2 className={styles.winnerName}>Name Here Wins!</h2>
+            <h2 className={styles.winnerName}>{top3[0].displayName}</h2>
             <Button
                 className={classes.submitBtn}
                 variant="contained"
