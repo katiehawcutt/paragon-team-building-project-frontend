@@ -26,11 +26,11 @@ const eventToComponentMap = {
     PODIUM: FinalPage,
 }
 
-function FactGame({ action, otherProps }) {
+function FactGame({ action, otherProps, handleAnswer }) {
     const ComponentToLoad = eventToComponentMap[action]
 
     if (ComponentToLoad) {
-        return <ComponentToLoad {...otherProps} />
+        return <ComponentToLoad {...otherProps, handleAnswer} />
     }
 
     return <p>Unimplemented event {action}</p>

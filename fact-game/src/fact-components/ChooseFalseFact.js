@@ -7,9 +7,8 @@ import Button from '@material-ui/core/Button'
 const useStyles = makeStyles({
     button: {
         width: '500px',
+        margin: '30px',
         marginTop: '60px',
-        marginLeft: '255px',
-        right: '170px',
         borderRadius: '10px',
         fontFamily: 'Questrial',
         fontSize: '30px',
@@ -44,22 +43,31 @@ function ChooseFalseFact({
             </header>
             <div className={styles.chooseFalseFact_container}>
                 {/* <CountDownTimer3 /> */}
+                {facts.map((fact) => {
+                    return (
+                        <Button
+                            className={classes.button}
+                            variant="contained"
+                            color="primary"
+                            key={fact}
+                            handleClick={() =>
+                                handleClick({
+                                    choice: fact,
+                                })
+                            }
+                        >
+                            {fact}
+                        </Button>
+                    )
+                })}
 
-                <Button
-                    className={classes.button}
-                    variant="contained"
-                    color="primary"
-                >
-                    {facts[0]}
-                </Button>
-
-                <Button
+                {/* <Button
                     className={classes.button}
                     variant="contained"
                     color="primary"
                 >
                     {facts[1]}
-                </Button>
+                </Button> */}
             </div>
         </div>
     )
