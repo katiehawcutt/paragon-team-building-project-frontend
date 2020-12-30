@@ -1,3 +1,5 @@
+import '../../globals/global.css'
+
 import css from './App.module.css'
 import CreateNewGame from '../CreateNewGame/CreateNewGame'
 import FactGame from '../FactGame/FactGame'
