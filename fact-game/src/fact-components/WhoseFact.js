@@ -1,6 +1,6 @@
 import React from 'react'
-import './WhoseFact.css'
 import Websocket from 'react-websocket'
+import styles from './WhoseFact.module.css'
 
 function WhoseFact({
     roundNumber,
@@ -13,65 +13,41 @@ function WhoseFact({
     handleAnswer,
 }) {
     return (
-        <section>
-            <h1>
-                Round #{roundNumber} (Seconds left: {secondsLeft})
-            </h1>
-            <h2>One of the statements is a lie. Guess whose it is.</h2>
-            {facts.map((fact, i) => {
-                return <p key={i}>{fact}</p>
-            })}
-            {participants.map((participant, i) => {
-                return (
-                    <button
-                        key={i}
-                        onClick={
-                            handleClick ??
-                            (() =>
-                                console.log(
-                                    "don't forget to hook me up for " + turnId
-                                ))
-                        }
-                    >
-                        {participant.text}
-                    </button>
-                )
-            })}
-            <div>
-                <h3>Leaderboard</h3>
+        <div className={styles.pageContainer}>
+            <header className={styles.header}>
+                <div className={styles.roundLabel}>Round #{roundNumber}</div>
+                <h1 className={styles.pageTitle}>Guess who!</h1>
+                <div className={styles.countdown}>{secondsLeft}</div>
+            </header>
+            <div className={styles.factContainer}>
+                {facts.map((fact, i) => {
+                    return (
+                        <div className={styles.facts} key={i}>
+                            {fact}
+                        </div>
+                    )
+                })}
             </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Score</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {leaderboard.map(({ displayName, score }, i) => {
-                        return (
-                            <tr key={i}>
-                                <td>{displayName}</td>
-                                <td>{score}</td>
-                            </tr>
-                        )
-                    })}
-                </tbody>
-            </table>
-        </section>
+            <div className={styles.buttonContainer}>
+                {participants.map((name) => {
+                    return (
+                        <button
+                            className={styles.nameButton}
+                            key={name}
+                            handleClick={() =>
+                                handleClick({
+                                    choice: name,
+                                })
+                            }
+                            //toggle background color green for selected button
+                        >
+                            {name}
+                        </button>
+                    )
+                })}
+            </div>
+        </div>
     )
-
-    // return (
-    //     <div className="whose-fact-container">
-    //         <h1>Whose Fact?</h1>
-    //         <div>
-    //             <p type="text" className="whoseFact">
-    //                 {' '}
-    //                 Fact from the back-end goes here!{' '}
-    //             </p>
-    //         </div>
-    //     </div>
-    // )
 }
 
 export default WhoseFact

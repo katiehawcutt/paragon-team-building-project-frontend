@@ -21,7 +21,7 @@ export const WhoseFactStory = Template.bind({})
 WhoseFactStory.args = {
     roundNumber: 1,
     facts: ['I like cake', "I don't like cake"],
-    participants: [{ text: 'Brad' }],
+    participants: ['Brad', 'Kawelpreet', 'Jeremy', 'Ann-Marie'],
     handleAnswer: function answer() {},
     leaderboard: [{ displayName: 'A', score: 0 }],
     secondsLeft: 5,

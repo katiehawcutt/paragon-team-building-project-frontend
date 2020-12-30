@@ -7,7 +7,7 @@ function WhoseFactReveal({ roundNumber, displayName }) {
     return (
         <div className={styles.whoseFact_container}>
             <h2>Whose Fact was it?</h2>
-            {/* <CountDownTimer2 /> */}
+
             <div className={styles.name_container}>
                 <p className={styles.whoseFact_name}>{displayName}</p>
             </div>
