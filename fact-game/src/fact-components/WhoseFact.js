@@ -6,7 +6,6 @@ function WhoseFact({
     roundNumber,
     facts,
     participants,
-    handleClick,
     leaderboard,
     secondsLeft,
     turnId,
@@ -29,19 +28,19 @@ function WhoseFact({
                 })}
             </div>
             <div className={styles.buttonContainer}>
-                {participants.map((name) => {
+                {participants.map((participant) => {
                     return (
                         <button
                             className={styles.nameButton}
-                            key={name}
-                            handleClick={() =>
-                                handleClick({
-                                    choice: name,
+                            key={participant.choiceId}
+                            onclick={() =>
+                                handleAnswer({
+                                    choice: participant.choiceId,
                                 })
                             }
                             //toggle background color green for selected button
                         >
-                            {name}
+                            {participant.text}
                         </button>
                     )
                 })}

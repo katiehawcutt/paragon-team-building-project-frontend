@@ -28,9 +28,9 @@ const eventToComponentMap = {
 
 function FactGame({ action, otherProps, handleAnswer }) {
     const ComponentToLoad = eventToComponentMap[action]
-
+    const combinedProps = { ...otherProps, handleAnswer }
     if (ComponentToLoad) {
-        return <ComponentToLoad {...otherProps, handleAnswer} />
+        return <ComponentToLoad {...combinedProps} />
     }
 
     return <p>Unimplemented event {action}</p>
