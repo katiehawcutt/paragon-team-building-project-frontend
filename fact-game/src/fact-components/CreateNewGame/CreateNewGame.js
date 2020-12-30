@@ -26,18 +26,13 @@ const useStyles = makeStyles({
 
 // To do >>>>> Need to post pageData to server.
 
-function CreateNewGame({ handleClick }) {
-    console.log(handleClick)
+export default function CreateNewGame({ handleClick }) {
     const [gameName, setGameName] = useState('')
     const [trueFact, setTrueFact] = useState('I like cake')
     const [falseFact, setFalseFact] = useState('I do not like cake')
     const [numberOfRounds, setNumberOfRounds] = useState(1)
     const [pageData, setPageData] = useState({})
     const classes = useStyles()
-
-    console.log({ gameName })
-    console.log({ numberOfRounds })
-    console.log({ pageData })
     return (
         <div className="create-game-container">
             <h1>Create New Game</h1>
@@ -123,5 +118,3 @@ function CreateNewGame({ handleClick }) {
         </div>
     )
 }
-
-export default CreateNewGame

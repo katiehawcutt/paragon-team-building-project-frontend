@@ -25,7 +25,7 @@ const useStyles = makeStyles({
     },
 })
 
-function EnterFactPage() {
+export default function EnterFactPage() {
     const classes = useStyles()
     const [trueFact, setTrueFact] = useState('')
     const [falseFact, setFalseFact] = useState('')
@@ -101,5 +101,3 @@ function EnterFactPage() {
         </div>
     )
 }
-
-export default EnterFactPage

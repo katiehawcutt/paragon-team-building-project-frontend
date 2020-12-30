@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     },
 })
 
-function FinalPage({ leaderboard, top3 }) {
+export default function FinalPage({ leaderboard, top3 }) {
     const classes = useStyles()
     return (
         <div className={styles.pageContainer}>
@@ -46,7 +46,7 @@ function FinalPage({ leaderboard, top3 }) {
                             <h2 className={styles.positionNum3}>3</h2>
                         </div>
                         <h2 className={styles.top3name}>
-                            {top3[2].displayName}
+                            {top3[2] ? top3[2].displayName : 'Nobody'}
                         </h2>
                     </div>
                     <div className={styles.fistPlace_container}>
@@ -82,7 +82,7 @@ function FinalPage({ leaderboard, top3 }) {
                             <h2 className={styles.positionNum2}>2</h2>
                         </div>
                         <h2 className={styles.top3name}>
-                            {top3[1].displayName}
+                            {top3[1] ? top3[1].displayName : 'Nobody'}
                         </h2>
                     </div>
                 </div>
@@ -100,9 +100,9 @@ function FinalPage({ leaderboard, top3 }) {
                         <th className={styles.tableHeading}>NAME</th>
                         <th className={styles.tableHeading}>SCORE</th>
                     </tr>
-                    {leaderboard.map((person) => {
+                    {leaderboard.map((person, i) => {
                         return (
-                            <tr className={styles.tableRow}>
+                            <tr key={i} className={styles.tableRow}>
                                 <td className={styles.tableData}>
                                     {person.displayName}
                                 </td>
@@ -117,5 +117,3 @@ function FinalPage({ leaderboard, top3 }) {
         </div>
     )
 }
-
-export default FinalPage

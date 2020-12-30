@@ -1,8 +1,7 @@
 import React from 'react'
-import Websocket from 'react-websocket'
 import styles from './WhoseFact.module.css'
 
-function WhoseFact({
+export default function WhoseFact({
     roundNumber,
     facts,
     participants,
@@ -33,7 +32,7 @@ function WhoseFact({
                         <button
                             className={styles.nameButton}
                             key={participant.choiceId}
-                            onclick={() =>
+                            onClick={() =>
                                 handleAnswer({
                                     choice: participant.choiceId,
                                 })
@@ -48,5 +47,3 @@ function WhoseFact({
         </div>
     )
 }
-
-export default WhoseFact

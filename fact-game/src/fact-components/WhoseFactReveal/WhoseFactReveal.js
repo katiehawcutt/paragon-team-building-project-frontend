@@ -1,8 +1,8 @@
 import React from 'react'
-import CountDownTimer2 from './CountDownTimer2'
+import CountDownTimer2 from '../CountDownTimer2/CountDownTimer2'
 import styles from './WhoseFactReveal.module.css'
 
-function WhoseFactReveal({ roundNumber, displayName }) {
+export default function WhoseFactReveal({ roundNumber, displayName }) {
     console.log('WhoseFactReveal', { displayName })
     return (
         <div className={styles.pageContainer}>
@@ -12,5 +12,3 @@ function WhoseFactReveal({ roundNumber, displayName }) {
         </div>
     )
 }
-
-export default WhoseFactReveal

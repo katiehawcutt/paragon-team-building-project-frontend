@@ -26,7 +26,7 @@ const useStyles = makeStyles({
     },
 })
 
-function ChooseFalseFact({
+export default function ChooseFalseFact({
     roundNumber,
     facts,
     handleClick,
@@ -72,5 +72,3 @@ function ChooseFalseFact({
         </div>
     )
 }
-
-export default ChooseFalseFact
