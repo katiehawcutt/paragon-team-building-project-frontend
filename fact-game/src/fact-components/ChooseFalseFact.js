@@ -1,27 +1,28 @@
 import React from 'react'
 import styles from './ChooseFalseFact.module.css'
-import CountDownTimer3 from './CountDownTimer3'
+// import CountDownTimer3 from './CountDownTimer3'
 import { makeStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles({
-    submitBtn: {
-        height: '40px',
-        width: '340px',
-        marginTop: '30px',
+    button: {
+        width: '500px',
+        marginTop: '60px',
         marginLeft: '255px',
         right: '170px',
-        borderRadius: '28px',
+        borderRadius: '10px',
         fontFamily: 'Questrial',
-        fontSize: '24px',
+        fontSize: '30px',
+        padding: '40px',
         color: 'white',
+        textTransform: 'none',
         lineHeight: '35px',
-        textTransform: 'capitalize',
         textShadow: '5px 3px 5px rgba(0, 0, 0, 0.25)',
         boxShadow: '13px 18px 20px rgba(0, 0, 0, 0.25)',
-        backgroundColor: '#454b82',
+        backgroundColor: '#6d44d9',
         '&:hover': {
-            background: '#2B2F53',
+            background: '#d99444',
+            transform: 'scale(1.1)',
         },
     },
 })
@@ -35,33 +36,30 @@ function ChooseFalseFact({
 }) {
     const classes = useStyles()
     return (
-        <div className={styles.chooseFalseFact_container}>
-            <CountDownTimer3 />
-            <h2>Which Fact is False</h2>
-            <p>
-                Round #{roundNumber} (Seconds left: {secondsLeft})
-            </p>
-            <div className={styles.facts_container}>
-                <div className={styles.fact1_container}>
-                    <div className={styles.fact_info}>{facts[0]}</div>
-                    <Button
-                        className={classes.submitBtn}
-                        variant="contained"
-                        color="primary"
-                    >
-                        Select #1
-                    </Button>
-                </div>
-                <div className={styles.fact2_container}>
-                    <div className={styles.fact_info}>{facts[1]}</div>
-                    <Button
-                        className={classes.submitBtn}
-                        variant="contained"
-                        color="primary"
-                    >
-                        Select #2
-                    </Button>
-                </div>
+        <div className={styles.pageContainer}>
+            <header className={styles.pageHeader}>
+                <div className={styles.roundLabel}>Round #{roundNumber}</div>
+                <h1 className={styles.pageTitle}>Which fact is false?</h1>
+                <div className={styles.countdown}>{secondsLeft}</div>
+            </header>
+            <div className={styles.chooseFalseFact_container}>
+                {/* <CountDownTimer3 /> */}
+
+                <Button
+                    className={classes.button}
+                    variant="contained"
+                    color="primary"
+                >
+                    {facts[0]}
+                </Button>
+
+                <Button
+                    className={classes.button}
+                    variant="contained"
+                    color="primary"
+                >
+                    {facts[1]}
+                </Button>
             </div>
         </div>
     )

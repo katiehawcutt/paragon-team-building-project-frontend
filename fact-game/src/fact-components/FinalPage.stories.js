@@ -11,10 +11,16 @@ const Template = (args) => <FinalPage {...args} />
 
 export const FirstStory = Template.bind({})
 FirstStory.args = {
-    leaderboard: [{ displayName: 'A', score: 0 }],
+    leaderboard: [
+        { displayName: 'Katie', score: 15 },
+        { displayName: 'Natalie', score: 7 },
+        { displayName: 'Bradley', score: 5 },
+        { displayName: 'Arshi', score: 3 },
+        { displayName: 'Khang', score: 1 },
+    ],
     top3: [
-        { displayName: 'B', score: 0 },
-        { displayName: 'C', score: 0 },
-        { displayName: 'D', score: 0 },
+        { displayName: 'Katie', score: 15 },
+        { displayName: 'Natalie', score: 7 },
+        { displayName: 'Bradley', score: 3 },
     ],
 }
