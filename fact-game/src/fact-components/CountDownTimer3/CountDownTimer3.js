@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
-import styles from './CountDownTimer2.module.css'
+import styles from './CountDownTimer3.module.css'
 
 const renderTime = ({ remainingTime }) => {
     if (remainingTime === 0) {
@@ -17,7 +17,7 @@ const renderTime = ({ remainingTime }) => {
     )
 }
 
-function App() {
+export default function CountDownTimer3() {
     return (
         <div className={styles.App}>
             <div className={styles.timer_wrapper}>
@@ -33,5 +33,3 @@ function App() {
         </div>
     )
 }
-
-export default App

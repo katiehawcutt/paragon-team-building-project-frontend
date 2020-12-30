@@ -1,8 +1,13 @@
 import React from 'react'
-import CountDownTimer3 from './CountDownTimer3'
+import CountDownTimer3 from '../CountDownTimer3/CountDownTimer3'
 import styles from './FalseFactReveal.module.css'
 
-function FalseFactReveal({ roundNumber, displayName, fact, lie }) {
+export default function FalseFactReveal({
+    roundNumber,
+    displayName,
+    fact,
+    lie,
+}) {
     return (
         <div className={styles.pageContainer}>
             <h2 className={styles.falseFact_title}>
@@ -17,5 +22,3 @@ function FalseFactReveal({ roundNumber, displayName, fact, lie }) {
         </div>
     )
 }
-
-export default FalseFactReveal
