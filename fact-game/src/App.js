@@ -41,6 +41,7 @@ function App() {
             <FactGame
                 action={factsGame.currentStageInGame.action}
                 otherProps={factsGame.currentStageInGame.otherProps}
+                handleAnswer={factsGame.sendJsonMessage}
             />
             {/* <CreateNewGame /> */}
             {/* <EnterFactPage /> */}

@@ -72,5 +72,13 @@ export default function useFactsGame({ webSocketUrl, messageHandlers }) {
             })
             setGame((prev) => ({ ...prev, requestSent: true }))
         },
+        sendAnswer({ gameId, playerId, choice }) {
+            sendJsonMessage({
+                action: 'ANSWER',
+                gameId,
+                playerId, // ID of the player that's answering, not the ID of who the fact is about
+                choice,
+            })
+        },
     }
 }
