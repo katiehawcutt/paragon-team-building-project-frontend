@@ -10,6 +10,7 @@ function WhoseFact({
     leaderboard,
     secondsLeft,
     turnId,
+    handleAnswer,
 }) {
     return (
         <section>
@@ -36,7 +37,6 @@ function WhoseFact({
                     </button>
                 )
             })}
-
             <div>
                 <h3>Leaderboard</h3>
             </div>
@@ -61,17 +61,17 @@ function WhoseFact({
         </section>
     )
 
-    return (
-        <div className="whose-fact-container">
-            <h1>Whose Fact?</h1>
-            <div>
-                <p type="text" className="whoseFact">
-                    {' '}
-                    Fact from the back-end goes here!{' '}
-                </p>
-            </div>
-        </div>
-    )
+    // return (
+    //     <div className="whose-fact-container">
+    //         <h1>Whose Fact?</h1>
+    //         <div>
+    //             <p type="text" className="whoseFact">
+    //                 {' '}
+    //                 Fact from the back-end goes here!{' '}
+    //             </p>
+    //         </div>
+    //     </div>
+    // )
 }
 
 export default WhoseFact
