@@ -96,22 +96,26 @@ export default function FinalPage({ leaderboard, top3 }) {
             </Button> */}
                 <h2 className={styles.leaderboardHeading}>LEADERBOARD</h2>
                 <table className={styles.leaderTable}>
-                    <tr className={styles.tableHeadingsRow}>
-                        <th className={styles.tableHeading}>NAME</th>
-                        <th className={styles.tableHeading}>SCORE</th>
-                    </tr>
-                    {leaderboard.map((person, i) => {
-                        return (
-                            <tr key={i} className={styles.tableRow}>
-                                <td className={styles.tableData}>
-                                    {person.displayName}
-                                </td>
-                                <td className={styles.tableData}>
-                                    {person.score}
-                                </td>
-                            </tr>
-                        )
-                    })}
+                    <thead>
+                        <tr className={styles.tableHeadingsRow}>
+                            <th className={styles.tableHeading}>NAME</th>
+                            <th className={styles.tableHeading}>SCORE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {leaderboard.map((person, i) => {
+                            return (
+                                <tr key={i} className={styles.tableRow}>
+                                    <td className={styles.tableData}>
+                                        {person.displayName}
+                                    </td>
+                                    <td className={styles.tableData}>
+                                        {person.score}
+                                    </td>
+                                </tr>
+                            )
+                        })}
+                    </tbody>
                 </table>
             </div>
         </div>

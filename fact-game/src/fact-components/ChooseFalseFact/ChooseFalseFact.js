@@ -29,7 +29,7 @@ const useStyles = makeStyles({
 export default function ChooseFalseFact({
     roundNumber,
     facts,
-    handleClick,
+    handleAnswer,
     secondsLeft,
     turnId,
 }) {
@@ -50,8 +50,8 @@ export default function ChooseFalseFact({
                             variant="contained"
                             color="primary"
                             key={fact}
-                            handleClick={() =>
-                                handleClick({
+                            onClick={() =>
+                                handleAnswer({
                                     choice: fact,
                                 })
                             }
