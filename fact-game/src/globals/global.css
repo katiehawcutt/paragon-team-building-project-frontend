@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+:root {
+    --light-purple: #8152ff;
+    --lightish-purple: #454b82;
+    --purple: #3f4477;
+    --dark-purple: #2e345c;
+    --gold: #d99444;
+    --primary-font: Questrial, sans-serif;
+    --yellow: #fec057;
+    --green: #139547;
+    --box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    --text-shadow: 5px 3px 3px rgba(0, 0, 0, 0.25);
+    --border-radius: 1rem;
+}

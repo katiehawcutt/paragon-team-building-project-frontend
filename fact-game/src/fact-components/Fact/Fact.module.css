@@ -1,0 +1,22 @@
+.Fact {
+    background-color: var(--lightish-purple);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    font-family: var(--primary-font);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    box-shadow: 13px 18px 28px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.25s linear;
+    max-width: 40vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.FactSelected {
+    background-color: var(--green);
+}
