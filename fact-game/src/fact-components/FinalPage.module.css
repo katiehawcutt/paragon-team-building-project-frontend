@@ -1,3 +1,14 @@
+body {
+    background-color: #2e345c;
+}
+
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 .podium_container {
     animation: transitionIn 0.8s;
     animation-timing-function: ease-in-out;
@@ -36,6 +47,7 @@
     left: 54px;
     bottom: 35px;
     text-align: center;
+    color: white;
 }
 
 .secondPlace_container {
@@ -55,6 +67,7 @@
     left: 54px;
     bottom: 75px;
     text-align: center;
+    color: white;
 }
 
 .fistPlace_container {
@@ -74,6 +87,7 @@
     left: 54px;
     bottom: 55px;
     text-align: center;
+    color: white;
 }
 
 .winnerName {
@@ -111,6 +125,58 @@
     }
 }
 
-h2 {
+.pageTitle {
     text-align: center;
+    font-size: 60px;
+    color: white;
+    margin-top: 50px;
+    background-color: #d99444;
+    padding: 30px;
+    border-radius: 10px;
+    padding: 30px;
+    font-family: 'Questrial';
+}
+
+.top3name {
+    text-align: center;
+    font-family: 'Questrial';
+    color: white;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.leaderTable {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    width: 500px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.tableHeadingsRow {
+    background-color: #d99444;
+    padding: 20px;
+    height: 30px;
+    font-size: 28px;
+}
+
+.tableHeading {
+    padding: 10px;
+    color: white;
+}
+
+.tableRow {
+    border: 1px black solid;
+}
+.tableData {
+    font-size: 25px;
+    padding: 5px;
+}
+
+.leaderboardHeading {
+    background-color: #6d44d9;
+    padding: 30px;
+    border-radius: 10px;
+    color: #d99444;
+    margin-top: 80px;
 }

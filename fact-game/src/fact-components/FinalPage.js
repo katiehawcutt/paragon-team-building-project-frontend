@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './FinalPage.module.css'
 import { makeStyles } from '@material-ui/core/styles'
-import Button from '@material-ui/core/Button'
+// import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles({
     submitBtn: {
@@ -25,77 +25,95 @@ const useStyles = makeStyles({
 })
 
 function FinalPage({ leaderboard, top3 }) {
-    // const leaderboard = [{ displayName: 'A', score: 0 }]
-    // const top3 = [
-    //     { displayName: 'B', score: 0 },
-    //     { displayName: 'C', score: 0 },
-    //     { displayName: 'D', score: 0 },
-    // ]
-
     const classes = useStyles()
     return (
-        <div className={styles.podium_container}>
-            <div className={styles.score_container}>
-                <div className={styles.thirdPlace_container}>
-                    <img
-                        src="./Images/Tick.png"
-                        alt="3rd-place"
-                        className={styles.profilePic}
-                    />
-                    <div className={styles.banner}>
+        <div className={styles.pageContainer}>
+            <h1 className={styles.pageTitle}>the FACTS podium</h1>
+            <div className={styles.podium_container}>
+                <div className={styles.score_container}>
+                    <div className={styles.thirdPlace_container}>
                         <img
-                            src="../Images/3rd.png"
-                            alt="podium-stand"
-                            className={styles.podium_stand3}
+                            src="./Images/Tick.png"
+                            alt="3rd-place"
+                            className={styles.profilePic}
                         />
-                        <h2 className={styles.positionNum3}>3</h2>
+                        <div className={styles.banner}>
+                            <img
+                                src="../Images/3rd.png"
+                                alt="podium-stand"
+                                className={styles.podium_stand3}
+                            />
+                            <h2 className={styles.positionNum3}>3</h2>
+                        </div>
+                        <h2 className={styles.top3name}>
+                            {top3[2].displayName}
+                        </h2>
                     </div>
-                    <h2>{top3[2].displayName}</h2>
-                </div>
-                <div className={styles.fistPlace_container}>
-                    <img
-                        src="./Images/Tick.png"
-                        alt="1st-place"
-                        className={styles.profilePic}
-                    />
-                    <div className={styles.banner}>
+                    <div className={styles.fistPlace_container}>
                         <img
-                            src="./Images/1st.png"
-                            alt="podium-stand"
-                            className={styles.podium_stand1}
+                            src="./Images/Tick.png"
+                            alt="1st-place"
+                            className={styles.profilePic}
                         />
-                        <h2 className={styles.positionNum1}>1</h2>
+                        <div className={styles.banner}>
+                            <img
+                                src="./Images/1st.png"
+                                alt="podium-stand"
+                                className={styles.podium_stand1}
+                            />
+                            <h2 className={styles.positionNum1}>1</h2>
+                        </div>
+                        <h2 className={styles.top3name}>
+                            {top3[0].displayName}
+                        </h2>
                     </div>
-                    <h2>{top3[0].displayName}</h2>
-                </div>
-                <div className={styles.secondPlace_container}>
-                    <img
-                        src="./Images/Tick.png"
-                        alt="3nd-place"
-                        className={styles.profilePic}
-                    />
-                    <div className={styles.banner}>
+                    <div className={styles.secondPlace_container}>
                         <img
-                            src="./Images/2nd.png"
-                            alt="podium-stand"
-                            className={styles.podium_stand2}
+                            src="./Images/Tick.png"
+                            alt="3nd-place"
+                            className={styles.profilePic}
                         />
-                        <h2 className={styles.positionNum2}>2</h2>
+                        <div className={styles.banner}>
+                            <img
+                                src="./Images/2nd.png"
+                                alt="podium-stand"
+                                className={styles.podium_stand2}
+                            />
+                            <h2 className={styles.positionNum2}>2</h2>
+                        </div>
+                        <h2 className={styles.top3name}>
+                            {top3[1].displayName}
+                        </h2>
                     </div>
-                    <h2>{top3[1].displayName}</h2>
                 </div>
-            </div>
-            {/* <h2 className={styles.winnerName}>{top3[0].displayName}</h2> */}
-            {/* <Button
+                {/* <h2 className={styles.winnerName}>{top3[0].displayName}</h2> */}
+                {/* <Button
                 className={classes.submitBtn}
                 variant="contained"
                 color="primary"
             >
                 Exit
             </Button> */}
-            <p>
-                {leaderboard[0].displayName}:{leaderboard[0].score}
-            </p>
+                <h2 className={styles.leaderboardHeading}>LEADERBOARD</h2>
+                <table className={styles.leaderTable}>
+                    <tr className={styles.tableHeadingsRow}>
+                        <th className={styles.tableHeading}>NAME</th>
+                        <th className={styles.tableHeading}>SCORE</th>
+                    </tr>
+                    {leaderboard.map((person) => {
+                        return (
+                            <tr className={styles.tableRow}>
+                                <td className={styles.tableData}>
+                                    {person.displayName}
+                                </td>
+                                <td className={styles.tableData}>
+                                    {person.score}
+                                </td>
+                            </tr>
+                        )
+                    })}
+                </table>
+            </div>
         </div>
     )
 }
