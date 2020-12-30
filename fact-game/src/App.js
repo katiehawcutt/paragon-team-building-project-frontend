@@ -41,7 +41,7 @@ function App() {
             <FactGame
                 action={factsGame.currentStageInGame.action}
                 otherProps={factsGame.currentStageInGame.otherProps}
-                handleAnswer={factsGame.sendJsonMessage}
+                handleAnswer={factsGame.sendAnswer}
             />
             {/* <CreateNewGame /> */}
             {/* <EnterFactPage /> */}
@@ -55,4 +55,3 @@ function App() {
 }
 
 export default App
-//c

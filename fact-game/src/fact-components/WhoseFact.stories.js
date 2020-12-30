@@ -18,15 +18,11 @@ export default {
 const Template = (args) => <WhoseFact {...args} />
 
 export const WhoseFactStory = Template.bind({})
-WhoseFact.args = {
+WhoseFactStory.args = {
+    roundNumber: 1,
     facts: ['I like cake', "I don't like cake"],
-    participants: 'Brad',
-    handleClick: {
-        action: 'ANSWER',
-        gameId: 'some_game_id',
-        playerId: 'some_player_id', // ID of the player that's answering, not the ID of who the fact is about
-        choice: 'some_choice_id',
-    },
+    participants: [{ text: 'Brad' }],
+    handleAnswer: function answer() {},
     leaderboard: [{ displayName: 'A', score: 0 }],
     secondsLeft: 5,
     turnId: '12345',

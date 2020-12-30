@@ -10,6 +10,7 @@ function WhoseFact({
     leaderboard,
     secondsLeft,
     turnId,
+    handleAnswer,
 }) {
     return (
         <section>
