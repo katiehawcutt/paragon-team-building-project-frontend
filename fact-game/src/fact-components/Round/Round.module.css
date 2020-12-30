@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+.RoundContainer {
+    width: fit-content;
+    padding: 1rem 3rem;
+    font-family: Questrial;
+    border-radius: 2rem;
+    background-color: #6d44d9;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.RoundLabel {
+    text-shadow: 5px 3px 3px rgba(0, 0, 0, 0.25);
+}
