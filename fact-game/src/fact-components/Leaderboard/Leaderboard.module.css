@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+.leaderTable {
+    background-color: #6d44d9;
+    border-radius: 10px;
+    width: 400px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.tableHeadingsRow {
+    background-color: #6d44d9;
+    padding: 20px;
+    height: 60px;
+    font-size: 30px;
+    font-family: 'Questrial', sans-serif;
+}
+
+.tableHeading {
+    padding: 20px;
+    color: white;
+    font-weight: 20;
+    letter-spacing: 3px;
+    font-family: 'Questrial', sans-serif;
+}
+
+.tableData {
+    font-family: 'Questrial', sans-serif;
+    font-size: 25px;
+    font-weight: small;
+    letter-spacing: 3px;
+    padding: 15px;
+}
+
+.leaderboardOrder {
+    font-family: 'Questrial', sans-serif;
+    font-size: 30px;
+    padding: 15px;
+    text-align: center;
+}
+
+.circle {
+    height: 37px;
+    width: 37px;
+    background-color: #fec057;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    padding: 4px 3px 0 3px;
+    box-shadow: 2.2px 2.2px 2.2px rgb(70, 69, 69);
+}
+
+.leaderboardHeading {
+    background-color: #6d44d9;
+    padding: 30px;
+    border-radius: 10px;
+    color: #6d44d9;
+    margin-top: 80px;
+}
