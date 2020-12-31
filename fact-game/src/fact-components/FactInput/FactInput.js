@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './FactInput.module.css'
 
-function FactInput({ placeholder }) {
+function FactInput({ placeholder, value }) {
     return (
         <div>
             <textarea
@@ -13,4 +13,4 @@ function FactInput({ placeholder }) {
     )
 }
 
-export default Input
+export default FactInput

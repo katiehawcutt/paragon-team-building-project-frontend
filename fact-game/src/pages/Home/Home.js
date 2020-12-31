@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styles from './Home.module.css'
 import Title from '../../fact-components/Title/Title'
 import Input from '../../fact-components/Input/Input'
+import FactInput from '../../fact-components/FactInput/FactInput'
 
 const pages = {
     CREATE: 'CREATE',
@@ -13,6 +14,8 @@ const pages = {
  */
 export default function Home() {
     const [page, setPage] = useState('')
+    const [fact, setFact] = useState("");
+    const [lie, setLie] = useState("");
 
     if (!page) {
         return (
@@ -42,8 +45,8 @@ export default function Home() {
                     <Title text="The Fact Game" />
                     <Input placeholder="Enter number of rounds..." />
                     <div className={styles.inputContainer}>
-                        <textarea placeholder="Enter a fact"></textarea>
-                        <textarea placeholder="Enter a lie"></textarea>
+                        <FactInput placeholder={'Enter a fact'} />
+                        <FactInput placeholder={'Enter a lie'} />
                     </div>
                     <button className={styles.createJoinButton}>CREATE</button>
                 </main>
@@ -59,23 +62,11 @@ export default function Home() {
                 <Title text="The Fact Game" />
                 <Input placeholder="Enter the Game ID..." />
                 <div className={styles.inputContainer}>
-                    <textarea placeholder="Enter a fact"></textarea>
-                    <textarea placeholder="Enter a lie"></textarea>
+                    <FactInput placeholder={'Enter a fact'} />
+                    <FactInput placeholder={'Enter a lie'} />
                 </div>
                 <button className={styles.createJoinButton}>JOIN</button>
             </main>
         </>
     )
-
-    // <main> tag, stick everything else in this
-    // flex, cent
-    // Title component
-    // Create and JoinGame buttons (Natalie has)
-    // Conditionally render one of the below:
-    //      CreateGame component
-    //          2 inputs
-    //          button
-    //      JoinGame component
-    // Input either gameId or number of rounds
-    // Render conditionally
 }
