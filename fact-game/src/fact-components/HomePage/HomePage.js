@@ -25,6 +25,12 @@ const useStyles = makeStyles((theme) => ({
         color: 'white',
         backgroundColor: '#6D44D9',
         '&:hover': {
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+}
             background: '#5B38B6',
         },
         textShadow: '5px 3px 5px rgba(0, 0, 0, 0.25)',
