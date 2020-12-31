@@ -1,6 +1,6 @@
 .Fact {
     background-color: var(--lightish-purple);
-    padding: 1.5rem;
+    padding: var(--padding);
     border-radius: var(--border-radius);
     font-family: var(--primary-font);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);

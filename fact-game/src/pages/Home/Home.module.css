@@ -7,8 +7,25 @@
     align-items: center;
 }
 
-.button-container {
+.buttonContainer {
     display: flex;
     justify-content: center;
     width: 70vw;
+    margin: 30px;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    margin: 30px;
+}
+
+.createJoinButton {
+    background-color: var(--gold);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    color: white;
+    border: none;
+    margin: 30px;
 }
