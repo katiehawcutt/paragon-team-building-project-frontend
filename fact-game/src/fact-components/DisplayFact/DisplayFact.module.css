@@ -1,0 +1,17 @@
+.factContainer {
+    width: 30vw;
+    height: 20vh;
+    padding: 1rem 3rem;
+    font-size: 16px;
+    font-family: var(--primary-font);
+    border-radius: 2rem;
+    overflow: auto;
+    background-color: var(--lightish-purple);
+    color: white;
+    box-shadow: var(--box-shadow);
+    text-shadow: var(--text-shadow);
+}
+
+.facts {
+    font-size: 16px;
+}
