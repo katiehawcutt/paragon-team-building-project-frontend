@@ -1,7 +1,6 @@
 import React from 'react'
 import DisplayFact from './DisplayFact'
 
-// This default export determines where your story goes in the story list
 export default {
     title: 'DisplayFact',
     component: DisplayFact,
