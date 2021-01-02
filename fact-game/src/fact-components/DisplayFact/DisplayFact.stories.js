@@ -10,5 +10,5 @@ const Template = (args) => <Title {...args} />
 
 export const DisplayFactStory = Template.bind({})
 DisplayFactStory.args = {
-    fact: 'I love cake',
+    facts: ['I love cake'],
 }
