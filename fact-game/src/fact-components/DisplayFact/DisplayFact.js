@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './DisplayFact.module.css'
 
-function DisplayFact() {
+function DisplayFact({ facts }) {
     return (
         <div className={styles.factContainer}>
             {facts.map((fact, i) => {
