@@ -27,7 +27,13 @@ export default function ChooseFalseFact({
                         // selected={selected}
                         // handleClick={handleClick}
                     />
-                    <Fact  factText={'I once a skydive and my parachute failed but luckily a large bird saved me'}/>
+                    <Fact
+                        factText={
+                            'I once a skydive and my parachute failed but luckily a large bird saved me'
+                        }
+                        // selected={selected}
+                        // handleClick={handleClick}
+                    />
                 </div>
             </main>
         </>
