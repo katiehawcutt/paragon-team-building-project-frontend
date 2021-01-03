@@ -1,0 +1,18 @@
+.header {
+    height: 60px;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #2e345c;
+    align-items: center;
+}
+
+.xbutton {
+    background-color: #2e345c;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    margin: 20px;
+    margin-right: 40px;
+}

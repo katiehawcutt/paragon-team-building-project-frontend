@@ -1,20 +1,12 @@
 .countdown {
-    background-color: #139547;
-    height: 300px;
-    width: 300px;
+    background-color: #2e345c;
+    height: 150px;
+    width: 150px;
     border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #fec057;
     font-size: 40px;
-    border: 10px white solid;
-}
-
-.pageContainer {
-    display: flex;
-    height: 99vh;
-    width: 99vw;
-    align-items: center;
-    justify-content: center;
+    border: 5px #fec057 solid;
 }
