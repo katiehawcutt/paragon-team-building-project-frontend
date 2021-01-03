@@ -2,7 +2,6 @@
     width: 30vw;
     height: 20vh;
     padding: 1rem 3rem;
-    font-size: 16px;
     text-align: center;
     font-family: var(--primary-font);
     border-radius: 2rem;
@@ -11,8 +10,9 @@
     color: white;
     box-shadow: var(--box-shadow);
     text-shadow: var(--text-shadow);
-}
-
-.facts {
-    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    font-size: 24px;
 }
