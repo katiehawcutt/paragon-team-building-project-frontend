@@ -1,6 +1,6 @@
-import { createContext } from 'react'
+import { createContext, useContext } from 'react'
 
-const UserContext = createContext()
+const UserContext = createContext({ user: 'some_user' })
 
 export const UserContextProvider = ({ children }) => {
     return (
