@@ -1,5 +1,5 @@
 import React from 'react'
-import css from './Fact.module.css'
+import css from './FactButton.module.css'
 import classnames from 'classnames'
 
 export default function Fact({ factText, selected, handleClick }) {

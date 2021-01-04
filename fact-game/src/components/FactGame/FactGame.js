@@ -1,25 +1,28 @@
 import React from 'react'
-import WhoseFact from '../_WhoseFact/WhoseFact'
-import CountDownTimer from '../_CountDownTimer/CountDownTimer'
-import WhoseFactReveal from '../_WhoseFactReveal/WhoseFactReveal'
-import ChooseFalseFact from '../_ChooseFalseFact/ChooseFalseFact'
-import FalseFactReveal from '../_FalseFactReveal/FalseFactReveal'
-import FinalPage from '../_FinalPage/FinalPage'
+import WhoseFact from '../../pages/WhoseFact/WhoseFact'
+import RevealFactTimer from '../../pages/RevealFactTimer/RevealFactTimer'
+import RevealWhoTimer from '../../pages/RevealWhoTimer/RevealWhoTimer'
+import WhoseFactReveal from '../../pages/WhoseFactReveal/WhoseFactReveal'
+import ChooseFalseFact from '../../pages/ChooseFalseFact/ChooseFalseFact'
+import FalseFactReveal from '../../pages/FalseFactReveal/FalseFactReveal'
+import Podium from '../../pages/Podium/Podium'
 
 const eventToComponentMap = {
     // TODO: GAME_STARTED
     GUESS_WHO_TIMER: WhoseFact,
-    REVEAL_WHO_TIMER: CountDownTimer,
+    REVEAL_WHO_TIMER: RevealWhoTimer,
     REVEAL_WHO: WhoseFactReveal,
     GUESS_FAKE_FACT_TIMER: ChooseFalseFact,
-    REVEAL_FAKE_FACT_TIMER: CountDownTimer,
+    REVEAL_FAKE_FACT_TIMER: RevealFactTimer,
     REVEAL_FAKE_FACT: FalseFactReveal,
-    PODIUM: FinalPage,
+    PODIUM: Podium,
 }
 
 export default function FactGame({ action, otherProps, handleAnswer }) {
     const ComponentToLoad = eventToComponentMap[action]
     const combinedProps = { ...otherProps, handleAnswer }
+
+    console.log('rendered FactGame')
 
     if (ComponentToLoad) {
         return <ComponentToLoad {...combinedProps} />

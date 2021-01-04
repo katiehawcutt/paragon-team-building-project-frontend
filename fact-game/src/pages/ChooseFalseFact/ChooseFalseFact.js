@@ -4,35 +4,36 @@ import Header from '../../components/Header/Header'
 import Round from '../../components/Round/Round'
 import Title from '../../components/Title/Title'
 import Countdown from '../../components/Countdown/Countdown'
-import Fact from '../../components/Fact/Fact'
+import FactButton from '../../components/FactButton/FactButton'
 
 export default function ChooseFalseFact({
     roundNumber,
     displayName,
-    facts,
+    facts: [firstFact, secondFact],
     handleAnswer,
     secondsLeft,
-    turnId,
+    // turnId,
 }) {
     return (
         <>
             <Header />
             <main className={styles.pageContainer}>
-                <Round roundNumber="1" />
-                <Title text="Which is Khang's truthy?" />
-                <Countdown secondsLeft="10" />
+                <Round roundNumber={roundNumber} />
+                <Title text={`Which is ${displayName}'s truthy?`} />
+                <Countdown secondsLeft={secondsLeft} />
                 <div className={styles.factContainer}>
-                    <Fact
-                        factText={`I hate cake very very much and can't even stand to be near it`}
+                    {/* TODO: Change back end response from string[] to object[]
+                    Conditionally toggle class based on updated choiceId
+                     */}
+                    <FactButton
+                        factText={firstFact}
                         // selected={selected}
-                        // handleClick={handleClick}
+                        handleClick={handleAnswer}
                     />
-                    <Fact
-                        factText={
-                            'I once a skydive and my parachute failed but luckily a large bird saved me'
-                        }
+                    <FactButton
+                        factText={secondFact}
                         // selected={selected}
-                        // handleClick={handleClick}
+                        handleClick={handleAnswer}
                     />
                 </div>
             </main>

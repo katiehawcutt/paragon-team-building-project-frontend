@@ -69,11 +69,11 @@ export default function useFactsGame({ webSocketUrl, messageHandlers }) {
             })
             setGame((prev) => ({ ...prev, requestSent: true }))
         },
-        joinExistingGame({ gameId, displayName, fact, lie }) {
+        joinExistingGame({ gameId, displayName, fact, lie, playerId }) {
             sendJsonMessage({
                 action: 'JOIN_GAME',
                 gameId,
-                player: { displayName, fact, lie },
+                player: { displayName, fact, lie, playerId },
             })
             setGame((prev) => ({ ...prev, requestSent: true }))
         },
