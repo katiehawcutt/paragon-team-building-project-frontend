@@ -109,3 +109,12 @@
     text-align: center;
     color: white;
 }
+
+.crown {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    left: 60px;
+    bottom: 350px;
+    transform: rotate(23deg);
+}

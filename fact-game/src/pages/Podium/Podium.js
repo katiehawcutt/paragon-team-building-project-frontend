@@ -27,6 +27,11 @@ export default function Podium() {
                         <UserPic />
                         <div className={styles.banner}>
                             <img
+                                src="../Images/crown.png"
+                                alt="crown"
+                                className={styles.crown}
+                            ></img>
+                            <img
                                 src="./Images/1st.png"
                                 alt="podium-stand"
                                 className={styles.podium_stand1}
