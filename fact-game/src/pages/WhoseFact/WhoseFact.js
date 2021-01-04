@@ -1,18 +1,69 @@
 import React from 'react'
 import styles from './WhoseFact.module.css'
-import Title from '../../fact-components/Title/Title'
+import Header from '../../fact-components/Header/Header'
 import Round from '../../fact-components/Round/Round'
+import Title from '../../fact-components/Title/Title'
+import Countdown from '../../fact-components/Countdown/Countdown'
+import DisplayFact from '../../fact-components/DisplayFact/DisplayFact'
 
-export default function WhoseFact() {
+const people = [
+    'Katie',
+    'Natalie',
+    'Bradley',
+    'Khang',
+    'Arshi',
+    'Amelia',
+    'Jon',
+    'Stefan',
+    'Ann-Marie',
+    'Jeremy',
+    'Patrick',
+    'Anna',
+    'Tommy',
+]
+
+export default function WhoseFact({
+    roundNumber,
+    facts,
+    participants,
+    secondsLeft,
+    handleAnswer,
+    turnId,
+}) {
     return (
         <>
-            <header>X</header>
+            <Header />
             <main className={styles.pageContainer}>
-                <Round />
+                <Round roundNumber="1" />
                 <Title text="Whose Facts?" />
-                <p>10</p>
-                <div className={styles.factContainer}></div>
-                <div className={}
+                <Countdown secondsLeft={20} />
+                <div className={styles.factContainer}>
+                    <DisplayFact
+                        facts={[
+                            `I hate cake very very much and can't even stand to be near it`,
+                            'I once a skydive and my parachute failed but luckily a large bird saved me',
+                        ]}
+                    />
+                </div>
+                <div className={styles.buttonContainer}>
+                    {people.map((participant) => {
+                        return (
+                            <button
+                                className={styles.nameButton}
+                                key={participant.choiceId}
+                                onClick={() =>
+                                    handleAnswer({
+                                        choice: participant.choiceId,
+                                    })
+                                }
+                                //toggle background color green for selected button
+                            >
+                                {participant}
+                                {/* {participant.text} */}
+                            </button>
+                        )
+                    })}
+                </div>
             </main>
         </>
     )

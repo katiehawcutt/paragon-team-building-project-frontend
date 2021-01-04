@@ -3,15 +3,15 @@ import styles from './DisplayFact.module.css'
 
 function DisplayFact({ facts }) {
     return (
-        <div className={styles.factContainer}>
+        <>
             {facts.map((fact, i) => {
                 return (
-                    <div className={styles.facts} key={i}>
-                        {fact}
+                    <div className={styles.factContainer}>
+                        <div key={i}>{fact}</div>
                     </div>
                 )
             })}
-        </div>
+        </>
     )
 }
 
