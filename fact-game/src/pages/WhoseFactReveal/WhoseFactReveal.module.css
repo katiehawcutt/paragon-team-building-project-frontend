@@ -1,6 +1,5 @@
 .pageContainer {
     min-height: calc(100vh - 60px);
-    width: 100vw;
     background-color: var(--dark-purple);
     display: flex;
     flex-direction: column;
@@ -12,24 +11,29 @@
     padding: 1rem 3rem;
     font-family: var(--primary-font);
     border-radius: 2rem;
-    background-color: var(--light-purple);
+    background-color: var(--gold);
     box-shadow: var(--box-shadow);
-    margin: 1rem;
-}
-
-.nameLabel {
+    margin: 2rem;
+    margin-top: 2rem;
     text-shadow: var(--text-shadow);
-}
-
-.round_countainer {
-    margin: 2rem 0rem;
-}
-
-.countdown_countainer {
-    margin: -10rem;
-}
-
-.nameLabel {
-    letter-spacing: 0.3vw;
+    color: white;
+    font-size: 50px;
+    letter-spacing: 0.2rem;
     margin: 0.9rem;
+    animation-name: name;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes name {
+    0% {
+        transform: scale(0.3) rotate(0deg);
+    }
+    50% {
+        transform: scale(0.6) rotate(180deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
 }

@@ -16,7 +16,7 @@
     align-items: center;
     justify-content: center; */
     width: 30vw;
-    height: 20vh;
+    max-height: 30vh;
     padding: 1rem 3rem;
     text-align: center;
     font-family: var(--primary-font);

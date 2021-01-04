@@ -1,12 +1,12 @@
 import React from 'react'
-import Fact from './FactButton'
+import FactButton from './FactButton'
 
 export default {
-    title: 'Fact',
-    component: Fact,
+    title: 'FactButton',
+    component: FactButton,
 }
 
-const Template = (args) => <Fact {...args} />
+const Template = (args) => <FactButton {...args} />
 
 export const FirstStory = Template.bind({})
 FirstStory.args = {

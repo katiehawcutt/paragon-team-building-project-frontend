@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -23,6 +23,7 @@ const useStyles = makeStyles({
     card: {
         padding: '1rem',
         backgroundColor: 'transparent',
+        boxShadow: 'none',
     },
     form: {
         display: 'flex',
@@ -65,7 +66,9 @@ const useStyles = makeStyles({
         transform: 'none',
     },
     createGameButton: {
-        margin: '0 auto',
+        color: 'white',
+        margin: '2rem auto',
+        marginBottom: '1rem auto',
         width: 'fit-content',
         backgroundColor: '#d99444',
         '&:hover': {
@@ -90,7 +93,7 @@ const useStyles = makeStyles({
 export default function CreateNewGame({ handleCreate }) {
     const [fact, setFact] = useState('some fact')
     const [lie, setLie] = useState('some lie')
-    const [rounds, setRounds] = useState(5)
+    const [rounds, setRounds] = useState(1)
     const classes = useStyles()
 
     const [loading, setLoading] = useState(false)

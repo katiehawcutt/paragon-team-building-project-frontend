@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-
-import Container from '@material-ui/core/Container'
+import styles from './Home.module.css'
+import Header from '../../components/Header/Header'
+import Title from '../../components/Title/Title'
+// import Container from '@material-ui/core/Container'
 import Button from '@material-ui/core/Button'
 // import FactInput from "../../components/FactInput/FactInput"
 import CreateGame from '../../components/CreateGame/CreateGame'
@@ -38,7 +40,7 @@ const useStyles = makeStyles({
     title: {
         textAlign: 'center',
         color: 'white',
-        fontFamily: 'Questrial, sans-serif',
+        fontFamily: 'Questrial',
         textShadow: '5px 3px 3px rgba(0, 0, 0, 0.25)',
         letterSpacing: '0.4rem',
         padding: '2rem',
@@ -59,9 +61,10 @@ const useStyles = makeStyles({
         textShadow: '5px 3px 3px rgba(0, 0, 0, 0.25)',
         color: '#FFFFFF',
         margin: '1rem',
-        fontSize: '1.1rem',
+        fontSize: '1.3rem',
         textTransform: 'none',
         letterSpacing: '0.2rem',
+        width: '350px',
     },
     createNewGameButton: {
         backgroundColor: '#3F4477',
@@ -76,12 +79,14 @@ const useStyles = makeStyles({
         },
     },
     goBackButton: {
-        padding: '0.5rem',
+        padding: '0.8rem',
         borderRadius: '1rem',
-        boxShadow: '0px 0px 2px 1px rgba(0, 0, 0, 0.25)',
+        // boxShadow: '0px 0px 2px 1px rgba(0, 0, 0, 0.25)',
+        boxShadow: '6px 7px 10px 2px rgba(0, 0, 0, 0.25)',
         textShadow: '5px 3px 3px rgba(0, 0, 0, 0.25)',
         color: '#FFFFFF',
         margin: '0.5rem',
+        marginTop: '0',
         fontSize: '1rem',
         textTransform: 'none',
         letterSpacing: '0.2rem',
@@ -126,26 +131,25 @@ export default function Home({ handleCreate, handleJoin }) {
 
     return (
         <ThemeProvider theme={theme}>
-            <Container
+            {/* <Container
                 style={{
                     backgroundColor: 'var(--dark-purple)',
                     display: 'flex',
                     flexDirection: 'column',
-                    height: '100vh',
+                    minHeight: 'calc(100vh - 60px)',
                     width: '100vw',
-                    padding: '2rem',
+                    padding: '0',
+                    maxWidth: '',
                 }}
-            >
+            > */}
+            <Header />
+            <div className={styles.pageContainer}>
                 {/* Header */}
                 {/* Swap h1 for Title component */}
                 <header className={classes.header}>
-                    {!page && <h1 className={classes.title}>The Facts Game</h1>}
-                    {pages.CREATE === page && (
-                        <h1 className={classes.title}>Create New Game</h1>
-                    )}
-                    {pages.JOIN === page && (
-                        <h1 className={classes.title}>Join Existing Game</h1>
-                    )}
+                    {!page && <Title text="The Fact Game" />}
+                    {pages.CREATE === page && <Title text="Create New Game" />}
+                    {pages.JOIN === page && <Title text="Join Existing Game" />}
                 </header>
 
                 {/* Main */}
@@ -158,7 +162,9 @@ export default function Home({ handleCreate, handleJoin }) {
                                     size="large"
                                     startIcon={
                                         <img
-                                            src={'/images/GameIcon2.png'}
+                                            src={
+                                                '/images/GameIcon2-resized.png'
+                                            }
                                             alt="src"
                                             className={classes.buttonIcon}
                                         />
@@ -178,7 +184,7 @@ export default function Home({ handleCreate, handleJoin }) {
                                     size="large"
                                     startIcon={
                                         <img
-                                            src={'/images/gameIcon.png'}
+                                            src={'/images/gameIcon-resized.png'}
                                             alt="src"
                                             className={classes.buttonIcon}
                                         />
@@ -214,7 +220,7 @@ export default function Home({ handleCreate, handleJoin }) {
                         </Button>
                     )}
                 </main>
-            </Container>
+            </div>
         </ThemeProvider>
     )
 }

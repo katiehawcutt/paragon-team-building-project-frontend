@@ -6,6 +6,8 @@ import Title from '../../components/Title/Title'
 import Countdown from '../../components/Countdown/Countdown'
 import DisplayFact from '../../components/DisplayFact/DisplayFact'
 
+import { useUserContext } from '../../contexts/User'
+
 export default function WhoseFact({
     roundNumber,
     facts,
@@ -14,6 +16,9 @@ export default function WhoseFact({
     handleAnswer,
     // turnId,
 }) {
+    const {
+        user: { playerId },
+    } = useUserContext()
     return (
         <>
             <Header />
@@ -33,6 +38,7 @@ export default function WhoseFact({
                                 key={participant.choiceId}
                                 onClick={() =>
                                     handleAnswer({
+                                        playerId,
                                         choice: participant.choiceId,
                                     })
                                 }

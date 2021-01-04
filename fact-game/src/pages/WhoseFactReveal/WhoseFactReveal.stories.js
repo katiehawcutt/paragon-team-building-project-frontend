@@ -10,5 +10,6 @@ const Template = (args) => <WhoseFactReveal {...args} />
 
 export const WhoseFactRevealStory = Template.bind({})
 WhoseFactRevealStory.args = {
-    name: 'Khang',
+    displayName: 'Katie',
+    roundNumber: 1,
 }

@@ -16,3 +16,7 @@
     margin: 20px;
     margin-right: 40px;
 }
+
+.xbutton:hover {
+    color: var(--gold);
+}

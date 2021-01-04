@@ -1,4 +1,5 @@
 import React from 'react'
+import GameLobby from '../../pages/GameLobby/GameLobby'
 import WhoseFact from '../../pages/WhoseFact/WhoseFact'
 import RevealFactTimer from '../../pages/RevealFactTimer/RevealFactTimer'
 import RevealWhoTimer from '../../pages/RevealWhoTimer/RevealWhoTimer'
@@ -8,7 +9,7 @@ import FalseFactReveal from '../../pages/FalseFactReveal/FalseFactReveal'
 import Podium from '../../pages/Podium/Podium'
 
 const eventToComponentMap = {
-    // TODO: GAME_STARTED
+    GAME_STARTED: GameLobby,
     GUESS_WHO_TIMER: WhoseFact,
     REVEAL_WHO_TIMER: RevealWhoTimer,
     REVEAL_WHO: WhoseFactReveal,

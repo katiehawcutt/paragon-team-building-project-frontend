@@ -10,4 +10,28 @@ export default {
 const Template = (args) => <Podium {...args} />
 
 export const PodiumStory = Template.bind({})
-PodiumStory.args = {}
+PodiumStory.args = {
+    leaderboard: [
+        { displayName: 'Khang', score: 15 },
+        { displayName: 'Natalie', score: 7 },
+        { displayName: 'Bradley', score: 5 },
+        { displayName: 'Arshi', score: 3 },
+        { displayName: 'Katie', score: 1 },
+        { displayName: 'Katie', score: 1 },
+        { displayName: 'Katie', score: 1 },
+        { displayName: 'Katie', score: 1 },
+        { displayName: 'Katie', score: 1 },
+        { displayName: 'Katie', score: 1 },
+        { displayName: 'Katie', score: 1 },
+        { displayName: 'Katie', score: 1 },
+        { displayName: 'Katie', score: 1 },
+        { displayName: 'Katie', score: 1 },
+        { displayName: 'Katie', score: 1 },
+        { displayName: 'Katie', score: 1 },
+        { displayName: 'Katie', score: 1 },
+        { displayName: 'Katie', score: 1 },
+        { displayName: 'Katie', score: 1 },
+        { displayName: 'Katie', score: 1 },
+    ],
+    winners: ['Natalie'],
+}

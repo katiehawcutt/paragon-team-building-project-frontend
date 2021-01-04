@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -23,6 +23,7 @@ const useStyles = makeStyles({
     card: {
         padding: '1rem',
         backgroundColor: 'transparent',
+        boxShadow: 'none',
     },
     form: {
         display: 'flex',
@@ -59,7 +60,8 @@ const useStyles = makeStyles({
         transform: 'none',
     },
     createGameButton: {
-        margin: '0 auto',
+        margin: '2rem auto',
+        marginBottom: '1rem auto',
         width: 'fit-content',
         backgroundColor: '#d99444',
         '&:hover': {
@@ -77,7 +79,7 @@ const useStyles = makeStyles({
         textShadow: '5px 3px 3px rgba(0, 0, 0, 0.25)',
         borderRadius: '1rem',
         letterSpacing: '0.2rem',
-        textTransform: 'none',
+        color: 'white',
     },
 })
 
