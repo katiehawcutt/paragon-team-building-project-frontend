@@ -36,6 +36,7 @@ export default function WhoseFact({
             <main className={styles.pageContainer}>
                 <Round roundNumber="1" />
                 <Title text="Whose Facts?" />
+
                 <Countdown secondsLeft={20} />
                 <div className={styles.factContainer}>
                     <DisplayFact
