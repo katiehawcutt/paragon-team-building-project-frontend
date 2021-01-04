@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from './WhoseFact.module.css'
-import Header from '../../fact-components/Header/Header'
-import Round from '../../fact-components/Round/Round'
-import Title from '../../fact-components/Title/Title'
-import Countdown from '../../fact-components/Countdown/Countdown'
-import DisplayFact from '../../fact-components/DisplayFact/DisplayFact'
+import Header from '../../components/Header/Header'
+import Round from '../../components/Round/Round'
+import Title from '../../components/Title/Title'
+import Countdown from '../../components/Countdown/Countdown'
+import DisplayFact from '../../components/DisplayFact/DisplayFact'
 
 const people = [
     'Katie',

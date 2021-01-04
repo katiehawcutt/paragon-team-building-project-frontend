@@ -1,0 +1,43 @@
+.Fact {
+    /* background-color: var(--lightish-purple);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    font-family: var(--primary-font);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    box-shadow: 13px 18px 28px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.25s linear;
+    max-width: 40vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+    width: 30vw;
+    height: 20vh;
+    padding: 1rem 3rem;
+    text-align: center;
+    font-family: var(--primary-font);
+    border-radius: 2rem;
+    overflow: auto;
+    background-color: var(--lightish-purple);
+    color: white;
+    box-shadow: var(--box-shadow);
+    text-shadow: var(--text-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    font-size: 24px;
+    border: none;
+}
+
+.Fact:hover {
+    background-color: var(--gold);
+}
+
+.FactSelected {
+    background-color: var(--green);
+}

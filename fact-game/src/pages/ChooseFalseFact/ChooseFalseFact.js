@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from './ChooseFalseFact.module.css'
-import Header from '../../fact-components/Header/Header'
-import Round from '../../fact-components/Round/Round'
-import Title from '../../fact-components/Title/Title'
-import Countdown from '../../fact-components/Countdown/Countdown'
-import Fact from '../../fact-components/Fact/Fact'
+import Header from '../../components/Header/Header'
+import Round from '../../components/Round/Round'
+import Title from '../../components/Title/Title'
+import Countdown from '../../components/Countdown/Countdown'
+import Fact from '../../components/Fact/Fact'
 
 export default function ChooseFalseFact({
     roundNumber,

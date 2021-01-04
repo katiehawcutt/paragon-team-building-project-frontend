@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
-import Container from '@material-ui/core/Container'
-import Button from '@material-ui/core/Button'
-
+import Container fr../../components/Title/Title
+import Button from ../../components/Input/Input
+../../components/FactInput/FactInput
 import CreateGame from '../../fact-components/CreateGame/CreateGame'
 import JoinGame from '../../fact-components/JoinGame/JoinGame'
 
