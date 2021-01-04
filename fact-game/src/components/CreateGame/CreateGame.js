@@ -87,7 +87,7 @@ const useStyles = makeStyles({
     },
 })
 
-export default function CreateNewGame() {
+export default function CreateNewGame({ handleCreate }) {
     const [fact, setFact] = useState('some fact')
     const [lie, setLie] = useState('some lie')
     const [rounds, setRounds] = useState(5)
@@ -95,35 +95,24 @@ export default function CreateNewGame() {
 
     const [loading, setLoading] = useState(false)
     const [success, setSuccess] = useState(false)
-    const timer = useRef()
-
-    useEffect(() => {
-        return () => {
-            clearTimeout(timer.current)
-        }
-    }, [])
 
     const { user } = useUserContext()
 
     const handleSubmit = (event) => {
         event.preventDefault()
 
+        console.log('create game button handler was clicked')
+
         if (!loading) {
             setSuccess(false)
             setLoading(true)
-            timer.current = setTimeout(() => {
-                setSuccess(true)
-                setLoading(false)
 
-                const formData = {
-                    fact,
-                    lie,
-                    rounds,
-                    user,
-                }
-
-                console.log(formData)
-            }, 2000)
+            handleCreate({
+                displayName: user.username,
+                playerId: user.playerId,
+                fact,
+                lie,
+            })
         }
     }
 

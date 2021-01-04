@@ -1,12 +1,10 @@
 import React from 'react'
 import styles from './Podium.module.css'
-import Header from '../../fact-components/Header/Header'
-import UserPic from '../../fact-components/UserPic/UserPic'
-import Leaderboard from '../../fact-components/Leaderboard/Leaderboard'
+import Header from '../../components/Header/Header'
+import UserPic from '../../components/UserPic/UserPic'
+import Leaderboard from '../../components/Leaderboard/Leaderboard'
 
-const winner = 'Katie'
-
-export default function Podium() {
+export default function Podium({ leaderboard, winners }) {
     return (
         <div className={styles.pageContainer}>
             <Header />
@@ -52,32 +50,18 @@ export default function Podium() {
                     </div>
                 </div>
             </main>
-            <h1 className={styles.winnerText}>{winner}, wins!</h1>
+
+            {winners.length > 1 && (
+                <h1 className={styles.winnerText}>
+                    The winners are: {winners.join(',')}!
+                </h1>
+            )}
+            {winners.length === 1 && (
+                <h1 className={styles.winnerText}>{winners[0]} wins!</h1>
+            )}
+
             <div>
-                <Leaderboard
-                    leaderboard={[
-                        { displayName: 'Khang', score: 15 },
-                        { displayName: 'Natalie', score: 7 },
-                        { displayName: 'Bradley', score: 5 },
-                        { displayName: 'Arshi', score: 3 },
-                        { displayName: 'Katie', score: 1 },
-                        { displayName: 'Katie', score: 1 },
-                        { displayName: 'Katie', score: 1 },
-                        { displayName: 'Katie', score: 1 },
-                        { displayName: 'Katie', score: 1 },
-                        { displayName: 'Katie', score: 1 },
-                        { displayName: 'Katie', score: 1 },
-                        { displayName: 'Katie', score: 1 },
-                        { displayName: 'Katie', score: 1 },
-                        { displayName: 'Katie', score: 1 },
-                        { displayName: 'Katie', score: 1 },
-                        { displayName: 'Katie', score: 1 },
-                        { displayName: 'Katie', score: 1 },
-                        { displayName: 'Katie', score: 1 },
-                        { displayName: 'Katie', score: 1 },
-                        { displayName: 'Katie', score: 1 },
-                    ]}
-                />
+                <Leaderboard leaderboard={leaderboard} />
             </div>
         </div>
     )

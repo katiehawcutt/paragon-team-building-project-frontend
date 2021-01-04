@@ -6,48 +6,27 @@ import Title from '../../components/Title/Title'
 import Countdown from '../../components/Countdown/Countdown'
 import DisplayFact from '../../components/DisplayFact/DisplayFact'
 
-const people = [
-    'Katie',
-    'Natalie',
-    'Bradley',
-    'Khang',
-    'Arshi',
-    'Amelia',
-    'Jon',
-    'Stefan',
-    'Ann-Marie',
-    'Jeremy',
-    'Patrick',
-    'Anna',
-    'Tommy',
-]
-
 export default function WhoseFact({
     roundNumber,
     facts,
     participants,
     secondsLeft,
     handleAnswer,
-    turnId,
+    // turnId,
 }) {
     return (
         <>
             <Header />
             <main className={styles.pageContainer}>
-                <Round roundNumber="1" />
+                <Round roundNumber={roundNumber} />
                 <Title text="Whose Facts?" />
 
-                <Countdown secondsLeft={20} />
+                <Countdown secondsLeft={secondsLeft} />
                 <div className={styles.factContainer}>
-                    <DisplayFact
-                        facts={[
-                            `I hate cake very very much and can't even stand to be near it`,
-                            'I once a skydive and my parachute failed but luckily a large bird saved me',
-                        ]}
-                    />
+                    <DisplayFact facts={facts} />
                 </div>
                 <div className={styles.buttonContainer}>
-                    {people.map((participant) => {
+                    {participants.map((participant) => {
                         return (
                             <button
                                 className={styles.nameButton}
@@ -59,8 +38,7 @@ export default function WhoseFact({
                                 }
                                 //toggle background color green for selected button
                             >
-                                {participant}
-                                {/* {participant.text} */}
+                                {participant.text}
                             </button>
                         )
                     })}

@@ -81,7 +81,7 @@ const useStyles = makeStyles({
     },
 })
 
-export default function CreateNewGame() {
+export default function CreateNewGame({ handleJoin }) {
     const [fact, setFact] = useState('some fact')
     const [lie, setLie] = useState('some lie')
     const [gameId, setGameId] = useState('')
@@ -89,35 +89,28 @@ export default function CreateNewGame() {
 
     const [loading, setLoading] = useState(false)
     const [success, setSuccess] = useState(false)
-    const timer = useRef()
-
-    useEffect(() => {
-        return () => {
-            clearTimeout(timer.current)
-        }
-    }, [])
 
     const { user } = useUserContext()
 
     const handleSubmit = (event) => {
         event.preventDefault()
 
+        console.log('join game button handler was clicked')
+
         if (!loading) {
             setSuccess(false)
             setLoading(true)
-            timer.current = setTimeout(() => {
-                setSuccess(true)
-                setLoading(false)
 
-                const formData = {
-                    fact,
-                    lie,
-                    gameId,
-                    user,
-                }
+            handleJoin({
+                gameId,
+                displayName: user.username,
+                playerId: user.playerId,
+                fact,
+                lie,
+            })
 
-                console.log(formData)
-            }, 2000)
+            setSuccess(true)
+            setLoading(false)
         }
     }
 

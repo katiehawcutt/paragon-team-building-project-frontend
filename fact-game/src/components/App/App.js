@@ -1,7 +1,6 @@
 import '../../globals/global.css'
 
-import css from './App.module.css'
-import CreateNewGame from '../_CreateNewGame/CreateNewGame'
+import Home from '../../pages/Home/Home'
 import FactGame from '../FactGame/FactGame'
 
 import useFactsGame from '../../hooks/useFactsGame'
@@ -18,11 +17,16 @@ export default function App() {
     }
 
     if (!factsGame.game.started) {
-        return <CreateNewGame handleClick={factsGame.createAndJoinGame} />
+        return (
+            <Home
+                handleCreate={factsGame.createAndJoinGame}
+                handleJoin={factsGame.joinExistingGame}
+            />
+        )
     }
 
     return (
-        <div className={css.App}>
+        <div>
             <FactGame
                 action={factsGame.currentStageInGame.action}
                 otherProps={factsGame.currentStageInGame.otherProps}

@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
-import Container fr../../components/Title/Title
-import Button from ../../components/Input/Input
-../../components/FactInput/FactInput
-import CreateGame from '../../fact-components/CreateGame/CreateGame'
-import JoinGame from '../../fact-components/JoinGame/JoinGame'
+import Container from '@material-ui/core/Container'
+import Button from '@material-ui/core/Button'
+// import FactInput from "../../components/FactInput/FactInput"
+import CreateGame from '../../components/CreateGame/CreateGame'
+import JoinGame from '../../components/JoinGame/JoinGame'
 
 import {
     createMuiTheme,
@@ -118,7 +118,9 @@ const theme = createMuiTheme({
     },
 })
 
-export default function Home() {
+export default function Home({ handleCreate, handleJoin }) {
+    console.log('Home rendered')
+
     const [page, setPage] = useState('')
     const classes = useStyles()
 
@@ -135,6 +137,7 @@ export default function Home() {
                 }}
             >
                 {/* Header */}
+                {/* Swap h1 for Title component */}
                 <header className={classes.header}>
                     {!page && <h1 className={classes.title}>The Facts Game</h1>}
                     {pages.CREATE === page && (
@@ -193,8 +196,12 @@ export default function Home() {
                     )}
                     {/* Create */}
 
-                    {pages.CREATE === page && <CreateGame />}
-                    {pages.JOIN === page && <JoinGame />}
+                    {pages.CREATE === page && (
+                        <CreateGame handleCreate={handleCreate} />
+                    )}
+                    {pages.JOIN === page && (
+                        <JoinGame handleJoin={handleJoin} />
+                    )}
 
                     {/* Join */}
                     {page && (
