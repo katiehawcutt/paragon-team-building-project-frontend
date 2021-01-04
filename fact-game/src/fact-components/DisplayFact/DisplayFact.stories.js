@@ -6,7 +6,7 @@ export default {
     component: DisplayFact,
 }
 
-const Template = (args) => <Title {...args} />
+const Template = (args) => <DisplayFact {...args} />
 
 export const DisplayFactStory = Template.bind({})
 DisplayFactStory.args = {

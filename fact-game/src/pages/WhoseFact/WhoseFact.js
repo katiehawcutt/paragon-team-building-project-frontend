@@ -12,7 +12,7 @@ export default function WhoseFact() {
                 <Title text="Whose Facts?" />
                 <p>10</p>
                 <div className={styles.factContainer}></div>
-                <div className={}
+                {/* <div className={} */}
             </main>
         </>
     )
