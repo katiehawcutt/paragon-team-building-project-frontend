@@ -14,6 +14,7 @@ export default function WhoseFact({
     participants,
     secondsLeft,
     handleAnswer,
+    currentChoiceId,
     // turnId,
 }) {
     const {
@@ -34,7 +35,11 @@ export default function WhoseFact({
                     {participants.map((participant) => {
                         return (
                             <button
-                                className={styles.nameButton}
+                                className={
+                                    currentChoiceId === participant.choiceId
+                                        ? styles.selectedButton
+                                        : styles.nameButton
+                                }
                                 key={participant.choiceId}
                                 onClick={() =>
                                     handleAnswer({
@@ -42,7 +47,6 @@ export default function WhoseFact({
                                         choice: participant.choiceId,
                                     })
                                 }
-                                //toggle background color green for selected button
                             >
                                 {participant.text}
                             </button>

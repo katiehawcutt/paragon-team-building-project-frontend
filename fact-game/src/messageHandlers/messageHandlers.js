@@ -15,6 +15,7 @@ export const CREATE_AND_JOIN_GAME = ({ data, setGame }) => {
         ...prev,
         gameId: data.gameId,
         responseReceived: true,
+        created: true,
     }))
 }
 
@@ -26,9 +27,18 @@ export const JOIN_GAME = ({ data, setGame }) => {
         ...prev,
         gameId: data.gameId,
         responseReceived: true,
+        created: true,
     }))
 }
 
+export const LOBBY = ({ data, setGame }) => {
+    setGame((prev) => ({
+        ...prev,
+        gameId: data.gameId,
+        responseReceived: true,
+        created: true,
+    }))
+}
 /**
  * Mark the game as having started.
  */

@@ -12,11 +12,13 @@ export default function App() {
         messageHandlers,
     })
 
+    console.log(factsGame)
+
     if (factsGame.game.error) {
         return <p>An error occcurred, please try again later.</p>
     }
 
-    if (!factsGame.game.started) {
+    if (!factsGame.game.created) {
         return (
             <Home
                 handleCreate={factsGame.createAndJoinGame}

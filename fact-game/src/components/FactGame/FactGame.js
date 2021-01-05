@@ -1,6 +1,7 @@
 import React from 'react'
 import GameLobby from '../../pages/GameLobby/GameLobby'
 import WhoseFact from '../../pages/WhoseFact/WhoseFact'
+// import AnswerSubmitted from '../AnswerSubmitted/AnswerSubmitted'
 import RevealFactTimer from '../../pages/RevealFactTimer/RevealFactTimer'
 import RevealWhoTimer from '../../pages/RevealWhoTimer/RevealWhoTimer'
 import WhoseFactReveal from '../../pages/WhoseFactReveal/WhoseFactReveal'
@@ -9,12 +10,15 @@ import FalseFactReveal from '../../pages/FalseFactReveal/FalseFactReveal'
 import Podium from '../../pages/Podium/Podium'
 
 const eventToComponentMap = {
-    GAME_STARTED: GameLobby,
+    LOBBY: GameLobby,
+    GAME_STARTED: GameLobby, //Game is starting screen
     GUESS_WHO_TIMER: WhoseFact,
+    // ANSWER: AnswerSubmitted,
     REVEAL_WHO_TIMER: RevealWhoTimer,
     REVEAL_WHO: WhoseFactReveal,
     GUESS_FAKE_FACT_TIMER: ChooseFalseFact,
     REVEAL_FAKE_FACT_TIMER: RevealFactTimer,
+    // ANSWER: AnswerSubmitted,
     REVEAL_FAKE_FACT: FalseFactReveal,
     PODIUM: Podium,
 }
