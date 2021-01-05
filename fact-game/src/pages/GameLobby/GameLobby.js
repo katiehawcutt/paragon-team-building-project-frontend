@@ -1,5 +1,7 @@
 import React from 'react'
+import cn from 'classnames'
 import styles from './GameLobby.module.css'
+
 import Header from '../../components/Header/Header'
 import Title from '../../components/Title/Title'
 import Countdown from '../../components/Countdown/Countdown'
@@ -54,7 +56,7 @@ function GameLobby({ gameId, secondsLeft }) {
     return (
         <>
             <Header />
-            <main className={styles.pageContainer}>
+            <main className={cn(styles.pageContainer, 'animateIn')}>
                 <Countdown secondsLeft={secondsLeft} />
                 <Title text="Waiting for other players to join..." />
                 <h3 className={styles.gameIdLabel}>Game ID:</h3>
@@ -79,7 +81,7 @@ function GameLobby({ gameId, secondsLeft }) {
                         className={styles.copyIcon}
                         src="./Images/copy-svg.svg"
                         alt="copy icon"
-                    ></img>
+                    />
                 </Button>
                 <Snackbar
                     open={open}

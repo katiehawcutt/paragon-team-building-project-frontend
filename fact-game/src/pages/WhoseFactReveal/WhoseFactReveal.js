@@ -1,4 +1,6 @@
 import React from 'react'
+import cn from 'classnames'
+
 import Header from '../../components/Header/Header'
 import Round from '../../components/Round/Round'
 import Title from '../../components/Title/Title'

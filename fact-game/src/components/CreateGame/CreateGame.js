@@ -120,7 +120,7 @@ export default function CreateNewGame({ handleCreate }) {
     }
     console.log(rounds)
     return (
-        <Card className={classes.card}>
+        <Card className={classnames(classes.card, 'animateIn')}>
             <form
                 noValidate
                 autoComplete="off"

@@ -143,20 +143,18 @@
     margin: 40px;
     letter-spacing: 0.2rem;
     text-align: center;
-    /* animation-name: podiumTitle;
-    animation-duration: 2s;
+    animation-name: podiumTitle;
+    animation-duration: 4s;
     animation-iteration-count: 1;
-    animation-timing-function: linear; */
+    animation-timing-function: ease-out;
 }
 
-/* @keyframes podiumTitle {
+@keyframes podiumTitle {
     0% {
-        transform: scale(0.3) rotate(0deg);
+        transform: scale(0.3);
     }
-    50% {
-        transform: scale(0.6) rotate(180deg);
-    }
+
     100% {
-        transform: scale(1) rotate(360deg);
+        transform: scale(1);
     }
-} */
+}

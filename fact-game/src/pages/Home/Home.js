@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import styles from './Home.module.css'
+import classnames from 'classnames'
+
 import Header from '../../components/Header/Header'
 import Title from '../../components/Title/Title'
 // import Container from '@material-ui/core/Container'
@@ -13,8 +15,6 @@ import {
     ThemeProvider,
     makeStyles,
 } from '@material-ui/core/styles'
-
-import classnames from 'classnames'
 
 const useStyles = makeStyles({
     header: {
@@ -52,6 +52,7 @@ const useStyles = makeStyles({
         borderRadius: '100%',
         height: '2rem',
         width: 'auto',
+        marginRight: '10px',
     },
     button: {
         transition: 'background-color 0.25s linear',
@@ -156,7 +157,12 @@ export default function Home({ handleCreate, handleJoin }) {
                 <main className={classes.main}>
                     {/* Create or join page */}
                     {!page && (
-                        <div className={classes.buttonGroup}>
+                        <div
+                            className={classnames(
+                                classes.buttonGroup,
+                                'animateIn'
+                            )}
+                        >
                             {(!page || pages.CREATE === page) && (
                                 <Button
                                     size="large"
@@ -212,7 +218,10 @@ export default function Home({ handleCreate, handleJoin }) {
                     {/* Join */}
                     {page && (
                         <Button
-                            className={classes.goBackButton}
+                            className={classnames(
+                                classes.goBackButton,
+                                'animateIn'
+                            )}
                             variant="text"
                             onClick={() => setPage('')}
                         >
