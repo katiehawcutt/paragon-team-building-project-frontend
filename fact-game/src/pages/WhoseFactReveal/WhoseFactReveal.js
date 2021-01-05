@@ -1,5 +1,5 @@
 import React from 'react'
-// import Countdown from '../../components/Countdown/Countdown'
+import Header from '../../components/Header/Header'
 import Round from '../../components/Round/Round'
 import Title from '../../components/Title/Title'
 import styles from './WhoseFactReveal.module.css'
@@ -7,14 +7,11 @@ import styles from './WhoseFactReveal.module.css'
 export default function WhoseFactReveal({ roundNumber, displayName }) {
     return (
         <>
+            <Header />
             <main className={styles.pageContainer}>
-                <div className={styles.round_countainer}>
-                    <Round roundNumber={roundNumber} />
-                </div>
-                <Title text="Whose Fact was it?" />
-                <div className={styles.nameContainer}>
-                    <span className={styles.nameLabel}>{displayName}</span>
-                </div>
+                <Round roundNumber={roundNumber} />
+                <Title text="These facts belonged to..." />
+                <div className={styles.nameContainer}>{displayName}</div>
             </main>
         </>
     )

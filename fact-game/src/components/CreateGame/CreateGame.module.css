@@ -7,10 +7,11 @@
     color: white;
 }
 
-.CreateGameButton {
+.createGameButton {
     background-color: var(--gold);
+    color: white;
 }
 
-.CreateGameButton:hover {
+.createGameButton:hover {
     background-color: var(--gold);
 }

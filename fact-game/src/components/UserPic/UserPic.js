@@ -26,8 +26,8 @@ export default function UserPic() {
     return (
         <Avatar
             className={classes.large}
-            alt="avatar img 'Tick' exmaple"
-            src="/images/Tick.png'"
+            alt="user icon"
+            src="/images/userIcon.png"
         ></Avatar>
     )
 }

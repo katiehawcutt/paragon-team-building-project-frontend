@@ -1,12 +1,29 @@
 .countdown {
-    background-color: #2e345c;
+    background-color: var(--dark-purple);
     height: 150px;
     width: 150px;
     border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fec057;
+    color: var(--yellow);
     font-size: 40px;
-    border: 5px #fec057 solid;
+    border: 5px var(--yellow) solid;
+    animation-name: countdown;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    margin: 30px;
+}
+
+@keyframes countdown {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }

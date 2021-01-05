@@ -4,7 +4,7 @@ import RevealTimer from '../../components/RevealTimer/RevealTimer'
 export default function RevealWhoTimer({ roundNumber, secondsLeft }) {
     return (
         <RevealTimer
-            title={'Whose facts were they?'}
+            title={'These facts belonged to...'}
             roundNumber={roundNumber}
             secondsLeft={secondsLeft}
         />

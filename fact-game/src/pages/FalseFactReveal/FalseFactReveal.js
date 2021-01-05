@@ -12,17 +12,14 @@ export default function FalseFactReveal({
     // secondsLeft,
     fakeFact,
 }) {
+    console.log(fakeFact)
     return (
         <>
             <Header />
             <main className={styles.pageContainer}>
-                <div className={styles.round_countainer}>
-                    <Round roundNumber={roundNumber} />
-                </div>
-                <Title text={`${displayName}'s truthy is...`} />
-                <div className={styles.displayFact_countainer}>
-                    <DisplayFact facts={fakeFact} />
-                </div>
+                <Round roundNumber={roundNumber} />
+                <Title text={`${displayName}'s fake fact is...`} />
+                <div className={styles.fakeFact}>{fakeFact[0]}</div>
             </main>
         </>
     )
