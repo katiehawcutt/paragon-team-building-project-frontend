@@ -26,7 +26,7 @@ export default function Podium({ leaderboard, winners }) {
                             <UserPic />
                             <div className={styles.banner}>
                                 <img
-                                    src="../Images/crown.png"
+                                    src="../Images/crown-resized.png"
                                     alt="crown"
                                     className={styles.crown}
                                 ></img>
