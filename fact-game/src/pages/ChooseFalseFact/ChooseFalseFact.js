@@ -1,5 +1,7 @@
 import React from 'react'
+import cn from 'classnames'
 import styles from './ChooseFalseFact.module.css'
+
 import Header from '../../components/Header/Header'
 import Round from '../../components/Round/Round'
 import Title from '../../components/Title/Title'
@@ -23,7 +25,7 @@ export default function ChooseFalseFact({
     return (
         <>
             <Header />
-            <main className={styles.pageContainer}>
+            <main className={cn(styles.pageContainer, 'animateIn')}>
                 <Round roundNumber={roundNumber} />
                 <Title text={`Which is ${displayName}'s fake fact?`} />
                 <Countdown secondsLeft={secondsLeft} />

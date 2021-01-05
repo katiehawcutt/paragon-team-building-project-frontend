@@ -117,7 +117,7 @@ export default function CreateNewGame({ handleJoin }) {
     }
 
     return (
-        <Card className={classes.card}>
+        <Card className={classnames(classes.card, 'animateIn')}>
             <form
                 noValidate
                 autoComplete="off"
