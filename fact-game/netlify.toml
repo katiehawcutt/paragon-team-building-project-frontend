@@ -1,7 +1,7 @@
 [[redirects]]
   from = "/login"
-  to = "/index.html"
+  to = "/"
   
 [[redirects]]
   from = "/after-logout"
-  to = "/index.html"
+  to = "/"
