@@ -1,0 +1,32 @@
+.pageContainer {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    height: auto;
+    position: static;
+    top: 10%;
+    width: 100%;
+}
+
+.title {
+    position: absolute;
+}
+
+.subHeader {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gameCardContainer {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 15px;
+}

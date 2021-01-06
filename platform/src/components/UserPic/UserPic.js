@@ -3,5 +3,5 @@ import React from 'react'
 import { Avatar } from '@chakra-ui/react'
 
 export default function UserPic() {
-    return <Avatar name="user" src="../../Images/userIcon.png" />
+    return <Avatar name="user" src="/images/userIcon.png" />
 }
