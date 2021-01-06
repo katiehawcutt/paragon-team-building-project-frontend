@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+
+.card {
+    width: 280px;
+    height: 300px;
+    background-color: white;
+    box-shadow: 8px 8px 13px 3px #b9b7b7;
+}
+
+.gameTitle {
+    font-family: Sen;
+    text-align: center;
+    color: black; /* needs changing to #979797 (black for storybook purposes) */
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.gameIcon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 8px 2px #b9b7b7;
+}
+
+.iconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.gameDescription {
+    font-family: Sen;
+    text-align: center;
+    color: black; /* needs changing to #979797 (black for storybook purposes) */
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
