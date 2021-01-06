@@ -9,4 +9,6 @@ export default {
 const Template = (args) => <Carousel1 {...args} />
 
 export const Carousel1Story = Template.bind({})
-Carousel1Story.args = {}
+Carousel1Story.args = {
+    link: [`https://gartic.io/`],
+}

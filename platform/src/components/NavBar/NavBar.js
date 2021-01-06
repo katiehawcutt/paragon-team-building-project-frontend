@@ -24,9 +24,9 @@ export default function NavBar() {
                         Cohort
                     </NavLink>
                 </NavMenu>
-                <NavBtn>
+                {/* <NavBtn>
                     <NavBtnLink to="/Profile"></NavBtnLink>
-                </NavBtn>
+                </NavBtn> */}
             </Nav>
         </>
     )
