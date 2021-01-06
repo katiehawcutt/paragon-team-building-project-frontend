@@ -1,16 +1,14 @@
-import React from 'react'
-import Button from './Button'
+// import React from 'react'
+// import Button from './Button'
 
-export default {
-    title: 'Button',
-    component: Button,
-}
+// export default {
+//     title: 'Button',
+//     component: Button,
+// }
 
-const Template = (args) => <Button {...args} />
+// const Template = (args) => <Button {...args} />
 
-export const ButtonStory = Template.bind({})
-ButtonStory.args = {
-  text: [
-    `Play now!',
-],
-}
+// export const ButtonStory = Template.bind({})
+// ButtonStory.args = {
+//     text: ['Play now!'],
+// }

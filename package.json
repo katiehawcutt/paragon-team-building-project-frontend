@@ -19,5 +19,10 @@
   "homepage": "https://github.com/SchoolOfCode/front-end-final-project-paragon#readme",
   "devDependencies": {
     "eslint-config-prettier": "^7.0.0"
+  },
+  "dependencies": {
+    "react-icons": "^4.1.0",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.2.1"
   }
 }

@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from './Title.module.css'
 
-function Title({ text }) {
+function Title() {
     return (
         <div>
-            <h1 className={styles.title}>{text}</h1>
+            <h1 className={styles.title}>Hello</h1>
         </div>
     )
 }
