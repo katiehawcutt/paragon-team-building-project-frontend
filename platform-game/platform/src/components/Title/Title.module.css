@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+
 .title {
     font-family: Sen;
-    color: #ffffff;
+    font-size: 60px;
+    color: black;
+    display: flex;
+    align-content: center;
 }
