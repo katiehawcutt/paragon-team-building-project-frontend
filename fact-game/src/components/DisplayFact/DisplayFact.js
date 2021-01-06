@@ -6,7 +6,7 @@ function DisplayFact({ facts }) {
         <>
             {facts.map((fact, i) => {
                 return (
-                    <div className={styles.factContainer}>
+                    <div className={styles.factContainer} key={i}>
                         <div key={i}>{fact}</div>
                     </div>
                 )

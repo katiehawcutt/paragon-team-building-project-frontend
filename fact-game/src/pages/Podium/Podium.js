@@ -1,5 +1,7 @@
 import React from 'react'
+import cn from 'classnames'
 import styles from './Podium.module.css'
+
 import Header from '../../components/Header/Header'
 import UserPic from '../../components/UserPic/UserPic'
 import Leaderboard from '../../components/Leaderboard/Leaderboard'
@@ -8,7 +10,7 @@ export default function Podium({ leaderboard, winners }) {
     return (
         <>
             <Header />
-            <div className={styles.pageContainer}>
+            <div className={cn(styles.pageContainer, 'animateIn')}>
                 <main className={styles.mainContainer}>
                     <div className={styles.podium_container}>
                         <div className={styles.thirdPlace_container}>
@@ -26,7 +28,7 @@ export default function Podium({ leaderboard, winners }) {
                             <UserPic />
                             <div className={styles.banner}>
                                 <img
-                                    src="../Images/crown.png"
+                                    src="../Images/crown-resized.png"
                                     alt="crown"
                                     className={styles.crown}
                                 ></img>

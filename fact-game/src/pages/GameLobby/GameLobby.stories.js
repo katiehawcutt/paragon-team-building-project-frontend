@@ -10,4 +10,6 @@ export default {
 const Template = (args) => <GameLobby {...args} />
 
 export const PodiumStory = Template.bind({})
-PodiumStory.args = {}
+PodiumStory.args = {
+    gameId: 123456,
+}

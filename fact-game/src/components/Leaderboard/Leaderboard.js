@@ -7,7 +7,7 @@ export default function LeaderBoard({ leaderboard }) {
             <table className={styles.leaderTable}>
                 <thead>
                     <tr className={styles.tableHeadingsRow}>
-                        <th className={styles.tableHeading} colspan="3">
+                        <th className={styles.tableHeading} colSpan="3">
                             Leaderboard
                         </th>
                     </tr>

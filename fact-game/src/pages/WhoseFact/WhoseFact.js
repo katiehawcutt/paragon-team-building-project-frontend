@@ -1,5 +1,7 @@
 import React from 'react'
+import cn from 'classnames'
 import styles from './WhoseFact.module.css'
+
 import Header from '../../components/Header/Header'
 import Round from '../../components/Round/Round'
 import Title from '../../components/Title/Title'
@@ -14,7 +16,7 @@ export default function WhoseFact({
     participants,
     secondsLeft,
     handleAnswer,
-    // turnId,
+    currentChoiceId,
 }) {
     const {
         user: { playerId },
@@ -22,7 +24,7 @@ export default function WhoseFact({
     return (
         <>
             <Header />
-            <main className={styles.pageContainer}>
+            <main className={cn(styles.pageContainer, 'animateIn')}>
                 <Round roundNumber={roundNumber} />
                 <Title text="Whose Facts?" />
 
@@ -34,7 +36,11 @@ export default function WhoseFact({
                     {participants.map((participant) => {
                         return (
                             <button
-                                className={styles.nameButton}
+                                className={
+                                    currentChoiceId === participant.choiceId
+                                        ? styles.selectedButton
+                                        : styles.nameButton
+                                }
                                 key={participant.choiceId}
                                 onClick={() =>
                                     handleAnswer({
@@ -42,7 +48,6 @@ export default function WhoseFact({
                                         choice: participant.choiceId,
                                     })
                                 }
-                                //toggle background color green for selected button
                             >
                                 {participant.text}
                             </button>

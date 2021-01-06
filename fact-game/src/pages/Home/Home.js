@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import styles from './Home.module.css'
+import classnames from 'classnames'
+
 import Header from '../../components/Header/Header'
 import Title from '../../components/Title/Title'
-// import Container from '@material-ui/core/Container'
 import Button from '@material-ui/core/Button'
-// import FactInput from "../../components/FactInput/FactInput"
 import CreateGame from '../../components/CreateGame/CreateGame'
 import JoinGame from '../../components/JoinGame/JoinGame'
 
@@ -13,8 +13,6 @@ import {
     ThemeProvider,
     makeStyles,
 } from '@material-ui/core/styles'
-
-import classnames from 'classnames'
 
 const useStyles = makeStyles({
     header: {
@@ -52,6 +50,7 @@ const useStyles = makeStyles({
         borderRadius: '100%',
         height: '2rem',
         width: 'auto',
+        marginRight: '10px',
     },
     button: {
         transition: 'background-color 0.25s linear',
@@ -81,7 +80,6 @@ const useStyles = makeStyles({
     goBackButton: {
         padding: '0.8rem',
         borderRadius: '1rem',
-        // boxShadow: '0px 0px 2px 1px rgba(0, 0, 0, 0.25)',
         boxShadow: '6px 7px 10px 2px rgba(0, 0, 0, 0.25)',
         textShadow: '5px 3px 3px rgba(0, 0, 0, 0.25)',
         color: '#FFFFFF',
@@ -124,28 +122,13 @@ const theme = createMuiTheme({
 })
 
 export default function Home({ handleCreate, handleJoin }) {
-    console.log('Home rendered')
-
     const [page, setPage] = useState('')
     const classes = useStyles()
 
     return (
         <ThemeProvider theme={theme}>
-            {/* <Container
-                style={{
-                    backgroundColor: 'var(--dark-purple)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    minHeight: 'calc(100vh - 60px)',
-                    width: '100vw',
-                    padding: '0',
-                    maxWidth: '',
-                }}
-            > */}
             <Header />
             <div className={styles.pageContainer}>
-                {/* Header */}
-                {/* Swap h1 for Title component */}
                 <header className={classes.header}>
                     {!page && <Title text="The Fact Game" />}
                     {pages.CREATE === page && <Title text="Create New Game" />}
@@ -156,7 +139,12 @@ export default function Home({ handleCreate, handleJoin }) {
                 <main className={classes.main}>
                     {/* Create or join page */}
                     {!page && (
-                        <div className={classes.buttonGroup}>
+                        <div
+                            className={classnames(
+                                classes.buttonGroup,
+                                'animateIn'
+                            )}
+                        >
                             {(!page || pages.CREATE === page) && (
                                 <Button
                                     size="large"
@@ -212,7 +200,10 @@ export default function Home({ handleCreate, handleJoin }) {
                     {/* Join */}
                     {page && (
                         <Button
-                            className={classes.goBackButton}
+                            className={classnames(
+                                classes.goBackButton,
+                                'animateIn'
+                            )}
                             variant="text"
                             onClick={() => setPage('')}
                         >

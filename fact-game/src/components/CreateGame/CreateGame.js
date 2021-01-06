@@ -78,7 +78,6 @@ const useStyles = makeStyles({
             backgroundColor: '#f3b063',
             opacity: '0.5',
         },
-        textTransform: 'none',
         padding: '0.8rem',
         fontSize: '1.1rem',
         boxShadow: '6px 7px 10px 2px rgba(0, 0, 0, 0.25)',
@@ -104,23 +103,22 @@ export default function CreateNewGame({ handleCreate }) {
     const handleSubmit = (event) => {
         event.preventDefault()
 
-        console.log('create game button handler was clicked')
-
         if (!loading) {
             setSuccess(false)
             setLoading(true)
 
             handleCreate({
-                displayName: user.username,
+                displayName: user.displayName,
                 playerId: user.playerId,
                 fact,
                 lie,
+                rounds,
             })
         }
     }
 
     return (
-        <Card className={classes.card}>
+        <Card className={classnames(classes.card, 'animateIn')}>
             <form
                 noValidate
                 autoComplete="off"

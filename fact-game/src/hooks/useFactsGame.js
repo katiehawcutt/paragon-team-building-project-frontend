@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import useWebSocket from 'react-use-websocket'
 
 const tryToParseJson = (json) => {
@@ -16,6 +16,7 @@ export default function useFactsGame({ webSocketUrl, messageHandlers }) {
     const [game, setGame] = useState({
         error: null,
         started: false,
+        created: false,
         gameId: null,
         requestSent: false,
         responseReceived: false,
@@ -27,9 +28,7 @@ export default function useFactsGame({ webSocketUrl, messageHandlers }) {
     const { sendJsonMessage, lastJsonMessage } = useWebSocket(webSocketUrl, {
         retryOnError: true,
         shouldReconnect: (e) => e.di,
-        onOpen(event) {
-            console.log('Opened web socket connection', event)
-        },
+        onOpen(event) {},
         onMessage(event) {
             /**
              * Try to parse message. If there's an error, log and return early.
@@ -54,17 +53,38 @@ export default function useFactsGame({ webSocketUrl, messageHandlers }) {
         },
     })
 
-    const { action, ...otherProps } = lastJsonMessage ?? {}
+    //Keep track of last message that isn't action:ANSWER
+    //If the last message has an action of ANSWER we want to update the currentSubmittedAnswer property within the object returned from the useFacts game
+    // If not, continue doing what we're doing - destructure action and props from lastJsonMesaage
+
+    const [lastNonAnswerMessage, setLastNonAnswerMessage] = useState()
+
+    const [lastAnswerMessage, setLastAnswerMessage] = useState()
+
+    useEffect(() => {
+        if (lastJsonMessage?.action === 'ANSWER') {
+            setLastAnswerMessage(lastJsonMessage)
+        } else {
+            setLastNonAnswerMessage(lastJsonMessage)
+        }
+    }, [lastJsonMessage])
+
+    const { action, ...otherProps } = lastNonAnswerMessage ?? {}
 
     return {
         game,
         currentStageInGame: {
             action,
-            otherProps,
+            otherProps: {
+                ...otherProps,
+                currentChoiceId: lastAnswerMessage?.choice,
+            },
         },
-        createAndJoinGame({ displayName, fact, lie, playerId }) {
+
+        createAndJoinGame({ displayName, fact, lie, playerId, rounds }) {
             sendJsonMessage({
                 action: 'CREATE_AND_JOIN_GAME',
+                rounds,
                 player: { displayName, fact, lie, playerId },
             })
             setGame((prev) => ({ ...prev, requestSent: true }))
