@@ -110,7 +110,7 @@ export default function CreateNewGame({ handleCreate }) {
             setLoading(true)
 
             handleCreate({
-                displayName: user.username,
+                displayName: user.displayName,
                 playerId: user.playerId,
                 fact,
                 lie,

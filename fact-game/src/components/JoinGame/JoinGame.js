@@ -105,7 +105,7 @@ export default function CreateNewGame({ handleJoin }) {
 
             handleJoin({
                 gameId,
-                displayName: user.username,
+                displayName: user.displayName,
                 playerId: user.playerId,
                 fact,
                 lie,
