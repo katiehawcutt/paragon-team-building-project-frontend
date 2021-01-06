@@ -17,7 +17,6 @@ export default function ChooseFalseFact({
     handleAnswer,
     secondsLeft,
     currentChoiceId,
-    // turnId,
 }) {
     const {
         user: { playerId },

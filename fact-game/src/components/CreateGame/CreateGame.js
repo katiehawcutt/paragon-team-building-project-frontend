@@ -103,8 +103,6 @@ export default function CreateNewGame({ handleCreate }) {
     const handleSubmit = (event) => {
         event.preventDefault()
 
-        console.log('create game button handler was clicked')
-
         if (!loading) {
             setSuccess(false)
             setLoading(true)
@@ -118,7 +116,7 @@ export default function CreateNewGame({ handleCreate }) {
             })
         }
     }
-    console.log(rounds)
+
     return (
         <Card className={classnames(classes.card, 'animateIn')}>
             <form

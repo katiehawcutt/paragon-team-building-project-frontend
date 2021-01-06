@@ -11,11 +11,6 @@ import FormControl from '@material-ui/core/FormControl'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import CheckIcon from '@material-ui/icons/Check'
 
-// import {
-//     MINIMUM_GAME_ROUNDS,
-//     MAXIMUM_GAME_ROUNDS,
-// } from '../../constants/gameCreation'
-
 import classnames from 'classnames'
 import { useUserContext } from '../../contexts/User'
 
@@ -96,8 +91,6 @@ export default function CreateNewGame({ handleJoin }) {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-
-        console.log('join game button handler was clicked')
 
         if (!loading) {
             setSuccess(false)

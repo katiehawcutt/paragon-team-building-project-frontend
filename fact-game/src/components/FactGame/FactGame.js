@@ -11,14 +11,12 @@ import Podium from '../../pages/Podium/Podium'
 
 const eventToComponentMap = {
     LOBBY: GameLobby,
-    GAME_STARTED: GameLobby, //Game is starting screen
+    GAME_STARTED: GameLobby, //create game is starting now page
     GUESS_WHO_TIMER: WhoseFact,
-    // ANSWER: AnswerSubmitted,
     REVEAL_WHO_TIMER: RevealWhoTimer,
     REVEAL_WHO: WhoseFactReveal,
     GUESS_FAKE_FACT_TIMER: ChooseFalseFact,
     REVEAL_FAKE_FACT_TIMER: RevealFactTimer,
-    // ANSWER: AnswerSubmitted,
     REVEAL_FAKE_FACT: FalseFactReveal,
     PODIUM: Podium,
 }
@@ -26,8 +24,6 @@ const eventToComponentMap = {
 export default function FactGame({ action, otherProps, handleAnswer }) {
     const ComponentToLoad = eventToComponentMap[action]
     const combinedProps = { ...otherProps, handleAnswer }
-
-    console.log('rendered FactGame')
 
     if (ComponentToLoad) {
         return <ComponentToLoad {...combinedProps} />

@@ -13,8 +13,6 @@ export default function App() {
         messageHandlers,
     })
 
-    console.log(factsGame)
-
     if (factsGame.game.error) {
         return <p>An error occcurred, please try again later.</p>
     }

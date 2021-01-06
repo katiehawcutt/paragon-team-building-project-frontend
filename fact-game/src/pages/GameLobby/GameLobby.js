@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
         '&:hover': {
             backgroundColor: '#f3b063',
         },
-        color: 'white',
         width: 'fit-content',
         padding: '1rem 3rem',
         fontFamily: 'Questrial, sans-serif',

@@ -17,7 +17,6 @@ export default function WhoseFact({
     secondsLeft,
     handleAnswer,
     currentChoiceId,
-    // turnId,
 }) {
     const {
         user: { playerId },
