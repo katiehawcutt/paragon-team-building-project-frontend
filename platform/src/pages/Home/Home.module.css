@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+
+.button_container {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    position: absolute;
+    top: 30%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    font-family: 'Sen';
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-transform: capitalize;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+.subtitle {
+    font-family: Sen;
+    font-size: 40px;
+    padding: 1em 2em 0.5em 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7b7b7b;
+}
+
+.underline {
+    background-color: #7b7b7b;
+    height: 0.5vh;
+    width: 3vw;
+    margin: auto;
+    border-radius: 45px;
+}
+
+.text_container {
+    padding: 0em 8em;
+    /* Need to remove height within button component */
+}
