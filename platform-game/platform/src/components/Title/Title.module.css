@@ -2,5 +2,10 @@
 
 .title {
     font-family: Sen;
-    color: #333333;
+    font-size: 60px;
+    height: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black; /* needs changing to #FFFFFF (black is so we can see the text on storybook) */
 }
