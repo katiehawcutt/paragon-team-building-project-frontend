@@ -1,0 +1,20 @@
+.button1 {
+    width: 17vw;
+    height: 10vh;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-family: 'Sen';
+    border-radius: 2rem;
+    overflow: auto;
+    background-color: #fe4042;
+    color: white;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 5px 3px 3px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    font-size: 20px;
+    border: none;
+    margin: auto;
+}
