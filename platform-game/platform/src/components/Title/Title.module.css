@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+
 .title {
     font-family: Sen;
     font-size: 60px;
@@ -7,4 +8,5 @@
     align-items: center;
     justify-content: center;
     color: black; /* needs changing to #FFFFFF (black is so we can see the text on storybook) */
+
 }
