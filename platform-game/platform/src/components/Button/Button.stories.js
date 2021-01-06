@@ -10,5 +10,5 @@ const Template = (args) => <Button {...args} />
 
 export const ButtonStory = Template.bind({})
 ButtonStory.args = {
+
     text: [`Play Now!`],
-}

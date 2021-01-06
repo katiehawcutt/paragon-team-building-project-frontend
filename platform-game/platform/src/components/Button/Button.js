@@ -1,3 +1,4 @@
+
 import React from 'react'
 import styles from './Button.module.css'
 // import { Icon } from '@chakra-ui/react'
@@ -28,4 +29,4 @@ function Button({ color, text, selected, handleClick }) {
 
 export default Button
 
-//Todo - change hardcoded data
+
