@@ -2,7 +2,7 @@ import React from 'react'
 import Subtitle from './Subtitle'
 
 export default {
-    Subtitle: 'Subtitle',
+    title: 'Subtitle',
     component: Subtitle,
 }
 
