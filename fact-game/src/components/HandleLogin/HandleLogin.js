@@ -1,8 +1,5 @@
-'use strict'
-
 import React, { useEffect, useState } from 'react'
-
-import { useLocation } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 
 import { useUserContext } from '../../contexts/User'
 import { useAwsCognitoHostedUi } from '../../hooks/useAwsCognitoHostedUi'
@@ -13,42 +10,50 @@ import { useAwsCognitoHostedUi } from '../../hooks/useAwsCognitoHostedUi'
  *  2. If code is present amongst query parameters, make POST request for tokens.
  */
 export const HandleLogin = () => {
-    const queryString = useLocation().search
-    const queryParams = new URLSearchParams(queryString)
+    const [token, setToken] = useState(null)
+
     const {
         userNeedsToBeRedirected,
         tokenCanBeRequested,
-        redirectToAwsCognitoLogIn,
+        redirectToAwsCognitoLogin,
         createRequestForToken,
+        createRequestForUserInfo,
+        authorisationCode,
     } = useAwsCognitoHostedUi()
 
-    const { setUser } = useUserContext()
+    const { user, setUser } = useUserContext()
 
     /**
      * Redirect the user if there's no code.
      */
     useEffect(() => {
-        // const userNeedsToBeRedirected = !queryParams.has('code')
         if (userNeedsToBeRedirected) {
-            redirectToAwsCognitoLogIn()
+            console.log('Would redirect user now')
+            redirectToAwsCognitoLogin()
         }
-    }, [])
+    }, [userNeedsToBeRedirected, redirectToAwsCognitoLogin])
 
     /**
      * User has returned (from signing in over at AWS Cognito). There should be a `code`
      * query string parameter, which we need to exchange for a token.
      */
     useEffect(() => {
-        // const tokenCanBeRequested = queryParams.has('code')
-        if (!tokenCanBeRequested) {
+        if (token || !tokenCanBeRequested) {
             return
         }
-        const code = queryParams.get('code')
-        const { fetchToken, cancelFetchToken } = createRequestForToken(code)
+
+        const { fetchToken, cancelFetchToken } = createRequestForToken(
+            authorisationCode
+        )
 
         fetchToken()
             .then((token) => {
                 console.log('Token, is that you?', token)
+                if (token.error) {
+                    const errorMessage = `Failed to log in to AWS Cognito: ${token.error}`
+                    throw new Error(errorMessage)
+                }
+                setToken(token)
             })
             .catch(console.error)
 
@@ -56,13 +61,39 @@ export const HandleLogin = () => {
          * Clean up function for unmount/re-render.
          */
         return cancelFetchToken
-    }, [])
+    }, [tokenCanBeRequested, createRequestForToken])
 
+    /**
+     * If we have token, request user's info.
+     */
     useEffect(() => {
+        if (!token) {
+            return void setUser(null)
+        }
+        const { fetchUserInfo, cancelFetch } = createRequestForUserInfo(
+            token.access_token
+        )
+
+        fetchUserInfo()
+            .then((userInfo) => {
+                console.log('User info retrieved', userInfo)
+                setUser((prev) => ({
+                    ...prev,
+                    playerId: userInfo.sub,
+                    displayName: userInfo.name,
+                }))
+            })
+            .catch(console.error)
+
         /**
-         * Update the token
+         * Clean up function for unmount/re-render.
          */
-    }, [])
+        return cancelFetch
+    }, [token, createRequestForUserInfo])
+
+    if (user) {
+        return <Redirect to="/" />
+    }
 
     return <p>Just getting you logged in...</p>
 }

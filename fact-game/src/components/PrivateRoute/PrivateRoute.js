@@ -6,7 +6,7 @@ import { useUserContext } from '../../contexts/User'
 
 export const PrivateRoute = ({ component: Component, ...routeProps }) => {
     const { user } = useUserContext()
-    const { sendUserToAwsCognitoLogInUrl } = useAwsCognitoHostedUi()
+    const { redirectToAwsCognitoLogin } = useAwsCognitoHostedUi()
 
     return (
         <Route
@@ -15,7 +15,7 @@ export const PrivateRoute = ({ component: Component, ...routeProps }) => {
                 if (user) {
                     return <Component {...props} />
                 }
-                sendUserToAwsCognitoLogInUrl()
+                redirectToAwsCognitoLogin()
                 return null
             }}
         />
