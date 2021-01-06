@@ -11,7 +11,7 @@ export default function GameCard({ image }) {
             <div className={styles.iconContainer}>
                 <img
                     className={styles.gameIcon}
-                    name="Gartic Game Icon"
+                    alt="Gartic Game Icon"
                     src="https://gartic.io/static/images/thumb.png?v=10"
                 />
             </div>
