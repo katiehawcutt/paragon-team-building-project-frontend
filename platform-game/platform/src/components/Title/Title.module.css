@@ -8,4 +8,5 @@
     align-items: center;
     justify-content: center;
     color: black; /* needs changing to #FFFFFF (black is so we can see the text on storybook) */
+
 }
