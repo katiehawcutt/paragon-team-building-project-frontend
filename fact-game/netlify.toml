@@ -1,7 +1,0 @@
-[[redirects]]
-  from = "/login"
-  to = "/"
-  
-[[redirects]]
-  from = "/after-logout"
-  to = "/"
