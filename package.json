@@ -3,9 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
-    "scripts": {
-        "build": "cd ./fact-game && npm run build"
-    },
+    "scripts": {},
     "repository": {
         "type": "git",
         "url": "git+https://github.com/SchoolOfCode/front-end-final-project-paragon.git"
