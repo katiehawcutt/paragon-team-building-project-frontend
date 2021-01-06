@@ -3,18 +3,20 @@ import styles from './Button.module.css'
 // import { Icon } from '@chakra-ui/react'
 // import { FaGooglePlay } from 'react-icons/fa'
 
-function Button({ color, text, selected, handleClick }) {
+function Button({ color, text, link }) {
     return (
         <button
             className={styles.button1}
             style={{ backgroundColor: { color } }}
-            onClick={handleClick}
+            onClick={() => {
+                window.open(link)
+            }}
         >
             {text}
         </button>
     )
 
-    // ;<Stack direction="row" spacing={4}>
+    // <Stack direction="row" spacing={4}>
     //     <Button
     //         leftIcon={<FaGooglePlay />}
     //         colorScheme="#FE4042"

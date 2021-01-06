@@ -2,10 +2,10 @@ import React from 'react'
 import './App.css'
 import NavBar from './components/NavBar/NavBar.js'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Home from './pages/Home'
-import Games from './pages/Games'
-import Cohort from './pages/Cohort'
-import Profile from './pages/Profile'
+import Home from './pages/Home/Home'
+import Games from './pages/Games/Games'
+import Cohort from './pages/Cohort/Cohort'
+import Profile from './pages/Profile/Profile'
 
 function App() {
     return (
