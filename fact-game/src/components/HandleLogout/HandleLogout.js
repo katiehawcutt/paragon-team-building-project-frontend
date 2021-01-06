@@ -11,7 +11,7 @@ export const HandleLogout = () => {
             setUser(null)
             redirectToAwsCognitoLogout()
         }
-    }, [])
+    }, [redirectToAwsCognitoLogout, user, setUser])
 
     if (user) {
         return <p>Just logging you out...</p>

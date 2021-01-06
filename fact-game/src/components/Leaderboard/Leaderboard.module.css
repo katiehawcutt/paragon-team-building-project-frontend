@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
-
 .leaderTable {
     background-color: #6d44d9;
     border-radius: 10px;
@@ -14,7 +12,7 @@
     padding: 20px;
     height: 60px;
     font-size: 30px;
-    font-family: 'Questrial', sans-serif;
+    font-family: var(--primary-font);
 }
 
 .tableHeading {
@@ -22,11 +20,11 @@
     color: white;
     font-weight: 20;
     letter-spacing: 3px;
-    font-family: 'Questrial', sans-serif;
+    font-family: var(--primary-font);
 }
 
 .tableData {
-    font-family: 'Questrial', sans-serif;
+    font-family: var(--primary-font);
     font-size: 25px;
     font-weight: small;
     letter-spacing: 3px;
@@ -34,7 +32,7 @@
 }
 
 .leaderboardOrder {
-    font-family: 'Questrial', sans-serif;
+    font-family: var(--primary-font);
     font-size: 30px;
     padding: 15px;
     text-align: center;

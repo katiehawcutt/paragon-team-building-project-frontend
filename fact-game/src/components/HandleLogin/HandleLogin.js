@@ -28,7 +28,6 @@ export const HandleLogin = () => {
      */
     useEffect(() => {
         if (userNeedsToBeRedirected) {
-            console.log('Would redirect user now')
             redirectToAwsCognitoLogin()
         }
     }, [userNeedsToBeRedirected, redirectToAwsCognitoLogin])
@@ -48,7 +47,6 @@ export const HandleLogin = () => {
 
         fetchToken()
             .then((token) => {
-                console.log('Token, is that you?', token)
                 if (token.error) {
                     const errorMessage = `Failed to log in to AWS Cognito: ${token.error}`
                     throw new Error(errorMessage)
@@ -61,7 +59,7 @@ export const HandleLogin = () => {
          * Clean up function for unmount/re-render.
          */
         return cancelFetchToken
-    }, [tokenCanBeRequested, createRequestForToken])
+    }, [tokenCanBeRequested, createRequestForToken, authorisationCode, token])
 
     /**
      * If we have token, request user's info.
@@ -76,7 +74,6 @@ export const HandleLogin = () => {
 
         fetchUserInfo()
             .then((userInfo) => {
-                console.log('User info retrieved', userInfo)
                 setUser((prev) => ({
                     ...prev,
                     playerId: userInfo.sub,
@@ -89,7 +86,7 @@ export const HandleLogin = () => {
          * Clean up function for unmount/re-render.
          */
         return cancelFetch
-    }, [token, createRequestForUserInfo])
+    }, [token, createRequestForUserInfo, setUser])
 
     if (user) {
         return <Redirect to="/" />
