@@ -6,47 +6,13 @@
     align-items: center;
 }
 
-.hourglassImage {
-    width: 10rem;
-    margin-top: 50px;
-    animation-name: hourglass;
-    animation-duration: 2.5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-@keyframes hourglass {
-    0% {
-        rotate: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.gameId {
-    width: fit-content;
-    padding: 1rem 3rem;
-    font-family: var(--primary-font);
-    border-radius: 2rem;
-    background-color: var(--gold);
-    box-shadow: var(--box-shadow);
-    margin: 2rem;
-    margin-top: 2rem;
-    text-shadow: var(--text-shadow);
-    color: white;
-    font-size: 20px;
-    letter-spacing: 0.2rem;
-    margin: 0.9rem;
-    display: flex;
-}
-
 .gameIdLabel {
     font-family: var(--primary-font);
     text-shadow: var(--text-shadow);
     color: white;
     font-size: 25px;
     letter-spacing: 0.2rem;
+    margin-top: 50px;
 }
 
 .copyIcon {

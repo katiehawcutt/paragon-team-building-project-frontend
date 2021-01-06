@@ -115,21 +115,35 @@
     left: 60px;
     bottom: 350px;
     transform: rotate(23deg);
-    animation-name: crown;
+    /* animation-name: crown-bobbing; */
+    animation-name: crown-falling;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
 }
-
-@keyframes crown {
+/* 
+@keyframes crown-bobbing {
     0% {
         transform: scale(1) rotate(23deg);
+        bottom: 500px;
     }
     50% {
         transform: scale(1.1) rotate(23deg);
+        bottom: 400px;
     }
     100% {
         transform: scale(1) rotate(23deg);
+        bottom: 350px;
+    }
+} */
+
+@keyframes crown-falling {
+    0% {
+        bottom: 500px;
+    }
+
+    100% {
+        bottom: 350px;
     }
 }
 

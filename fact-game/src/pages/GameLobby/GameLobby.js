@@ -24,13 +24,13 @@ const useStyles = makeStyles((theme) => ({
         width: 'fit-content',
         padding: '1rem 3rem',
         fontFamily: 'Questrial, sans-serif',
-        borderRadius: '2rem',
+        borderRadius: '1rem',
         boxShadow: '0 4px 4px rgba(0, 0, 0, 0.25)',
         margin: '2rem',
         marginTop: '2rem',
         textShadow: '5px 3px 3px rgba(0, 0, 0, 0.25)',
         color: 'white',
-        fontSize: '30px',
+        fontSize: '20px',
         letterSpacing: '0.2rem',
         transition: 'background-color 0.25s linear',
     },
@@ -91,12 +91,6 @@ function GameLobby({ gameId, secondsLeft }) {
                         Game ID copied!
                     </Alert>
                 </Snackbar>
-
-                <img
-                    className={styles.hourglassImage}
-                    src="./Images/hourglass.png"
-                    alt="spinning eggtimer"
-                ></img>
             </main>
         </>
     )
