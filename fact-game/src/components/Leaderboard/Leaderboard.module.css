@@ -1,14 +1,14 @@
 .leaderTable {
-    background-color: #6d44d9;
+    background-color: var(--lightish-purple);
     border-radius: 10px;
     width: 400px;
     padding: 10px;
     text-align: center;
-    margin: 30px;
+    margin: 20px;
 }
 
 .tableHeadingsRow {
-    background-color: #6d44d9;
+    background-color: var(--lightish-purple);
     padding: 20px;
     height: 60px;
     font-size: 30px;
@@ -21,11 +21,12 @@
     font-weight: 20;
     letter-spacing: 3px;
     font-family: var(--primary-font);
+    font-size: 28px;
 }
 
 .tableData {
     font-family: var(--primary-font);
-    font-size: 25px;
+    font-size: 20px;
     font-weight: small;
     letter-spacing: 3px;
     padding: 15px;
@@ -41,7 +42,22 @@
 .circle {
     height: 37px;
     width: 37px;
-    background-color: #fec057;
+    background-color: var(--light-purple);
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    padding: 3px;
+    box-shadow: 2.2px 2.2px 2.2px rgb(70, 69, 69);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circleTopThree {
+    height: 37px;
+    width: 37px;
+    background-color: var(--yellow);
     border-radius: 50%;
     display: inline-block;
     text-align: center;

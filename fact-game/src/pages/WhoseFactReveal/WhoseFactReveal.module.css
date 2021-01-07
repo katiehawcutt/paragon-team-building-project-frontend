@@ -10,7 +10,7 @@
     width: fit-content;
     padding: 1rem 3rem;
     font-family: var(--primary-font);
-    border-radius: 2rem;
+    border-radius: 1rem;
     background-color: var(--gold);
     box-shadow: var(--box-shadow);
     margin: 2rem;
@@ -28,12 +28,12 @@
 
 @keyframes name {
     0% {
-        transform: scale(0.3) rotate(0deg);
+        transform: scale(0.1);
     }
     50% {
-        transform: scale(0.6) rotate(180deg);
+        transform: scale(0.5);
     }
     100% {
-        transform: scale(1) rotate(360deg);
+        transform: scale(1);
     }
 }
