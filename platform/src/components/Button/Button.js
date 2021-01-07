@@ -1,11 +1,27 @@
 import React from 'react'
 import styles from './Button.module.css'
-// import { Icon } from '@chakra-ui/react'
-// import { FaGooglePlay } from 'react-icons/fa'
+import { Icon } from '@chakra-ui/react'
+import { FaGooglePlay } from 'react-icons/fa'
+import { Button as ButtonChak, ButtonGroup } from '@chakra-ui/react'
 
 function Button({ color, text, link }) {
     return (
-        <button
+        //     <button
+        //         className={styles.button1}
+        //         style={{ backgroundColor: { color } }}
+        //         onClick={() => {
+        //             window.open(link)
+        //         }}
+        //     >
+        //         {text}
+        //     </button>
+        // )
+
+        <ButtonChak
+            leftIcon={<FaGooglePlay />}
+            colorScheme="#FE4042"
+            size="lg"
+            variant="solid"
             className={styles.button1}
             style={{ backgroundColor: { color } }}
             onClick={() => {
@@ -13,19 +29,8 @@ function Button({ color, text, link }) {
             }}
         >
             {text}
-        </button>
+        </ButtonChak>
     )
-
-    // <Stack direction="row" spacing={4}>
-    //     <Button
-    //         leftIcon={<FaGooglePlay />}
-    //         colorScheme="#FE4042"
-    //         size="lg"
-    //         variant="solid"
-    //     >
-    //         {text}
-    //     </Button>
-    // </Stack>
 }
 
 export default Button

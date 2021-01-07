@@ -10,7 +10,7 @@ import bgImg from '../../Images_2/game-controller-bg.png'
 import NavBar from '../../components/NavBar/NavBar'
 
 function Home() {
-    const factGameLink = 'https://gartic.io/' //Replace with fact game***
+    const factGameLink = 'https://the-fact-game.netlify.app'
 
     return (
         <div className={styles.home_container}>
@@ -34,7 +34,6 @@ export default Home
 
 /* 
 Homepage Plan:
-Add linear gradient with opacity??
-Add navbar
+Add linear gradient with opacity
 
 */
