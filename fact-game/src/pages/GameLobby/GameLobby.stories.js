@@ -10,4 +10,7 @@ export default {
 const Template = (args) => <GameLobby {...args} />
 
 export const FirstStory = Template.bind({})
-FirstStory.args = {}
+FirstStory.args = {
+    gameId: '739fhdkdndkfiew3948230',
+    secondsLeft: 10,
+}

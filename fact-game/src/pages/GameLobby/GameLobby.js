@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '2rem',
         textShadow: '5px 3px 3px rgba(0, 0, 0, 0.25)',
         color: 'white',
-        fontSize: '20px',
+        fontSize: '18px',
         letterSpacing: '0.2rem',
         transition: 'background-color 0.25s linear',
     },

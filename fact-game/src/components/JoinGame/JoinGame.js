@@ -16,7 +16,7 @@ import { useUserContext } from '../../contexts/User'
 
 const useStyles = makeStyles({
     card: {
-        padding: '1rem',
+        // padding: '1rem',
         backgroundColor: 'transparent',
         boxShadow: 'none',
     },
@@ -28,6 +28,8 @@ const useStyles = makeStyles({
         boxShadow: '1px 3px 3px -1px rgba(0, 0, 0, 0.25)',
         borderRadius: '1rem',
         backgroundColor: '#454B82',
+        marginLeft: '10px',
+        marginRight: '10px',
     },
     input: {
         margin: 0,
