@@ -24,10 +24,10 @@ export const endpoints = Object.freeze({
  * These URLs need to match what we've configured in AWS Cognito.
  */
 export const callbackUrls = Object.freeze({
-    // AUTH_URL: process.env.REACT_APP_AUTH_URL ?? 'http://localhost:3000/login',
-    AUTH_URL: 'http://localhost:3000/login',
+    AUTH_URL: process.env.REACT_APP_AUTH_URL ?? 'http://localhost:3000/login',
+    // AUTH_URL: 'http://localhost:3000/login',
     // LOGOUT_URL:
-    //     process.env.REACT_APP_LOGOUT_URL ??
-    //     'http://localhost:3000/after-logout',
-    LOGOUT_URL: 'http://localhost:3000/after-logout',
+        process.env.REACT_APP_LOGOUT_URL ??
+        'http://localhost:3000/after-logout',
+    // LOGOUT_URL: 'http://localhost:3000/after-logout',
 })
