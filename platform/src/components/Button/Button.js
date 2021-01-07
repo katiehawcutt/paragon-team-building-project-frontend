@@ -18,6 +18,7 @@ function Button({ color, text, link }) {
         // )
 
         <ButtonChak
+            data-testid="ButtonChak"
             leftIcon={<FaGooglePlay />}
             colorScheme="#FE4042"
             size="lg"
