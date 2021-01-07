@@ -5,7 +5,7 @@ import Button from '../../components/Button/Button'
 import Title from '../../components/Title/Title'
 import Subtitle from '../../components/Subtitle/Subtitle'
 import WelcomeText from '../../components/WelcomeText/WelcomeText'
-// import Carousel1 from '../../components/Carousel/Carousel'
+import Carousel1 from '../../components/Carousel/Carousel'
 import bgImg from '../../Images_2/game-controller-bg.png'
 import NavBar from '../../components/NavBar/NavBar'
 
@@ -25,7 +25,7 @@ function Home() {
             <div className={styles.text_container}>
                 <WelcomeText />
             </div>
-            {/* <Carousel1 /> */}
+            <Carousel1 />
         </div>
     )
 }

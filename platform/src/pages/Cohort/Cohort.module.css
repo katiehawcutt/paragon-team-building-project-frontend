@@ -12,4 +12,6 @@
     justify-content: center;
     margin-top: 20px;
     padding: 15px;
+    flex-wrap: wrap;
+    margin: 15px;
 }
