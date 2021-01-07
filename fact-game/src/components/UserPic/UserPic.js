@@ -14,6 +14,10 @@ const useStyles = makeStyles((theme) => ({
         width: theme.spacing(6),
         height: theme.spacing(6),
     },
+    medium: {
+        width: theme.spacing(12),
+        height: theme.spacing(12),
+    },
     large: {
         width: theme.spacing(19),
         height: theme.spacing(19),
@@ -25,7 +29,7 @@ export default function UserPic() {
 
     return (
         <Avatar
-            className={classes.large}
+            className={classes.medium}
             alt="user icon"
             src="/images/userIcon.png"
         ></Avatar>

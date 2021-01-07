@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .winnerText {
@@ -28,7 +28,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 90px;
+    margin-top: 50px;
 }
 
 .banner {
@@ -38,8 +38,8 @@
 /* -------------------------THIRD PLACE------------------------- */
 
 .podium_stand3 {
-    width: 150px;
-    height: 170px;
+    width: 100px;
+    height: 120px;
 }
 
 .thirdPlace_container {
@@ -52,10 +52,10 @@
 
 .positionNum3 {
     position: absolute;
-    left: 58px;
+    left: 40px;
     bottom: 35px;
     font-weight: small;
-    font-size: 70px;
+    font-size: 40px;
     text-align: center;
     color: white;
 }
@@ -63,8 +63,8 @@
 /* -------------------------SECOND PLACE------------------------- */
 
 .podium_stand2 {
-    width: 150px;
-    height: 200px;
+    width: 100px;
+    height: 140px;
 }
 
 .secondPlace_container {
@@ -76,10 +76,10 @@
 
 .positionNum2 {
     position: absolute;
-    left: 58px;
+    left: 40px;
     bottom: 48px;
     font-weight: small;
-    font-size: 70px;
+    font-size: 40px;
     text-align: center;
     color: white;
 }
@@ -87,8 +87,8 @@
 /* -------------------------FIRST PLACE------------------------- */
 
 .podium_stand1 {
-    width: 150px;
-    height: 230px;
+    width: 100px;
+    height: 170px;
 }
 
 .fistPlace_container {
@@ -100,57 +100,41 @@
 
 .positionNum1 {
     position: absolute;
-    left: 55px;
+    left: 37px;
     bottom: 55px;
     font-weight: small;
-    font-size: 75px;
+    font-size: 50px;
     text-align: center;
     color: white;
 }
 
 .crown {
     position: absolute;
-    width: 120px;
-    height: 120px;
-    left: 60px;
-    bottom: 350px;
+    width: 80px;
+    height: 80px;
+    left: 38px;
+    bottom: 245px;
     transform: rotate(23deg);
-    /* animation-name: crown-bobbing; */
     animation-name: crown-falling;
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
 }
-/* 
-@keyframes crown-bobbing {
-    0% {
-        transform: scale(1) rotate(23deg);
-        bottom: 500px;
-    }
-    50% {
-        transform: scale(1.1) rotate(23deg);
-        bottom: 400px;
-    }
-    100% {
-        transform: scale(1) rotate(23deg);
-        bottom: 350px;
-    }
-} */
 
 @keyframes crown-falling {
     0% {
-        bottom: 500px;
+        bottom: 400px;
     }
 
     100% {
-        bottom: 350px;
+        bottom: 245px;
     }
 }
 
 .podiumTitle {
     font-family: var(--primary-font);
     font-weight: 100;
-    font-size: 60px;
+    font-size: 40px;
     color: white;
     text-shadow: var(--text-shadow);
     margin: 40px;

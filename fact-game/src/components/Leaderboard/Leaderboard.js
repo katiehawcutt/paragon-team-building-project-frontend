@@ -17,7 +17,13 @@ export default function LeaderBoard({ leaderboard }) {
                         return (
                             <tr key={i}>
                                 <td className={styles.leaderboardOrder}>
-                                    <span className={styles.circle}>
+                                    <span
+                                        className={
+                                            i <= 2
+                                                ? styles.circleTopThree
+                                                : styles.circle
+                                        }
+                                    >
                                         {i + 1}
                                     </span>
                                 </td>

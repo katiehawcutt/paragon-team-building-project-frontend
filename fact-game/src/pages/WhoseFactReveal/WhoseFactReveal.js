@@ -11,7 +11,7 @@ export default function WhoseFactReveal({ roundNumber, displayName }) {
             <Header />
             <main className={styles.pageContainer}>
                 <Round roundNumber={roundNumber} />
-                <Title text="These facts belonged to..." />
+                <Title text="The facts belong to..." />
                 <div className={styles.nameContainer}>{displayName}</div>
             </main>
         </>
