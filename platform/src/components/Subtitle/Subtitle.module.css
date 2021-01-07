@@ -2,9 +2,10 @@
 .subtitle {
     font-family: Sen;
     font-size: 40px;
-    height: 10em;
+    font-weight: lighter;
+    height: 3.5em;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black; /* needs changing to #7B7B7B (black is so we can see the text on storybook) */
+    color: #979797; /* needs changing to #7B7B7B (black is so we can see the text on storybook) */
 }

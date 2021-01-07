@@ -2,21 +2,22 @@ import React from 'react'
 import styles from './GameCard.module.css'
 import { Avatar } from '@chakra-ui/react'
 
-export default function GameCard({ image }) {
+export default function GameCard({ handleClick, text, description, image }) {
     return (
         <div className={styles.card}>
-            <div className={styles.gameTitle}>
-                <h2>Gartic</h2>
+            <div className={styles.gameTitleContainer}>
+                <h2 className={styles.gameTitle}>{text}</h2>
             </div>
             <div className={styles.iconContainer}>
                 <img
                     className={styles.gameIcon}
                     alt="Gartic Game Icon"
-                    src="https://gartic.io/static/images/thumb.png?v=10"
+                    src={image}
+                    onclick={handleClick}
                 />
             </div>
             <div className={styles.gameDescription}>
-                <p>Information about the game here!</p>
+                <p>{description}</p>
             </div>
         </div>
     )
