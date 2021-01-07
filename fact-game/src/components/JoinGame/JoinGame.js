@@ -67,7 +67,7 @@ const useStyles = makeStyles({
             opacity: '0.5',
         },
         textTransform: 'none',
-        padding: '0.8rem',
+        padding: '1rem 3rem',
         fontSize: '1.1rem',
         boxShadow: '6px 7px 10px 2px rgba(0, 0, 0, 0.25)',
         transition: 'background-color 0.25s linear',
@@ -79,8 +79,8 @@ const useStyles = makeStyles({
 })
 
 export default function CreateNewGame({ handleJoin }) {
-    const [fact, setFact] = useState('some fact')
-    const [lie, setLie] = useState('some lie')
+    const [fact, setFact] = useState()
+    const [lie, setLie] = useState()
     const [gameId, setGameId] = useState('')
     const classes = useStyles()
 

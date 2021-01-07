@@ -24,9 +24,10 @@ export const endpoints = Object.freeze({
  * These URLs need to match what we've configured in AWS Cognito.
  */
 export const callbackUrls = Object.freeze({
-    AUTH_URL: 'https://the-fact-game.netlify.app/login',
-    // process.env.CREATE_REACT_APP_AUTH_URL ?? 'http://localhost:3000/login',
-    LOGOUT_URL: 'https://the-fact-game.netlify.app/after-logout',
-    // process.env.CREATE_REACT_APP_LOGOUT_URL ??
-    // 'http://localhost:3000/after-logout',
+    AUTH_URL: process.env.REACT_APP_AUTH_URL ?? 'http://localhost:3000/login',
+    // AUTH_URL: 'http://localhost:3000/login',
+    LOGOUT_URL:
+        process.env.REACT_APP_LOGOUT_URL ??
+        'http://localhost:3000/after-logout',
+    // LOGOUT_URL: 'http://localhost:3000/after-logout',
 })

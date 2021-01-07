@@ -78,7 +78,7 @@ const useStyles = makeStyles({
         },
     },
     goBackButton: {
-        padding: '0.8rem',
+        padding: '1rem 3rem',
         borderRadius: '1rem',
         boxShadow: '6px 7px 10px 2px rgba(0, 0, 0, 0.25)',
         textShadow: '5px 3px 3px rgba(0, 0, 0, 0.25)',

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Redirect } from 'react-router-dom'
 
+import styles from './HandleLogin.module.css'
+
 import { useUserContext } from '../../contexts/User'
 import { useAwsCognitoHostedUi } from '../../hooks/useAwsCognitoHostedUi'
 
@@ -92,5 +94,13 @@ export const HandleLogin = () => {
         return <Redirect to="/" />
     }
 
-    return <p>Just getting you logged in...</p>
+    return (
+        <>
+            <div className={styles.pageContainer}>
+                <p className={styles.loggingInMessage}>
+                    Just getting you logged in...
+                </p>
+            </div>
+        </>
+    )
 }
