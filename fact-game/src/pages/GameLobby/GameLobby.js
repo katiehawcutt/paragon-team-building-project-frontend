@@ -67,7 +67,7 @@ function GameLobby({ gameId, secondsLeft }) {
                             // Clipboard API not available
                             return
                         }
-                        const text = e.target.innerText
+                        const text = e.target.textContent
                         try {
                             await navigator.clipboard.writeText(text)
                         } catch (err) {
