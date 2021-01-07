@@ -1,7 +1,7 @@
 .button1 {
     width: 18vw;
     height: 8vh;
-    padding: 1rem 0rem;
+    padding: 0.5em;
     text-align: center;
     font-family: 'Sen';
     border-radius: 2rem;
@@ -11,6 +11,7 @@
     text-shadow: 5px 3px 3px rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 2vw;
     border: none;
     outline: none;
