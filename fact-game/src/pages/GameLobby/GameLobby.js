@@ -7,17 +7,11 @@ import Title from '../../components/Title/Title'
 import Countdown from '../../components/Countdown/Countdown'
 
 import Button from '@material-ui/core/Button'
-import Snackbar from '@material-ui/core/Snackbar'
-import MuiAlert from '@material-ui/lab/Alert'
 import { makeStyles } from '@material-ui/core/styles'
 
 import FileCopyIcon from '@material-ui/icons/FileCopy'
 import CheckIcon from '@material-ui/icons/Check'
 import Tooltip from '@material-ui/core/Tooltip'
-
-// function Alert(props) {
-//     return <MuiAlert elevation={6} variant="filled" {...props} />
-// }
 
 const useStyles = makeStyles((theme) => ({
     root: {

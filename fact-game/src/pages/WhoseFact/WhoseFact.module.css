@@ -13,9 +13,10 @@
 }
 
 .buttonContainer {
-    height: 280px;
+    /* height: 280px;
     width: 65vw;
-    overflow-y: scroll;
+    overflow-y: scroll; */
+    max-width: 60vw;
     background-color: var(--purple);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
@@ -23,28 +24,29 @@
     margin-bottom: 40px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    padding: 10px;
 }
 
 .nameButton {
-    background-color: var(--light-purple);
+    background-color: var(--gold);
     border-radius: var(--border-radius);
     color: white;
-    font-size: 24px;
-    margin: 20px;
-    margin-top: 30px;
+    font-size: 20px;
+    margin: 10px;
     width: 300px;
     height: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
+    /* padding-left: 10px;
+    padding-right: 10px; */
     border: none;
     box-shadow: var(--box-shadow);
     letter-spacing: 0.2rem;
+    text-align: center;
 }
 
 .nameButton:hover {
-    background-color: var(--gold);
+    background-color: var(--light-purple);
     transition: 0.3s;
 }
 

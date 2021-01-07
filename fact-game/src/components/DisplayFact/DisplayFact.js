@@ -4,13 +4,15 @@ import styles from './DisplayFact.module.css'
 function DisplayFact({ facts }) {
     return (
         <>
-            {facts.map((fact, i) => {
-                return (
-                    <div className={styles.factContainer} key={i}>
-                        <div key={i}>{fact}</div>
-                    </div>
-                )
-            })}
+            <div className={styles.factContainer}>
+                {facts.map((fact, i) => {
+                    return (
+                        <div className={styles.factDisplay} key={i}>
+                            <div key={i}>{fact}</div>
+                        </div>
+                    )
+                })}
+            </div>
         </>
     )
 }

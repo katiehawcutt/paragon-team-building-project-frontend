@@ -1,19 +1,35 @@
-.factContainer {
+.factDisplay {
     width: 30vw;
-    max-height: 30vh;
-    padding: 2rem 3rem;
+    padding: 1rem 1.5rem;
     text-align: center;
     font-family: var(--primary-font);
     border-radius: 2rem;
-    overflow: auto;
-    background-color: var(--lightish-purple);
+    background-color: var(--light-purple);
     color: white;
-    box-shadow: var(--box-shadow);
     text-shadow: var(--text-shadow);
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 30px;
-    font-size: 20px;
+    margin: 10px;
+    font-size: 18px;
     letter-spacing: 0.2rem;
+}
+
+.factContainer {
+    background-color: var(--lightish-purple);
+    border-radius: 2rem;
+    display: flex;
+    box-shadow: var(--box-shadow);
+    margin-top: 10px;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+    .factContainer {
+        flex-direction: column;
+    }
+    .factDisplay {
+        width: 60vw;
+    }
 }
