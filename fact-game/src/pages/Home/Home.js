@@ -130,7 +130,7 @@ export default function Home({ handleCreate, handleJoin }) {
             <Header />
             <div className={styles.pageContainer}>
                 <header className={classes.header}>
-                    {!page && <Title text="Facts!" />}
+                    {!page && <h1 className={styles.homepageTitle}>Facts!</h1>}
                     {pages.CREATE === page && <Title text="Create New Game" />}
                     {pages.JOIN === page && <Title text="Join Existing Game" />}
                 </header>
