@@ -27,8 +27,9 @@ export default function useFactsGame({ webSocketUrl, messageHandlers }) {
      */
     const { sendJsonMessage, lastJsonMessage } = useWebSocket(webSocketUrl, {
         retryOnError: true,
-        shouldReconnect: (e) => e.di,
-        onOpen(event) {},
+        shouldReconnect: () => true,
+        reconnectInterval: 1000,
+        onError: (e) => console.log('useWebSocket onError ran', e),
         onMessage(event) {
             /**
              * Try to parse message. If there's an error, log and return early.

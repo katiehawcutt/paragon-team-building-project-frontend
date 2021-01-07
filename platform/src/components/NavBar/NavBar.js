@@ -10,7 +10,7 @@ export default function NavBar() {
                     <img
                         src="https://d33wubrfki0l68.cloudfront.net/e6fddcbea146f91d2f3c160f7d56a9391a4740b0/4e758/static/logo-51c754388b198e5bbb0d08a971ebbfa2.png"
                         alt="School of Code logo"
-                        style={{ maxWidth: '65px', maxHeight: 'auto' }}
+                        style={{ maxWidth: '60px', maxHeight: 'auto' }}
                     />
                 </NavLink>
                 <NavMenu>
@@ -24,9 +24,9 @@ export default function NavBar() {
                         Cohort
                     </NavLink>
                 </NavMenu>
-                {/* <NavBtn>
+                <NavBtn>
                     <NavBtnLink to="/Profile"></NavBtnLink>
-                </NavBtn> */}
+                </NavBtn>
             </Nav>
         </>
     )

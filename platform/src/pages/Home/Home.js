@@ -5,12 +5,12 @@ import Button from '../../components/Button/Button'
 import Title from '../../components/Title/Title'
 import Subtitle from '../../components/Subtitle/Subtitle'
 import WelcomeText from '../../components/WelcomeText/WelcomeText'
-import Carousel1 from '../../components/Carousel/Carousel'
+// import Carousel1 from '../../components/Carousel/Carousel'
 import bgImg from '../../Images_2/game-controller-bg.png'
 import NavBar from '../../components/NavBar/NavBar'
 
 function Home() {
-    const factGameLink = 'https://gartic.io/' //Replace with fact game***
+    const factGameLink = 'https://the-fact-game.netlify.app'
 
     return (
         <div className={styles.home_container}>
@@ -25,7 +25,7 @@ function Home() {
             <div className={styles.text_container}>
                 <WelcomeText />
             </div>
-            <Carousel1 />
+            {/* <Carousel1 /> */}
         </div>
     )
 }
@@ -34,7 +34,6 @@ export default Home
 
 /* 
 Homepage Plan:
-Add linear gradient with opacity??
-Add navbar
+Add linear gradient with opacity
 
 */

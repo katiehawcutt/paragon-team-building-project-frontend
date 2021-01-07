@@ -3,15 +3,15 @@
 
 .button_container {
     position: absolute;
-    top: 48%;
-    left: 50%;
+    top: 48vh;
+    left: 50vw;
     transform: translate(-50%, -50%);
 }
 
 .title {
     position: absolute;
-    top: 35%;
-    left: 49%;
+    top: 35vh;
+    left: 50vw;
     transform: translate(-50%, -50%);
     font-family: 'Questrial';
     font-weight: lighter;
