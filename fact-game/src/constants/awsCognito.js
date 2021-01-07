@@ -26,7 +26,7 @@ export const endpoints = Object.freeze({
 export const callbackUrls = Object.freeze({
     AUTH_URL: process.env.REACT_APP_AUTH_URL ?? 'http://localhost:3000/login',
     // AUTH_URL: 'http://localhost:3000/login',
-    // LOGOUT_URL:
+    LOGOUT_URL:
         process.env.REACT_APP_LOGOUT_URL ??
         'http://localhost:3000/after-logout',
     // LOGOUT_URL: 'http://localhost:3000/after-logout',
