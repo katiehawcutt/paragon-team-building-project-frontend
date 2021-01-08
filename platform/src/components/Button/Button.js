@@ -19,6 +19,9 @@ function Button({ color, text, link }) {
 
         <ButtonChak
             data-testid="ButtonChak"
+            borderRadius="4"
+            width="35%"
+            fontSize="1.5vw"
             leftIcon={<FaGooglePlay />}
             colorScheme="#FE4042"
             size="lg"
