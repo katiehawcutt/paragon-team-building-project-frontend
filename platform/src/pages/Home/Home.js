@@ -3,7 +3,7 @@ import styles from './Home.module.css'
 import Button from '../../components/Button/Button'
 import Title from '../../components/Title/Title'
 
-import HomeImg from '../../Images_2/team-building-activities-banner.png'
+import HomeImg from '../../Images_2/homepage-picture.png'
 
 function Home() {
     const factGameLink = 'https://the-fact-game.netlify.app'
@@ -21,7 +21,7 @@ function Home() {
                         <Button text="Play Now" link={factGameLink} />
                     </div>
                 </div>
-                <img src={HomeImg} />
+                <img className={styles.homeImg} src={HomeImg} />
             </div>
         </>
     )
