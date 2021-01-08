@@ -7,7 +7,7 @@ import Subtitle from '../../components/Subtitle/Subtitle'
 import WelcomeText from '../../components/WelcomeText/WelcomeText'
 import Carousel1 from '../../components/Carousel/Carousel'
 import bgImg from '../../Images_2/game-controller-bg.png'
-import NavBar from '../../components/NavBar/NavBar'
+// import NavBar from '../../components/NavBar/NavBar'
 
 function Home() {
     const factGameLink = 'https://the-fact-game.netlify.app'
