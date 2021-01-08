@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
-
 .title {
-    font-family: Sen;
-    font-size: 80px;
+    font-family: var(--primary-font);
     font-weight: lighter;
-    text-align: center;
-    color: #ffffff;
+    font-size: 5vw;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    color: var(--dark-grey);
+    text-transform: capitalize;
+    line-height: 6.5vw;
 }

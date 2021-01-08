@@ -1,9 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
-
 .home_container {
     margin-top: 10vh;
-    margin-left: 4vw;
+    margin-left: 5vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -18,22 +15,22 @@
 }
 
 .title {
-    font-family: 'Sen';
+    font-family: var(--primary-font);
     font-weight: lighter;
     font-size: 5vw;
     display: flex;
     align-items: left;
     justify-content: left;
-    color: #656565;
+    color: var(--grey);
     text-transform: capitalize;
     line-height: 6.5vw;
 }
 
 .bio_section {
-    font-family: 'Sen';
+    font-family: var(--primary-font);
     font-weight: lighter;
     display: flex;
-    color: #656565;
+    color: var(--grey);
     align-items: left;
     line-height: 4vh;
     margin-top: 5vh;
@@ -42,14 +39,14 @@
 }
 
 .subtitle {
-    font-family: Sen;
+    font-family: var(--primary-font);
     font-size: 40px;
     margin-top: 2%;
     padding: 1em 2em 0.5em 2em;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #7b7b7b;
+    color: var(--grey);
 }
 
 img {
@@ -58,4 +55,8 @@ img {
     width: auto;
     height: auto;
     z-index: 1;
+}
+
+.button_container {
+    margin-top: 4vh;
 }

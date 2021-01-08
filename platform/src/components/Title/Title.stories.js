@@ -9,4 +9,6 @@ export default {
 const Template = (args) => <Title {...args} />
 
 export const TitleStory = Template.bind({})
-TitleStory.args = {}
+TitleStory.args = {
+    text: 'Welcome Bootcampers!',
+}
