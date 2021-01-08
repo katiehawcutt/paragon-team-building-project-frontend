@@ -1,10 +1,10 @@
 .button1 {
-    width: auto;
-    height: 8vh;
-    padding: 1em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
     text-align: center;
     font-family: 'Sen';
-    /* font-size: 0.5vw; */
     border-radius: 2rem;
     background-color: #fe4042;
     color: white;
@@ -13,7 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2vw;
+    font-size: 1.3em;
     border: none;
     outline: none;
     margin: auto;
