@@ -1,9 +1,10 @@
 .button1 {
-    width: 18vw;
+    width: auto;
     height: 8vh;
-    padding: 0.5em;
+    padding: 1em;
     text-align: center;
     font-family: 'Sen';
+    /* font-size: 0.5vw; */
     border-radius: 2rem;
     background-color: #fe4042;
     color: white;
