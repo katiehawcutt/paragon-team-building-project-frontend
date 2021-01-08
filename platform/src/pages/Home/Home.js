@@ -7,7 +7,8 @@ import Subtitle from '../../components/Subtitle/Subtitle'
 import WelcomeText from '../../components/WelcomeText/WelcomeText'
 import Carousel1 from '../../components/Carousel/Carousel'
 import HomeImg from '../../Images_2/team-building-activities-banner.png'
-import NavBar from '../../components/NavBar/NavBar'
+
+
 
 function Home() {
     const factGameLink = 'https://the-fact-game.netlify.app'
