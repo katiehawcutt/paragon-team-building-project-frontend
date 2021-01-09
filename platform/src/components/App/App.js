@@ -4,7 +4,7 @@ import '../../globals/global.css'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from '../../pages/Home/Home'
 import Games from '../../pages/Games/Games'
-import Profile from '../../pages/Profile/Profile'
+import Profiles from '../../pages/Profiles/Profiles'
 import Nav from '../Nav/Nav'
 
 function App() {
@@ -16,8 +16,8 @@ function App() {
                     <Route path="/Games">
                         <Games />
                     </Route>
-                    <Route path="/Profile">
-                        <Profile />
+                    <Route path="/Profiles">
+                        <Profiles />
                     </Route>
                     <Route path="/">
                         <Home />

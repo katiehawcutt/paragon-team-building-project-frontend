@@ -31,7 +31,7 @@ function Nav() {
                     </li>
                     <li className={styles.li}>
                         <Link
-                            to="/profile"
+                            to="/profiles"
                             className={styles.navLink}
                             activeClassName={styles.activeLink}
                         >
@@ -40,7 +40,7 @@ function Nav() {
                     </li>
                 </ul>
                 <button className={styles.userButton}>
-                    <img className={styles.userPhoto} src="./Images/kh.jpg" />
+                    <img className={styles.userPhoto} src="./Images/kh.png" />
                 </button>
             </div>
         </nav>

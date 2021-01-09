@@ -10,5 +10,5 @@ const Template = (args) => <UserIcon {...args} />
 
 export const UserPicStory = Template.bind({})
 UserPicStory.args = {
-    imageSrc: './Images/kh.jpg',
+    imageSrc: './Images/kh.png',
 }
