@@ -6,9 +6,10 @@ import Title from '../../components/Title/Title'
 function Profiles() {
     return (
         <div className={styles.pageContainer}>
-            <Title className={styles.h1} text={'Meet your cohort...'} />
-            <div>
-                {' '}
+            <div className={styles.titleImageContainer}>
+                <div className={styles.titleContainer}>
+                    <Title text={'Meet your cohort...'} />
+                </div>
                 <img
                     className={styles.pageImage}
                     alt="cohort"
@@ -17,14 +18,38 @@ function Profiles() {
             </div>
 
             <div className={styles.flipCardContainer}>
-                <FlipCard />
-                <FlipCard />
-                <FlipCard />
-                <FlipCard />
-                <FlipCard />
-                <FlipCard />
-                <FlipCard />
-                <FlipCard />
+                <FlipCard
+                    personName="Katie Hawcutt"
+                    imageSrc="./Images/kh.png"
+                />
+                <FlipCard
+                    personName="Natalie Posteraro"
+                    imageSrc="./Images/kh.png"
+                />
+                <FlipCard
+                    personName="Katie Hawcutt"
+                    imageSrc="./Images/kh.png"
+                />
+                <FlipCard
+                    personName="Katie Hawcutt"
+                    imageSrc="./Images/kh.png"
+                />
+                <FlipCard
+                    personName="Katie Hawcutt"
+                    imageSrc="./Images/kh.png"
+                />
+                <FlipCard
+                    personName="Katie Hawcutt"
+                    imageSrc="./Images/kh.png"
+                />
+                <FlipCard
+                    personName="Katie Hawcutt"
+                    imageSrc="./Images/kh.png"
+                />
+                <FlipCard
+                    personName="Katie Hawcutt"
+                    imageSrc="./Images/kh.png"
+                />
             </div>
         </div>
     )

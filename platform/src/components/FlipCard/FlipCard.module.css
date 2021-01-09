@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
 
 .flipCard {
-    width: 350px;
-    height: 450px;
+    width: 250px;
+    height: 300px;
     background-color: white;
     box-shadow: 8px 8px 13px 3px #b9b7b7;
     padding: 30px;
-    margin: 30px;
+    margin: 20px;
+    margin-bottom: 40px;
     border-radius: 10%;
     transition: transform 0.8s;
     transform-style: preserve-3d;
@@ -21,18 +22,12 @@
     transform-style: preserve-3d;
 }
 
-.cohortImage {
-    margin: 2rem;
-    border-radius: 100%;
-    background-image: linear-gradient(#4a90e2, #31986a);
-    max-width: 200px;
-    padding: 1rem;
-}
-.cohortName {
+.personName {
     font-family: Sen;
     font-weight: lighter;
-    font-size: 30px;
+    font-size: 24px;
     padding-top: 10px;
+    margin-top: 15px;
 }
 
 .container:hover .flipCard {
@@ -41,6 +36,9 @@
 
 .flipCardFront,
 .flipCardBack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -59,21 +57,10 @@
     text-align: left;
 }
 
-.info {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+.h2 {
+    font-size: 20px;
+    font-weight: bold;
 }
-
-.hobbies {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding-bottom: 50px;
-}
-
-.skills {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding-bottom: 50px;
+.bio {
+    text-align: center;
 }
