@@ -19,12 +19,12 @@ export default function LeaderBoard({ leaderboard }) {
                                 <td className={styles.leaderboardOrder}>
                                     <span
                                         className={
-                                            i <= 2
+                                            person.position <= 3
                                                 ? styles.circleTopThree
                                                 : styles.circle
                                         }
                                     >
-                                        {i + 1}
+                                        {person.position}
                                     </span>
                                 </td>
                                 <td className={styles.tableData}>

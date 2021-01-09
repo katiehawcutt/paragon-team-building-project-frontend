@@ -22,14 +22,16 @@
     letter-spacing: 3px;
     font-family: var(--primary-font);
     font-size: 28px;
+    text-shadow: var(--text-shadow);
 }
 
 .tableData {
     font-family: var(--primary-font);
+    text-shadow: var(--text-shadow);
     font-size: 20px;
-    font-weight: small;
     letter-spacing: 3px;
     padding: 15px;
+    color: white;
 }
 
 .leaderboardOrder {
@@ -52,6 +54,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 .circleTopThree {
