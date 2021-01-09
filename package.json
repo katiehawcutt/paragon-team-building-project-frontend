@@ -1,12 +1,11 @@
 {
-
   "name": "front-end-final-project-paragon",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-  "build:fact-game": "npm --prefix fact-game run pre-build && npm --prefix fact-game run build"
+    "build:fact-game": "npm --prefix fact-game run pre-build && npm --prefix fact-game run build"
   },
   "repository": {
     "type": "git",
@@ -28,4 +27,3 @@
     "styled-components": "^5.2.1"
   }
 }
-

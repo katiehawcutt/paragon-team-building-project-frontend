@@ -9,4 +9,7 @@ export default {
 const Template = (args) => <FlipCard {...args} />
 
 export const FlipCardStory = Template.bind({})
-FlipCardStory.args = {}
+FlipCardStory.args = {
+    personName: 'Katie Hawcutt',
+    imageSrc: './Images/kh.png',
+}
