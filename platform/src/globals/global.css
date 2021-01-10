@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+
+:root {
+    --primary-font: 'Sen', sans-serif;
+    --grey: #656565;
+    --dark-grey: #434343;
+    --light-blue: #3ab6d4;
+    --red: #fe4042;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+}

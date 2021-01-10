@@ -1,7 +1,8 @@
 .button1 {
-    width: 18vw;
-    height: 8vh;
-    padding: 0.5em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
     text-align: center;
     font-family: 'Sen';
     border-radius: 2rem;
@@ -12,7 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2vw;
+    font-size: 1.3em;
     border: none;
     outline: none;
     margin: auto;

@@ -1,0 +1,162 @@
+.nav {
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.li {
+    margin-bottom: 0px;
+}
+
+.navLink {
+    margin: 30px;
+    font-size: 18px;
+    color: var(--dark-grey);
+    font-family: var(--primary-font);
+}
+
+.navLink:hover {
+    color: #3ab6d4;
+}
+
+.activeLink {
+    color: #3ab6d4;
+}
+
+.userButton {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#4a90e0, #3c9d74);
+    margin-right: 5vw;
+    margin-left: 30px;
+    border: none;
+}
+
+.userPhoto {
+    height: 53px;
+    border-radius: 100%;
+}
+
+.rightContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50vw;
+}
+
+.leftContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50vw;
+}
+
+.socLogo {
+    height: 50px;
+    width: 50px;
+}
+
+.schoolOfCodeWords {
+    font-size: 25px;
+    color: var(--dark-grey);
+    font-family: var(--primary-font);
+    margin-left: 20px;
+    text-align: center;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    margin-left: 5vw;
+}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    margin-right: 5vw;
+}
+
+@media only screen and (min-width: 1600px) {
+    .navLink {
+        margin: 40px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .navLink {
+        margin: 20px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .navLink {
+        margin: 18px;
+        font-size: 15px;
+    }
+    .schoolOfCodeWords {
+        font-size: 20px;
+    }
+    .userButton {
+        height: 50px;
+        width: 50px;
+    }
+    .userPhoto {
+        height: 43px;
+        width: 43x;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .navLink {
+        margin: 14px;
+        font-size: 15px;
+    }
+    .schoolOfCodeWords {
+        font-size: 18px;
+    }
+    .userButton {
+        height: 50px;
+        width: 50px;
+    }
+    .userPhoto {
+        height: 43px;
+        width: 43x;
+    }
+    .socLogo {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    .navLink {
+        margin: 12px;
+        font-size: 15px;
+    }
+
+    .userButton {
+        height: 40px;
+        width: 40px;
+    }
+    .userPhoto {
+        height: 33px;
+        width: 33x;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .schoolOfCodeWords {
+        display: none;
+    }
+}

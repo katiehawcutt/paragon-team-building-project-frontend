@@ -1,9 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
-
 .title {
-    font-family: Sen;
-    font-size: 80px;
+    font-family: var(--primary-font);
     font-weight: lighter;
-    text-align: center;
-    color: #656565;
+
+    font-size: 5vw;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    color: var(--dark-grey);
+    text-transform: capitalize;
+    line-height: 6.5vw;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .title {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .title {
+        font-size: 40px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .title {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .title {
+        line-height: 1em;
+    }
 }

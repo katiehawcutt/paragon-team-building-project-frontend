@@ -1,48 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+.home_container {
+    margin-top: 10vh;
+    margin-left: 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
-.button_container {
-    position: absolute;
-    top: 48vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
+.text_container {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height: auto;
+    z-index: 10;
 }
 
 .title {
-    position: absolute;
-    top: 35vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
-    font-family: 'Questrial';
+    font-family: var(--primary-font);
     font-weight: lighter;
-    font-size: 70px;
+    font-size: 5vw;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
+    align-items: left;
+    justify-content: left;
+    color: var(--grey);
     text-transform: capitalize;
-    text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+    line-height: 6.5vw;
+}
+
+.bio_section {
+    font-family: var(--primary-font);
+    font-weight: lighter;
+    display: flex;
+    color: var(--grey);
+    align-items: left;
+    line-height: 4vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 0.6vw;
 }
 
 .subtitle {
-    font-family: Sen;
+    font-family: var(--primary-font);
     font-size: 40px;
     margin-top: 2%;
     padding: 1em 2em 0.5em 2em;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #7b7b7b;
+    color: var(--grey);
 }
 
-.underline {
-    background-color: #7b7b7b;
-    height: 0.5vh;
-    width: 3vw;
-    margin: auto;
-    border-radius: 45px;
+.homeImg {
+    max-width: 42vw;
+    max-height: 30vw;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    margin-top: 5vh;
+    margin-right: 6vw;
+    margin-left: 30px;
 }
 
-.text_container {
-    margin: 5% 20%;
+.button_container {
+    margin-top: 4vh;
+}
+
+@media only screen and (max-width: 1000px) {
+    .homeImg {
+        margin-right: 3vw;
+    }
+}
+
+@media only screen and (max-width: 910px) {
+    .homeImg {
+        margin-top: 0px;
+        max-width: 80vw;
+        max-height: 35vh;
+    }
+    .home_container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .text_container {
+        width: 80vw;
+        align-items: center;
+    }
+    .bio_section {
+        align-items: center;
+        text-align: center;
+    }
 }

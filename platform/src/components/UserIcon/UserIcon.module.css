@@ -1,0 +1,18 @@
+.userIconContainer {
+    margin-top: 20px;
+    height: 130px;
+    width: 130px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#4a90e0, #3c9d74);
+    border: none;
+}
+
+.userPhoto {
+    height: 120px;
+    border-radius: 100%;
+}
+
+/*change the size of the user icon by adjusting the userIconContainer height and width (keep in proportion) and adjust the userPhoto height to 7px less than the height and width of the userIconContainer*/

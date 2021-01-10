@@ -1,25 +1,22 @@
 import React from 'react'
 import styles from './FlipCard.module.css'
+import UserIcon from '../UserIcon/UserIcon'
 
-function FlipCard({ image, text }) {
+const bio = `I love playing the saxophone and being outdoors. I also really like eating cheese and drinking wine. Recently, I have come to love coding and I can't wait to become a web-developer.`
+
+function FlipCard({ imageSrc, personName }) {
     return (
         <div className={styles.container}>
             <div className={styles.flipCard}>
                 <div className={styles.flipCardInner}>
                     <div className={styles.flipCardFront}>
-                        <img
-                            className={styles.cohortImage}
-                            alt="user icon"
-                            src="./Images/userIcon.png"
-                        />
-                        <h1 className={styles.cohortName}>Natalie Posteraro</h1>
+                        <UserIcon imageSrc={imageSrc} />
+                        <h1 className={styles.personName}>{personName}</h1>
                     </div>
                     <div className={styles.flipCardBack}>
-                        <h2>About</h2>
+                        <h2 className={styles.h2}>Bio:</h2>
                         <div className={styles.cohortInfoContainer}>
-                            <h3 className={styles.info}>Info:</h3>
-                            <h3 className={styles.hobbies}>Hobbies:</h3>
-                            <h3 className={styles.skills}>Skills:</h3>
+                            <p className={styles.bio}>{bio} </p>
                         </div>
                     </div>
                 </div>
