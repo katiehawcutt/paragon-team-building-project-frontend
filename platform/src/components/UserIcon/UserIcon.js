@@ -5,7 +5,11 @@ function UserIcon({ imageSrc }) {
     return (
         <>
             <div className={styles.userIconContainer}>
-                <img className={styles.userPhoto} src={imageSrc} />
+                <img
+                    data-testid="userTest"
+                    className={styles.userPhoto}
+                    src={imageSrc}
+                />
             </div>
         </>
     )
