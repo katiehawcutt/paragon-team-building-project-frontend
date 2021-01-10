@@ -7,9 +7,8 @@ function Profiles() {
     return (
         <div className={styles.pageContainer}>
             <div className={styles.titleImageContainer}>
-                <div className={styles.titleContainer}>
-                    <Title text={'Meet your cohort...'} />
-                </div>
+                <Title text={'Meet your cohort...'} className={styles.title} />
+
                 <img
                     className={styles.pageImage}
                     alt="cohort"
