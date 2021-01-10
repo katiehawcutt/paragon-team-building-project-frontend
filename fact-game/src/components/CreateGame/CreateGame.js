@@ -386,7 +386,7 @@ export default function CreateNewGame({ handleCreate, serverSidedError }) {
                             vertical: 'bottom',
                             horizontal: 'left',
                         }}
-                        autoHideDuration={6000}
+                        autoHideDuration={7000}
                         onClose={() => setError(false)}
                         open={error}
                         message={
