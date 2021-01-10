@@ -3,7 +3,7 @@ import Carousel from 'react-elastic-carousel'
 import CarouselItem from '../CarouselItem/CarouselItem'
 import styles from './Carousel.module.css'
 import garticImg from '../../Images_2/garticImg.png'
-import amongUsImg from '../../Images_2/amongUsImg.png'
+import amongUsImg from '../../Images_2/amongUs.png'
 import scattegoriesImg from '../../Images_2/scattegoriesImg.png'
 import chessImg from '../../Images_2/chessImg.png'
 
