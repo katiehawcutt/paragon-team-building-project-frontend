@@ -395,8 +395,7 @@ export default function CreateNewGame({ handleCreate, serverSidedError }) {
                                     classes={{ root: classes.errorIcon }}
                                 />
                                 <span className={classes.errorMessage}>
-                                    Sorry, the game can not be created right
-                                    now.
+                                    Sorry, the game cannot be created right now.
                                 </span>
                             </div>
                         }
