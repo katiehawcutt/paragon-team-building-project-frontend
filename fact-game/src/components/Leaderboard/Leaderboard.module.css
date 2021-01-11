@@ -57,7 +57,24 @@
     color: white;
 }
 
-.circleTopThree {
+.circleFirstPlace {
+    background-color: #ffc02e;
+    color: black;
+}
+
+.circleSecondPlace {
+    background-color: #b6aa8d;
+}
+
+.circleThirdPlace {
+    background-color: #c66716;
+}
+
+.circleOtherPlace {
+    background-color: var(--light-purple);
+}
+
+/* .circleTopThree {
     height: 37px;
     width: 37px;
     background-color: var(--yellow);
@@ -70,7 +87,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .leaderboardHeading {
     background-color: #6d44d9;
