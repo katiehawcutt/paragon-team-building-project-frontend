@@ -1,7 +1,7 @@
 .card {
     position: relative;
     width: 310px;
-    height: 350px;
+    height: 310px;
     background-color: white;
     box-shadow: 8px 8px 13px 3px #b9b7b7;
     margin: 30px;
@@ -9,9 +9,9 @@
 
 .gameCard {
     width: 310px;
-    height: 350px;
+    height: 310px;
     /* opacity: 0.6; */
-    filter: brightness(76%);
+    filter: brightness(60%);
 }
 
 /* .gameTitleContainer {

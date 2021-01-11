@@ -19,10 +19,10 @@ function Games() {
     const tabooLink = 'https://playtaboo.com/playpage'
 
     const pageBio =
-        "We believe team building is an important factor when working together. Whether it's having fun playing games, competing against each other, tackling puzzles together, or just having a friendly chat. We want you build trust amongst your team mates, discover each others strengths and weaknesses to create a cohesive team but most of all we want you to have fun! Here you'll find a selection of games and energisers within to help you achieve this"
+        "We believe team building is an important factor when working together, whether it's having fun playing games, competing against each other, tackling puzzles together, or just having a friendly chat. We want you to build trust with your team mates, discover each others strengths and weaknesses and have fun getting to know each other in order to develop cohesive and effective teams. Here you'll find a selection of games and energisers to help you achieve this."
 
     const showCaseBio =
-        "Learn interesting things about your cohort in FACTS! Two statements are handed in from each player, one is a fact and the other is lie. The aim is to guess who's fact it is and then which statement of theirs is the fact."
+        'Learn interesting things about your cohort in FACTS! Two statements are handed in from each player, one is a fact and the other is a lie. The aim is to guess who the facts belong to and which one of them is true.'
 
     return (
         <>
@@ -33,7 +33,7 @@ function Games() {
                     src={'./Images/team-building.jpg'}
                 />
                 <div className={styles.textContainer}>
-                    <Title className={styles.title} text={'Game'} />
+                    <Title className={styles.title} text={`Let's Play...`} />
                     <p className={styles.pageBio}>{pageBio}</p>
                 </div>
             </div>

@@ -5,7 +5,7 @@ import Title from '../../components/Title/Title'
 
 const people = [
     {
-        personName: 'Katie Hawcutt',
+        personName: 'Katie Louise Hawcutt',
         imageSrc: './Images/kh.png',
         bio: `I love playing the saxophone and being outdoors. I also really like eating cheese and drinking wine. Recently, I have come to love coding and I can't wait to become a web-developer.`,
     },
@@ -20,7 +20,7 @@ const people = [
         bio: `I love playing the saxophone and being outdoors. I also really like eating cheese and drinking wine. Recently, I have come to love coding and I can't wait to become a web-developer.`,
     },
     {
-        personName: 'Bradley Smith',
+        personName: 'Bradley Arthur Bart Smith',
         imageSrc: './Images/kh.png',
         bio: `I love playing the saxophone and being outdoors. I also really like eating cheese and drinking wine. Recently, I have come to love coding and I can't wait to become a web-developer.`,
     },
