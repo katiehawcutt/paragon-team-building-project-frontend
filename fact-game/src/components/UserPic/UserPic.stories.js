@@ -10,4 +10,6 @@ export default {
 const Template = (args) => <UserPic {...args} />
 
 export const UserPicStory = Template.bind({})
-UserPicStory.args = {}
+UserPicStory.args = {
+    image: '/images/userIcon.png',
+}
