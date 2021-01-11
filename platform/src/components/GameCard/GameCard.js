@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './GameCard.module.css'
 
-
 export default function GameCard({
     handleClick,
     text,
@@ -26,5 +25,6 @@ export default function GameCard({
             <div className={styles.gameDescription}>
                 <p>{description}</p>
             </div>
-
-
+        </div>
+    )
+}
