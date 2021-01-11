@@ -25,34 +25,39 @@ export default function useFactsGame({ webSocketUrl, messageHandlers }) {
     /**
      * Build custom hook on top of hook.
      */
-    const { sendJsonMessage, lastJsonMessage } = useWebSocket(webSocketUrl, {
-        retryOnError: true,
-        shouldReconnect: () => true,
-        reconnectInterval: 1000,
-        onError: (e) => console.log('useWebSocket onError ran', e),
-        onMessage(event) {
-            /**
-             * Try to parse message. If there's an error, log and return early.
-             */
-            const { parsed, parsingError } = tryToParseJson(event.data)
-            if (parsingError) {
-                return console.error(parsingError)
-            }
+    const { sendJsonMessage, lastJsonMessage, readyState } = useWebSocket(
+        webSocketUrl,
+        {
+            retryOnError: true,
+            shouldReconnect: () => true,
+            reconnectInterval: 1000,
+            // onError: (e) => console.log('useWebSocket onError ran', e),
+            onMessage(event) {
+                /**
+                 * Try to parse message. If there's an error, log and return early.
+                 */
+                const { parsed, parsingError } = tryToParseJson(event.data)
+                if (parsingError) {
+                    return console.error(parsingError)
+                }
 
-            console.log('Received from server', parsed)
+                console.log('Received from server', parsed)
 
-            /**
-             * Call handler with try-catch.
-             */
-            const handler =
-                messageHandlers[parsed.action] ?? messageHandlers.$default
-            try {
-                handler({ data: parsed, setGame, sendJsonMessage })
-            } catch (err) {
-                console.error(err)
-            }
-        },
-    })
+                /**
+                 * Call handler with try-catch.
+                 */
+                const handler =
+                    messageHandlers[parsed.action] ?? messageHandlers.$default
+                try {
+                    handler({ data: parsed, setGame, sendJsonMessage })
+                } catch (err) {
+                    console.error(err)
+                }
+            },
+        }
+    )
+
+    // console.log({ readyState })
 
     //Keep track of last message that isn't action:ANSWER
     //If the last message has an action of ANSWER we want to update the currentSubmittedAnswer property within the object returned from the useFacts game

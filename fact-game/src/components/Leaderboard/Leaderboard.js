@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './Leaderboard.module.css'
+import cn from 'classnames'
 
 export default function LeaderBoard({ leaderboard }) {
     return (
@@ -14,17 +15,24 @@ export default function LeaderBoard({ leaderboard }) {
                 </thead>
                 <tbody>
                     {leaderboard.map((person, i) => {
+                        /**
+                         * Apply a specific class if position is top 3, otherwise default
+                         * to generic other class.
+                         */
+                        const colourClass =
+                            [
+                                styles.circleFirstPlace,
+                                styles.circleSecondPlace,
+                                styles.circleThirdPlace,
+                            ][person.position - 1] ?? styles.circleOtherPlace
+
+                        const className = cn(styles.circle, colourClass)
+
                         return (
                             <tr key={i}>
                                 <td className={styles.leaderboardOrder}>
-                                    <span
-                                        className={
-                                            i <= 2
-                                                ? styles.circleTopThree
-                                                : styles.circle
-                                        }
-                                    >
-                                        {i + 1}
+                                    <span className={className}>
+                                        {person.position}
                                     </span>
                                 </td>
                                 <td className={styles.tableData}>
