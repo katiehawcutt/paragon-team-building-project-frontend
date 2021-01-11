@@ -33,6 +33,8 @@ export default function App() {
         <Home
             handleCreate={factsGame.createAndJoinGame}
             handleJoin={factsGame.joinExistingGame}
+            gameNotCreatedError={factsGame.gameNotCreatedError}
+            gameNotJoinedError={factsGame.gameNotJoinedError}
         />
     )
 }
