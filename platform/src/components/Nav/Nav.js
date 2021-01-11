@@ -41,10 +41,7 @@ function Nav() {
                         </Link>
                     </li>
                 </ul>
-                <Menu image={image} /> {/* //Image retrieved from backend */}
-                {/* <button className={styles.userButton}>
-                    <img className={styles.userPhoto} src="./Images/kh.png" />
-                </button> */}
+                <Menu image={image} />
             </div>
         </nav>
     )

@@ -9,4 +9,6 @@ export default {
 const Template = (args) => <Menu {...args} />
 
 export const MenuStory = Template.bind({})
-MenuStory.args = {}
+MenuStory.args = {
+    image: './Images/kh.png',
+}
