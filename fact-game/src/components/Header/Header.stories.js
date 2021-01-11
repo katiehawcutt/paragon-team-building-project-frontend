@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from './Header'
+import Header from './index'
 
 // This default export determines where your story goes in the story list
 export default {

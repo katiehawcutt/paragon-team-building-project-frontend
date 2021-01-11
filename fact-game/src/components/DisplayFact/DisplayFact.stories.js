@@ -1,5 +1,5 @@
 import React from 'react'
-import DisplayFact from './DisplayFact'
+import DisplayFact from './index'
 
 export default {
     title: 'DisplayFact',

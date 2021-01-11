@@ -1,5 +1,5 @@
 import React from 'react'
-import Podium from './Podium'
+import Podium from './index'
 
 // This default export determines where your story goes in the story list
 export default {

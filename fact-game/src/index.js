@@ -1,13 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import { PrivateRoute } from './components/PrivateRoute/PrivateRoute'
+import { PrivateRoute } from './components/PrivateRoute'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import './index.css'
-import App from './components/App/App'
-import { HandleLogin } from './components/HandleLogin/HandleLogin'
-import { HandleLogout } from './components/HandleLogout/HandleLogout'
+import App from './components/App'
+import { HandleLogin } from './components/HandleLogin'
+import { HandleLogout } from './components/HandleLogout'
 import { UserContextProvider } from './contexts/User'
 
 ReactDOM.render(
