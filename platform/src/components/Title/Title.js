@@ -1,12 +1,9 @@
 import React from 'react'
 import styles from './Title.module.css'
+import cn from 'classnames'
 
-function Title({ text }) {
-    return (
-        <div>
-            <h1 className={styles.title}>{text}</h1>
-        </div>
-    )
+function Title({ text, className = '' }) {
+    return <h1 className={cn(styles.title, className)}>{text}</h1>
 }
 
 export default Title

@@ -14,7 +14,7 @@ export default function useFactsGame({ webSocketUrl, shouldConnect = true }) {
     /**
      * Build custom hook on top of hook.
      */
-    const { sendJsonMessage, lastJsonMessage, readyState } = useWebSocket(
+    const { sendJsonMessage, lastJsonMessage } = useWebSocket(
         webSocketUrl,
         {
             retryOnError: true,

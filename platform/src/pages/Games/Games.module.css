@@ -1,46 +1,130 @@
-.pageContainer {
+.headerContainer {
+    margin-top: 10vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-bottom: 10vh;
+    padding-bottom: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.banner {
+    height: auto;
+    width: auto;
+    float: left;
+    display: flex;
+    max-width: 60vw;
+    max-height: 45vw;
+    z-index: 10;
+    margin-top: 5vh;
+    margin-right: 30px;
+    margin-left: 3px;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height: auto;
+    z-index: 10;
+}
+
+.pageBio {
+    font-family: var(--primary-font);
+    font-weight: lighter;
+    font-size: 16px;
+    display: flex;
+    align-items: left;
+    color: var(--grey);
+    line-height: 4vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.title {
+    margin: 0;
+}
+
+/* ----------------------------------------------------- */
+
+.showCaseContainer {
+    margin-top: 10vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-bottom: 10vh;
+    padding-bottom: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.textShowCaseContainer {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height: auto;
+    z-index: 10;
+}
+
+.button_container {
+    margin-top: 4vh;
+}
+
+.showCaseImage {
+    height: 400px;
+    width: 400px;
+    float: right;
+    display: flex;
+    z-index: 1;
+    border-radius: 50%;
+    margin-left: 10vh;
+    margin-right: 10vh;
+}
+
+.showCaseBio {
+    font-family: var(--primary-font);
+    font-weight: lighter;
+    font-size: 16px;
+    display: flex;
+    align-items: left;
+    color: var(--grey);
+    line-height: 4vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+/* ----------------------------------------------------- */
+
+.mainContainer {
     min-height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.banner {
-    height: auto;
-    float: left;
-    top: 10%;
-    width: 40%;
-    left: 30%;
-}
-
-.title {
-    position: absolute;
-    z-index: 10;
-    top: 18%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-}
-
 .subTitle {
+    font-family: var(--primary-font);
     height: auto;
     float: left;
-    position: relative;
     display: flex;
+    padding-top: 3em;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
-.subTitle:before {
-    position: absolute;
-    left: 50;
+.subTitle:after {
+    left: 60%;
     top: 7em;
-    bottom: 1;
-    height: 0;
+    bottom: 10px;
+    height: 50px;
     width: 120px;
     content: '';
     border-top: 3px solid #ebebeb;
 }
 
 .gameCardContainer {
+    font-family: var(--primary-font);
     height: auto;
     float: left;
     display: flex;
@@ -53,4 +137,61 @@
     opacity: 0.6;
     /* background-image: linear-gradient(to right, #4a90e2), #31986a; */
     transition: 3ms;
+}
+
+/* ----------------------------------------------------- */
+
+@media only screen and (max-width: 1000px) {
+    .banner {
+        margin-right: 3vw;
+    }
+    .showCaseImage {
+        margin-top: 0px;
+        max-width: 60vw;
+        max-height: 53vh;
+    }
+}
+
+@media only screen and (max-width: 910px) {
+    .banner {
+        margin-top: 0px;
+        max-width: 80vw;
+        max-height: 35vh;
+    }
+    .headerContainer {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .mainContainer {
+        align-items: center;
+    }
+    .subTitle {
+        width: 80vw;
+        align-items: center;
+    }
+    .text_container {
+        width: 80vw;
+        align-items: center;
+    }
+    .pageBio {
+        align-items: center;
+        text-align: center;
+    }
+    .showCaseContainer {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .textShowCaseContainer {
+        width: 80vw;
+        align-items: center;
+    }
+    .showCaseBio {
+        align-items: center;
+        text-align: center;
+    }
+    .showCaseImage {
+        margin-top: 0px;
+        max-width: 50vw;
+        max-height: 36vh;
+    }
 }

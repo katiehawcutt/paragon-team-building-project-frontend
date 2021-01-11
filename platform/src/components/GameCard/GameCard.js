@@ -18,15 +18,3 @@ export default function GameCard({ text, image, link }) {
         </div>
     )
 }
-
-// <div className={styles.gameTitleContainer}>
-// <div className={styles.iconContainer}>
-// </div>
-{
-    /* <img
-                className={styles.gameCard}
-                alt="Games img Card"
-                src={image}
-                onclick={handleClick}
-            /> */
-}
