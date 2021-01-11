@@ -1,7 +1,10 @@
 import React from 'react'
 import styles from './Header.module.css'
 
+import { useLocation } from 'react-router-dom'
+
 function Header() {
+    const location = useLocation()
     return (
         <header className={styles.header} data-testid={'header'}>
             <button
