@@ -8,12 +8,9 @@ function Menu({ image }) {
 
     return (
         <div className={styles.dropdown}>
-            <button
-                className={styles.dropbtn}
-                style={{
-                    backgroundImage: `url(${image})`,
-                }}
-            />
+            <button className={styles.userButton}>
+                <img src={image} className={styles.userPhoto}></img>
+            </button>
             <div className={styles.dropdownContent}>
                 <a href="#">profile settings</a>
                 <button
