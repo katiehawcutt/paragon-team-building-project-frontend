@@ -1,21 +1,16 @@
 import React from 'react'
 import styles from './Header.module.css'
 
-import { useLocation } from 'react-router-dom'
-
 function Header() {
-    const location = useLocation()
     return (
         <header className={styles.header} data-testid={'header'}>
-            <button
-                className={styles.xbutton}
+            <a
+                className={styles.x}
                 data-testid={'headerXButton'}
-                onClick={() => {
-                    location.replace('https://www.google.com')
-                }}
+                href="https://www.google.com"
             >
                 X
-            </button>
+            </a>
         </header>
     )
 }
