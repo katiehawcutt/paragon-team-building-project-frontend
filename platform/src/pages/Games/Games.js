@@ -37,7 +37,7 @@ function Games() {
             </div>
             <div className={styles.showCaseContainer}>
                 <div className={styles.textShowCaseContainer}>
-                    <Title className={styles.showCaseTitle} text={'Facts!'} />
+                    <Title className={styles.title} text={'Facts!'} />
                     <p className={styles.showCaseBio}>{showCaseBio}</p>
                     <div className={styles.button_container}>
                         <Button text="Play Now" link={factGameLink} />
