@@ -2,16 +2,16 @@
 
 .card {
     position: relative;
-    width: 410px;
-    height: 450px;
+    width: 310px;
+    height: 350px;
     background-color: white;
     box-shadow: 8px 8px 13px 3px #b9b7b7;
     margin: 30px;
 }
 
 .gameCard {
-    width: 410px;
-    height: 450px;
+    width: 310px;
+    height: 350px;
     /* opacity: 0.6; */
     filter: brightness(76%);
 }
@@ -28,7 +28,7 @@
     padding-top: 5px;
     font-weight: bold;
     padding-bottom: 5px;
-    font-size: 62px;
+    font-size: 38px;
     text-align: center;
     position: absolute;
     top: 50%;
