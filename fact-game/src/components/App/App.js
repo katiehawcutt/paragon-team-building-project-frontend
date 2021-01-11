@@ -5,34 +5,27 @@ import FactGame from '../FactGame/FactGame'
 import { WEBSOCKET_URL } from '../../constants/websocket'
 
 import useFactsGame from '../../hooks/useFactsGame'
-import * as messageHandlers from '../../messageHandlers/messageHandlers'
 
 export default function App() {
     const factsGame = useFactsGame({
         webSocketUrl: WEBSOCKET_URL,
-        messageHandlers,
     })
 
-    if (factsGame.game.error) {
-        return <p>An error occcurred, please try again later.</p>
+    if (factsGame.unknownError) {
+        return <p>An unknown error occcurred, please try again later.</p>
     }
 
-    if (!factsGame.game.created) {
-        return (
-            <Home
-                handleCreate={factsGame.createAndJoinGame}
-                handleJoin={factsGame.joinExistingGame}
-            />
-        )
+    if (
+        (factsGame.gameCreated || factsGame.gameJoined) &&
+        factsGame.ComponentToRender
+    ) {
+        return <FactGame {...factsGame} />
     }
 
     return (
-        <div>
-            <FactGame
-                action={factsGame.currentStageInGame.action}
-                otherProps={factsGame.currentStageInGame.otherProps}
-                handleAnswer={factsGame.sendAnswer}
-            />
-        </div>
+        <Home
+            handleCreate={factsGame.createAndJoinGame}
+            handleJoin={factsGame.joinExistingGame}
+        />
     )
 }
