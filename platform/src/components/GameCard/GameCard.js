@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './GameCard.module.css'
-import { Avatar } from '@chakra-ui/react'
+
 
 export default function GameCard({
     handleClick,
@@ -26,6 +26,5 @@ export default function GameCard({
             <div className={styles.gameDescription}>
                 <p>{description}</p>
             </div>
-        </div>
-    )
-}
+
+
