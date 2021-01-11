@@ -29,7 +29,11 @@ function Home() {
                         />
                     </div>
                 </div>
-                <img className={styles.homeImg} src={HomeImg} />
+                <img
+                    className={styles.homeImg}
+                    src={HomeImg}
+                    alt="group of people working together"
+                />
             </div>
         </>
     )
