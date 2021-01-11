@@ -1,14 +1,13 @@
 /**
  * Set up in AWS Cognito.
  */
-export const APP_CLIENT_ID = '4717ed4sr9omajvh9kicrc3mbr'
-export const USER_POOL_ID = 'eu-west-1_Dbanccf5c'
+export const APP_CLIENT_ID = '7ciqhikgb2hne3lk3glen23c1'
+export const USER_POOL_ID = 'eu-west-1_deTxl6vNk'
 
 /**
  * Domain configured in AWS Cognito.
  */
-export const COGNITO_DOMAIN =
-    'https://paragon-rtb.auth.eu-west-1.amazoncognito.com'
+export const COGNITO_DOMAIN = 'https://paragon.auth.eu-west-1.amazoncognito.com'
 
 /**
  * Interact with these endpoints.
@@ -25,9 +24,7 @@ export const endpoints = Object.freeze({
  */
 export const callbackUrls = Object.freeze({
     AUTH_URL: process.env.REACT_APP_AUTH_URL ?? 'http://localhost:3000/login',
-    // AUTH_URL: 'http://localhost:3000/login',
     LOGOUT_URL:
         process.env.REACT_APP_LOGOUT_URL ??
         'http://localhost:3000/after-logout',
-    // LOGOUT_URL: 'http://localhost:3000/after-logout',
 })
