@@ -2,8 +2,6 @@ import React from 'react'
 import styles from './FlipCard.module.css'
 import UserIcon from '../UserIcon/UserIcon'
 
-const bio = `I love playing the saxophone and being outdoors. I also really like eating cheese and drinking wine. Recently, I have come to love coding and I can't wait to become a web-developer.`
-
 function FlipCard({ imageSrc, personName, bio }) {
     return (
         <div className={styles.container}>
