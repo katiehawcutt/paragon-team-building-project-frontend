@@ -74,21 +74,6 @@
     background-color: var(--light-purple);
 }
 
-/* .circleTopThree {
-    height: 37px;
-    width: 37px;
-    background-color: var(--yellow);
-    border-radius: 50%;
-    display: inline-block;
-    text-align: center;
-    padding: 3px;
-    box-shadow: 2.2px 2.2px 2.2px rgb(70, 69, 69);
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
 .leaderboardHeading {
     background-color: #6d44d9;
     padding: 30px;
