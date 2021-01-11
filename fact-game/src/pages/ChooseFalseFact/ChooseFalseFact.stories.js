@@ -1,5 +1,5 @@
 import React from 'react'
-import ChooseFalseFact from './ChooseFalseFact'
+import ChooseFalseFact from './index'
 
 export default {
     title: 'ChooseFalseFact',

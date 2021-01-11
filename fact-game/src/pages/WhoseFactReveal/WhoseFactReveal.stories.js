@@ -1,5 +1,5 @@
 import React from 'react'
-import WhoseFactReveal from './WhoseFactReveal'
+import WhoseFactReveal from './index'
 
 export default {
     title: 'WhoseFactReveal',

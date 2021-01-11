@@ -1,5 +1,5 @@
 import React from 'react'
-import UserPic from './UserPic'
+import UserPic from './index'
 
 // This default export determines where your story goes in the story list
 export default {

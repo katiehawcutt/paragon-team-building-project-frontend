@@ -1,5 +1,5 @@
 import React from 'react'
-import Leaderboard from './Leaderboard'
+import Leaderboard from './index'
 
 // This default export determines where your story goes in the story list
 export default {

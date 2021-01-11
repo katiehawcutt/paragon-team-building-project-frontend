@@ -1,5 +1,5 @@
 import React from 'react'
-import Input from './Input'
+import Input from './index'
 
 // This default export determines where your story goes in the story list
 export default {

@@ -8,17 +8,22 @@ import Title from '../../components/Title'
 import Countdown from '../../components/Countdown'
 import DisplayFact from '../../components/DisplayFact'
 
-// import { useUserContext } from '../../contexts/User'
+import ErrorSnackbar from '../../components/ErrorSnackbar'
+
+import { useUserContext } from '../../contexts/User'
 
 export default function WhoseFact({
     roundNumber,
     facts,
     participants,
     secondsLeft,
+    handleAnswer,
+    currentChoiceId,
+    answerNotUpdatedError,
 }) {
-    // const {
-    //     user: { playerId },
-    // } = useUserContext()
+    const {
+        user: { playerId },
+    } = useUserContext()
     return (
         <>
             <Header />
@@ -34,21 +39,31 @@ export default function WhoseFact({
                     {participants.map((participant) => {
                         return (
                             <button
-                                className={styles.nameButton}
-                                // key={participant.choiceId}
-                                // onClick={() =>
-                                //     handleAnswer({
-                                //         playerId,
-                                //         choice: participant.choiceId,
-                                //     })
-                                // }
+                                className={
+                                    currentChoiceId === participant.choiceId
+                                        ? styles.selectedButton
+                                        : styles.nameButton
+                                }
+                                key={participant.choiceId}
+                                onClick={() =>
+                                    handleAnswer({
+                                        playerId,
+                                        choice: participant.choiceId,
+                                    })
+                                }
                             >
-                                {participant}
+                                {participant.text}
                             </button>
                         )
                     })}
                 </div>
             </main>
+            {answerNotUpdatedError && (
+                <ErrorSnackbar
+                    errorMessage={answerNotUpdatedError}
+                    autoHideDuration={null}
+                />
+            )}
         </>
     )
 }

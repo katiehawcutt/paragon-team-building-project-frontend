@@ -1,5 +1,5 @@
 import React from 'react'
-import FactButton from './FactButton'
+import FactButton from './index'
 
 export default {
     title: 'FactButton',

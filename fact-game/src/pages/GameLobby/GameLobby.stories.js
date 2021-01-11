@@ -1,5 +1,5 @@
 import React from 'react'
-import GameLobby from './GameLobby'
+import GameLobby from './index'
 
 // This default export determines where your story goes in the story list
 export default {

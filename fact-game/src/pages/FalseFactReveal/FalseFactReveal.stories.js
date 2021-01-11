@@ -1,5 +1,5 @@
 import React from 'react'
-import FalseFactReveal from './FalseFactReveal'
+import FalseFactReveal from './index'
 
 export default {
     title: 'FalseFactReveal',

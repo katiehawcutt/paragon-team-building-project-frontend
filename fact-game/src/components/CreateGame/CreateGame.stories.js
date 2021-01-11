@@ -1,5 +1,5 @@
 import React from 'react'
-import CreateGame from './CreateGame'
+import CreateGame from '.'
 
 export default {
     title: 'CreateGame',
