@@ -9,10 +9,10 @@ function Menu({ image }) {
     return (
         <div className={styles.dropdown}>
             <button className={styles.userButton}>
-                <img src={image} className={styles.userPhoto}></img>
+                <img src={image} className={styles.userPhoto} alt="user" />
             </button>
             <div className={styles.dropdownContent}>
-                <a href="#">profile settings</a>
+                <div>profile settings</div>
                 <button
                     className={styles.logoutBtn} /* onClick={handleClick} */
                 >
