@@ -1,8 +1,8 @@
 /**
  * Set up in AWS Cognito.
  */
-export const APP_CLIENT_ID = 's9rm0dpi83pd9ltmf537pe8ku'
-export const USER_POOL_ID = 'eu-west-1_Wl1xmFtdN'
+export const APP_CLIENT_ID = '7ciqhikgb2hne3lk3glen23c1'
+export const USER_POOL_ID = 'eu-west-1_deTxl6vNk'
 
 /**
  * Domain configured in AWS Cognito.
