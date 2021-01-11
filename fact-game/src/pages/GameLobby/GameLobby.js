@@ -51,8 +51,6 @@ function GameLobby({
     playersInLobby,
     gameNotStartedError,
 }) {
-    console.log({ gameNotStartedError })
-
     const classes = useStyles()
     const [copied, setCopied] = React.useState(false)
 
@@ -115,6 +113,12 @@ function GameLobby({
                     </Button>
                 </Tooltip>
             </main>
+            {gameNotStartedError && (
+                <ErrorSnackbar
+                    errorMessage={gameNotStartedError}
+                    autoHideDuration={null}
+                />
+            )}
         </>
     )
 }

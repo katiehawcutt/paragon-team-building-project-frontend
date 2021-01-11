@@ -3,7 +3,7 @@ import React from 'react'
 export default function FactGame({
     ComponentToRender,
     renderProps,
-    stateAnswer: handleAnswer,
+    sendAnswer: handleAnswer,
     gameState,
 }) {
     const combinedProps = { ...renderProps, ...gameState, handleAnswer }

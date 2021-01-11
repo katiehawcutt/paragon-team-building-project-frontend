@@ -19,7 +19,14 @@ export default function App() {
         (factsGame.gameCreated || factsGame.gameJoined) &&
         factsGame.ComponentToRender
     ) {
-        return <FactGame {...factsGame} />
+        return (
+            <FactGame
+                ComponentToRender={factsGame.ComponentToRender}
+                renderProps={factsGame.renderProps}
+                handleAnswer={factsGame.sendAnswer}
+                gameState={factsGame}
+            />
+        )
     }
 
     return (

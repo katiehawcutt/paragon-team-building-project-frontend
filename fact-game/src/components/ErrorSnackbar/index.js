@@ -105,7 +105,10 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export default function ErrorSnackbar({ errorMessage }) {
+export default function ErrorSnackbar({
+    errorMessage,
+    autoHideDuration = 7000,
+}) {
     const classes = useStyles()
 
     const [error, setError] = useState(true)
@@ -115,7 +118,7 @@ export default function ErrorSnackbar({ errorMessage }) {
                 vertical: 'bottom',
                 horizontal: 'left',
             }}
-            autoHideDuration={7000}
+            autoHideDuration={autoHideDuration}
             onClose={() => setError(false)}
             open={error}
             message={
