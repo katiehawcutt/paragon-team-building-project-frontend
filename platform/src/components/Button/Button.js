@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './Button.module.css'
-import { Icon } from '@chakra-ui/react'
 import { FaGooglePlay } from 'react-icons/fa'
 import { Button as ButtonChak, ButtonGroup } from '@chakra-ui/react'
 

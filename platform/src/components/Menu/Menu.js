@@ -7,16 +7,18 @@ function Menu({ image }) {
     // }
 
     return (
-        <div class={styles.dropdown}>
+        <div className={styles.dropdown}>
             <button
-                class={styles.dropbtn}
+                className={styles.dropbtn}
                 style={{
                     backgroundImage: `url(${image})`,
                 }}
             />
-            <div class={styles.dropdownContent}>
+            <div className={styles.dropdownContent}>
                 <a href="#">profile settings</a>
-                <button class={styles.logoutBtn} /* onClick={handleClick} */>
+                <button
+                    className={styles.logoutBtn} /* onClick={handleClick} */
+                >
                     log out
                 </button>
             </div>
