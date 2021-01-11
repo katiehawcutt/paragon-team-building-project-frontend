@@ -100,7 +100,9 @@ export default function Podium({ leaderboard, winners }) {
                 </main>
                 {winners.length > 1 && (
                     <div className={styles.podiumTitle}>
-                        The joint winners are: {winners.join(', ')}!
+                        {winners.length > 3
+                            ? 'Congratulations to all the winners!'
+                            : `The joint winners are: ${winners.join(', ')}!`}
                     </div>
                 )}
                 {winners.length === 1 && (
