@@ -10,15 +10,14 @@
 .gameCard {
     width: 310px;
     height: 310px;
+}
+
+.gameImage {
+    width: 310px;
+    height: 310px;
     /* opacity: 0.6; */
     filter: brightness(60%);
 }
-
-/* .gameTitleContainer {
-    text-align: center;
-    position: absolute;
-    
-} */
 
 .gameTitle {
     font-family: var(--primary-font);
