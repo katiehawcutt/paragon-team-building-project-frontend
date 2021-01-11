@@ -57,7 +57,7 @@ function Games() {
             </div>
             <div className={styles.mainContainer}>
                 <div className={styles.subTitle}>
-                    <Subtitle text={'Select Your Game'} />
+                    <Subtitle text={'Select Your Activity'} />
                 </div>
                 <div className={styles.gameCardContainer}>
                     <GameCard
