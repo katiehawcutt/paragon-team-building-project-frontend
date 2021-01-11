@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import useWebSocket from 'react-use-websocket'
 import useMessageReducer from './useMessageReducer'
 

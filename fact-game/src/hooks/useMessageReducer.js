@@ -64,6 +64,7 @@ export default function useMessageReducer({ lastMessage }) {
                 payload: properties,
             })
         }
+        // eslint-disable-next-line
     }, [lastMessage])
 
     return state
