@@ -8,8 +8,7 @@ export default function GameCard({ text, image, link }) {
                 className={styles.gameCard}
                 href={link}
                 target="_blank"
-                rel="noopener"
-                rel="noreferrer"
+                rel="noopener noreferrer"
             >
                 <img src={image} alt="Game img button" />
                 <h2 className={styles.gameTitle}>{text}</h2>
