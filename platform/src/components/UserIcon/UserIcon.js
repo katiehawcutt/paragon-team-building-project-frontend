@@ -9,6 +9,7 @@ function UserIcon({ imageSrc }) {
                     data-testid="userTest"
                     className={styles.userPhoto}
                     src={imageSrc}
+                    alt="user"
                 />
             </div>
         </>
