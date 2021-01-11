@@ -45,11 +45,10 @@ const initialMessageState = {
 export default function useMessageReducer({ lastMessage }) {
     const [state, dispatch] = useReducer(messageReducer, initialMessageState)
 
-    const { action, ...properties } = lastMessage ?? {}
-
-    const ComponentToRender = eventToComponentMap[action]
-
     useEffect(() => {
+        const { action, ...properties } = lastMessage ?? {}
+        const ComponentToRender = eventToComponentMap[action]
+
         if (ComponentToRender) {
             dispatch({
                 type: actionTypes.SET_COMPONENT_TO_RENDER,
@@ -64,7 +63,6 @@ export default function useMessageReducer({ lastMessage }) {
                 payload: properties,
             })
         }
-        // eslint-disable-next-line
     }, [lastMessage])
 
     return state
