@@ -72,12 +72,14 @@
 }
 
 .showCaseImage {
-    height: 400px;
-    width: 400px;
+    height: auto;
+    width: auto;
+    max-width: 400px;
+    max-height: 400px;
     float: right;
     display: flex;
     z-index: 1;
-    border-radius: 50%;
+    border-radius: 100%;
     margin-left: 10vh;
     margin-right: 10vh;
 }
