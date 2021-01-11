@@ -1,6 +1,8 @@
 import React from 'react'
 import { NavLink as Link } from 'react-router-dom'
 import styles from './Nav.module.css'
+import Menu from '../Menu/Menu'
+import image from '../../Images_2/userIcon.png'
 
 function Nav() {
     return (
@@ -39,9 +41,10 @@ function Nav() {
                         </Link>
                     </li>
                 </ul>
-                <button className={styles.userButton}>
+                <Menu image={image} /> {/* //Image retrieved from backend */}
+                {/* <button className={styles.userButton}>
                     <img className={styles.userPhoto} src="./Images/kh.png" />
-                </button>
+                </button> */}
             </div>
         </nav>
     )

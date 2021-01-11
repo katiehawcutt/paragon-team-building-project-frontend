@@ -1,30 +1,21 @@
 import React from 'react'
 import styles from './GameCard.module.css'
 
-export default function GameCard({
-    handleClick,
-    text,
-    description,
-    image,
-    alt,
-}) {
+export default function GameCard({ text, image, link }) {
     return (
         <div className={styles.card}>
-            <div className={styles.gameTitleContainer}>
-                <h2 className={styles.gameTitle}>{text}</h2>
-            </div>
-            <div className={styles.iconContainer}>
-                <img
-                    data-testid="testGameCard"
-                    className={styles.gameIcon}
-                    alt={alt}
-                    src={image}
-                    onClick={handleClick}
-                />
-            </div>
-            <div className={styles.gameDescription}>
-                <p>{description}</p>
-            </div>
+            <input
+                className={styles.gameCard}
+                data-testid="testGameCard"
+                type="image"
+                id="image"
+                alt="Game img button"
+                src={image}
+                onClick={() => {
+                    window.open(link)
+                }}
+            />
+            <h2 className={styles.gameTitle}>{text}</h2>
         </div>
     )
 }
