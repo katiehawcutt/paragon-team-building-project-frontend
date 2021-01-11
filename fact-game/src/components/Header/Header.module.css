@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-.xbutton {
+.x {
     background-color: #2e345c;
     color: rgba(255, 255, 255, 0.5);
     font-size: 25px;
@@ -17,8 +17,9 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    text-decoration: none;
 }
 
-.xbutton:hover {
+.x:hover {
     color: var(--gold);
 }

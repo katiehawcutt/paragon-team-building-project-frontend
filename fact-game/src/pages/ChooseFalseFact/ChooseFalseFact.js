@@ -31,14 +31,14 @@ export default function ChooseFalseFact({
                 <div className={styles.factContainer}>
                     <FactButton
                         factText={firstFact}
-                        selected={currentChoiceId === firstFact ? true : false}
+                        selected={currentChoiceId === firstFact}
                         handleClick={() => {
                             handleAnswer({ playerId, choice: firstFact })
                         }}
                     />
                     <FactButton
                         factText={secondFact}
-                        selected={currentChoiceId === secondFact ? true : false}
+                        selected={currentChoiceId === secondFact}
                         handleClick={() => {
                             handleAnswer({ playerId, choice: secondFact })
                         }}

@@ -22,14 +22,16 @@
     letter-spacing: 3px;
     font-family: var(--primary-font);
     font-size: 28px;
+    text-shadow: var(--text-shadow);
 }
 
 .tableData {
     font-family: var(--primary-font);
+    text-shadow: var(--text-shadow);
     font-size: 20px;
-    font-weight: small;
     letter-spacing: 3px;
     padding: 15px;
+    color: white;
 }
 
 .leaderboardOrder {
@@ -52,21 +54,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
-.circleTopThree {
-    height: 37px;
-    width: 37px;
-    background-color: var(--yellow);
-    border-radius: 50%;
-    display: inline-block;
-    text-align: center;
-    padding: 3px;
-    box-shadow: 2.2px 2.2px 2.2px rgb(70, 69, 69);
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.circleFirstPlace {
+    background-color: #ffc02e;
+    color: black;
+}
+
+.circleSecondPlace {
+    background-color: #b6aa8d;
+}
+
+.circleThirdPlace {
+    background-color: #c66716;
+}
+
+.circleOtherPlace {
+    background-color: var(--light-purple);
 }
 
 .leaderboardHeading {

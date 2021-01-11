@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
 import useWebSocket from 'react-use-websocket'
+import useMessageReducer from './useMessageReducer'
 
 const tryToParseJson = (json) => {
     try {
@@ -9,91 +9,46 @@ const tryToParseJson = (json) => {
     }
 }
 
-export default function useFactsGame({ webSocketUrl, messageHandlers }) {
-    /**
-     * A bit of state for when the player's not yet joined a game.
-     */
-    const [game, setGame] = useState({
-        error: null,
-        started: false,
-        created: false,
-        gameId: null,
-        requestSent: false,
-        responseReceived: false,
-    })
-
+export default function useFactsGame({ webSocketUrl, shouldConnect = true }) {
     /**
      * Build custom hook on top of hook.
      */
-    const { sendJsonMessage, lastJsonMessage, readyState } = useWebSocket(
+    const { sendJsonMessage, lastJsonMessage } = useWebSocket(
         webSocketUrl,
         {
             retryOnError: true,
             shouldReconnect: () => true,
             reconnectInterval: 1000,
-            // onError: (e) => console.log('useWebSocket onError ran', e),
             onMessage(event) {
                 /**
-                 * Try to parse message. If there's an error, log and return early.
+                 * Try to parse and log message.
+                 *
+                 * Actual message handling will be done by useMessageReducer hook.
                  */
                 const { parsed, parsingError } = tryToParseJson(event.data)
                 if (parsingError) {
-                    return console.error(parsingError)
+                    console.error(parsingError)
+                } else {
+                    console.log('Received from server', parsed)
                 }
-
-                console.log('Received from server', parsed)
-
-                /**
-                 * Call handler with try-catch.
-                 */
-                const handler =
-                    messageHandlers[parsed.action] ?? messageHandlers.$default
-                try {
-                    handler({ data: parsed, setGame, sendJsonMessage })
-                } catch (err) {
-                    console.error(err)
-                }
-            },
-        }
-    )
-
-    // console.log({ readyState })
-
-    //Keep track of last message that isn't action:ANSWER
-    //If the last message has an action of ANSWER we want to update the currentSubmittedAnswer property within the object returned from the useFacts game
-    // If not, continue doing what we're doing - destructure action and props from lastJsonMesaage
-
-    const [lastNonAnswerMessage, setLastNonAnswerMessage] = useState()
-
-    const [lastAnswerMessage, setLastAnswerMessage] = useState()
-
-    useEffect(() => {
-        if (lastJsonMessage?.action === 'ANSWER') {
-            setLastAnswerMessage(lastJsonMessage)
-        } else {
-            setLastNonAnswerMessage(lastJsonMessage)
-        }
-    }, [lastJsonMessage])
-
-    const { action, ...otherProps } = lastNonAnswerMessage ?? {}
-
-    return {
-        game,
-        currentStageInGame: {
-            action,
-            otherProps: {
-                ...otherProps,
-                currentChoiceId: lastAnswerMessage?.choice,
             },
         },
+        shouldConnect
+    )
 
+    /**
+     * Custom hook for flexibly updating state in response to received messages.
+     */
+    const gameState = useMessageReducer({ lastMessage: lastJsonMessage })
+
+    return {
+        ...gameState,
         createAndJoinGame({ displayName, fact, lie, playerId, rounds }) {
             sendJsonMessage({
                 action: 'CREATE_AND_JOIN_GAME',
                 rounds,
                 player: { displayName, fact, lie, playerId },
             })
-            setGame((prev) => ({ ...prev, requestSent: true }))
         },
         joinExistingGame({ gameId, displayName, fact, lie, playerId }) {
             sendJsonMessage({
@@ -101,12 +56,11 @@ export default function useFactsGame({ webSocketUrl, messageHandlers }) {
                 gameId,
                 player: { displayName, fact, lie, playerId },
             })
-            setGame((prev) => ({ ...prev, requestSent: true }))
         },
         sendAnswer({ choice, playerId }) {
             sendJsonMessage({
                 action: 'ANSWER',
-                gameId: game.gameId,
+                gameId: gameState.gameId,
                 playerId: playerId, // ID of the player that's answering
                 choice,
             })

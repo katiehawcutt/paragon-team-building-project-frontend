@@ -16,7 +16,10 @@ function Home() {
         <>
             <div className={styles.home_container}>
                 <div className={styles.text_container}>
-                    <Title text="Welcome Bootcampers!" />
+                    <Title
+                        text="Welcome Bootcampers!"
+                        className={styles.title}
+                    />
                     <p className={styles.bio_section}>{bio}</p>
                     <div className={styles.button_container}>
                         <Button

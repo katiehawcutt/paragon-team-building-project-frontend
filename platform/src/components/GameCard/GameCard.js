@@ -4,18 +4,15 @@ import styles from './GameCard.module.css'
 export default function GameCard({ text, image, link }) {
     return (
         <div className={styles.card}>
-            <input
+            <a
                 className={styles.gameCard}
-                data-testid="testGameCard"
-                type="image"
-                id="image"
-                alt="Game img button"
-                src={image}
-                onClick={() => {
-                    window.open(link)
-                }}
-            />
-            <h2 className={styles.gameTitle}>{text}</h2>
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img src={image} alt="Game img button" />
+                <h2 className={styles.gameTitle}>{text}</h2>
+            </a>
         </div>
     )
 }

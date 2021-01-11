@@ -121,7 +121,12 @@ const theme = createMuiTheme({
     },
 })
 
-export default function Home({ handleCreate, handleJoin }) {
+export default function Home({
+    handleCreate,
+    handleJoin,
+    gameNotJoinedError,
+    gameNotCreatedError,
+}) {
     const [page, setPage] = useState('')
     const classes = useStyles()
 
@@ -191,10 +196,16 @@ export default function Home({ handleCreate, handleJoin }) {
                     {/* Create */}
 
                     {pages.CREATE === page && (
-                        <CreateGame handleCreate={handleCreate} />
+                        <CreateGame
+                            handleCreate={handleCreate}
+                            gameNotCreatedError={gameNotCreatedError}
+                        />
                     )}
                     {pages.JOIN === page && (
-                        <JoinGame handleJoin={handleJoin} />
+                        <JoinGame
+                            handleJoin={handleJoin}
+                            gameNotJoinedError={gameNotJoinedError}
+                        />
                     )}
 
                     {/* Join */}

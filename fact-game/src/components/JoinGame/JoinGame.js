@@ -119,7 +119,7 @@ const useStyles = makeStyles({
     },
 })
 
-export default function CreateNewGame({ handleJoin, serverSidedError }) {
+export default function JoinExistingGame({ handleJoin, gameNotJoinedError }) {
     const [fact, setFact] = useState('')
     const [lie, setLie] = useState('')
     const [gameId, setGameId] = useState('')
@@ -195,6 +195,16 @@ export default function CreateNewGame({ handleJoin, serverSidedError }) {
             isMounted.current = false
         }
     }, [])
+
+    /**
+     * Update error state
+     */
+    useEffect(() => {
+        if (gameNotJoinedError) {
+            setLoading(false)
+        }
+        setError(Boolean(gameNotJoinedError))
+    }, [gameNotJoinedError])
 
     const buttonEndIcon = loading ? (
         <CircularProgress size="2rem" className={classes.buttonProgress} />
@@ -374,7 +384,8 @@ export default function CreateNewGame({ handleJoin, serverSidedError }) {
                                     classes={{ root: classes.errorIcon }}
                                 />
                                 <span className={classes.errorMessage}>
-                                    Sorry, the game cannot be joined right now.
+                                    {gameNotJoinedError ??
+                                        'Sorry, this game cannot be joined right now.'}
                                 </span>
                             </div>
                         }
