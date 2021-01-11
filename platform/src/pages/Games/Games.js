@@ -4,7 +4,7 @@ import Button from '../../components/Button/Button'
 import GameCard from '../../components/GameCard/GameCard'
 import Title from '../../components/Title/Title'
 import Subtitle from '../../components/Subtitle/Subtitle'
-import amongUs from '../../Images_2/amongUs.png'
+// import amongUs from './Images_2/amongUs.png'
 import gartic from '../../Images_2/garticImg.png'
 import scattergories from '../../Images_2/scattegoriesImg.png'
 import banner2 from '../../Images_2/banner2.jpg'
@@ -76,7 +76,7 @@ function Games() {
                     />
                     <GameCard
                         text={'Among Us'}
-                        image={amongUs}
+                        image={'./Images/amongUs.png'}
                         link={amongUsLink}
                     />
                     <GameCard

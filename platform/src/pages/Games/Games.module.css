@@ -181,7 +181,6 @@
         align-items: center;
     }
     .mainContainer {
-        flex-direction: column-reverse;
         align-items: center;
     }
     .subTitle {
