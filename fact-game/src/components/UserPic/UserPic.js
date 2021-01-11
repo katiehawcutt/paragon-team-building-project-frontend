@@ -1,5 +1,4 @@
 import React from 'react'
-// import styles from './UserPic.module.css'
 import { makeStyles } from '@material-ui/core/styles'
 import Avatar from '@material-ui/core/Avatar'
 
@@ -24,14 +23,10 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export default function UserPic() {
+export default function UserPic({ image }) {
     const classes = useStyles()
 
     return (
-        <Avatar
-            className={classes.medium}
-            alt="user icon"
-            src="/images/userIcon.png"
-        ></Avatar>
+        <Avatar className={classes.medium} alt="user icon" src={image}></Avatar>
     )
 }
