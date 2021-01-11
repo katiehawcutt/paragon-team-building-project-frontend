@@ -6,6 +6,8 @@ import Title from '../../components/Title/Title'
 import Subtitle from '../../components/Subtitle/Subtitle'
 
 function Games() {
+    const buttonColor = '#FE4042'
+
     const factGameLink = 'https://the-fact-game.netlify.app'
     const garticLink = 'https://gartic.io/'
     const scattergoriesLink = 'https://swellgarfo.com/scattergories/'
@@ -40,13 +42,17 @@ function Games() {
                     <Title className={styles.showCaseTitle} text={'Facts!'} />
                     <p className={styles.showCaseBio}>{showCaseBio}</p>
                     <div className={styles.button_container}>
-                        <Button text="Play Now" link={factGameLink} />
+                        <Button
+                            text="Play Now"
+                            link={factGameLink}
+                            color={buttonColor}
+                        />
                     </div>
                 </div>
                 <img
                     className={styles.showCaseImage}
                     alt="showCase Facts"
-                    src={'./Images/banner2.jpg'}
+                    src={'./Images/facts_logo.png'}
                 />
             </div>
             <div className={styles.mainContainer}>
@@ -56,7 +62,7 @@ function Games() {
                 <div className={styles.gameCardContainer}>
                     <GameCard
                         text={'Facts!'}
-                        image={'./Images/banner2.jpg'}
+                        image={'./Images/facts_no_center.png'}
                         link={factGameLink}
                     />
                     <GameCard
