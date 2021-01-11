@@ -4,16 +4,6 @@ import Button from '../../components/Button/Button'
 import GameCard from '../../components/GameCard/GameCard'
 import Title from '../../components/Title/Title'
 import Subtitle from '../../components/Subtitle/Subtitle'
-// import amongUs from './Images_2/amongUs.png'
-import gartic from '../../Images_2/garticImg.png'
-import scattergories from '../../Images_2/scattegoriesImg.png'
-import banner2 from '../../Images_2/banner2.jpg'
-import teamBuildingBanner from '../../Images_2/team-building.jpg'
-import codenames from '../../Images_2/codenames.jpg'
-import mafia from '../../Images_2/mafia.jpg'
-import spyfall from '../../Images_2/spyfall.jpg'
-import secretHitler from '../../Images_2/secret_hitler.jpg'
-import taboo from '../../Images_2/taboo.jpg'
 
 function Games() {
     const factGameLink = 'https://the-fact-game.netlify.app'
@@ -38,7 +28,7 @@ function Games() {
                 <img
                     className={styles.banner}
                     alt="Team Building img"
-                    src={teamBuildingBanner}
+                    src={'./Images/team-building.jpg'}
                 />
                 <div className={styles.textContainer}>
                     <Title className={styles.title} text={'Game'} />
@@ -56,7 +46,7 @@ function Games() {
                 <img
                     className={styles.showCaseImage}
                     alt="showCase Facts"
-                    src={banner2}
+                    src={'./Images/banner2.jpg'}
                 />
             </div>
             <div className={styles.mainContainer}>
@@ -66,12 +56,12 @@ function Games() {
                 <div className={styles.gameCardContainer}>
                     <GameCard
                         text={'Facts!'}
-                        image={banner2}
+                        image={'./Images/banner2.jpg'}
                         link={factGameLink}
                     />
                     <GameCard
                         text={'Gartic'}
-                        image={gartic}
+                        image={'./Images/gartic.png'}
                         link={garticLink}
                     />
                     <GameCard
@@ -81,26 +71,34 @@ function Games() {
                     />
                     <GameCard
                         text={'Scattergories'}
-                        image={scattergories}
+                        image={'./Images/scattergoriesImg.png'}
                         link={scattergoriesLink}
                     />
                     <GameCard
                         text={'Codenames'}
-                        image={codenames}
+                        image={'./Images/codenames.png'}
                         link={codenamesLink}
                     />
-                    <GameCard text={'Mafia'} image={mafia} link={mafiaLink} />
+                    <GameCard
+                        text={'Mafia'}
+                        image={'./Images/mafia.png'}
+                        link={mafiaLink}
+                    />
                     <GameCard
                         text={'Spyfall'}
-                        image={spyfall}
+                        image={'./Images/spyfall.jpg'}
                         link={spyfallLink}
                     />
                     <GameCard
                         text={'Secret Hitler'}
-                        image={secretHitler}
+                        image={'./Images/secret_hitler.png'}
                         link={secretHitlerLink}
                     />
-                    <GameCard text={'Taboo'} image={taboo} link={tabooLink} />
+                    <GameCard
+                        text={'Taboo'}
+                        image={'./Images/taboo.png'}
+                        link={tabooLink}
+                    />
                 </div>
             </div>
         </>
