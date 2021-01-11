@@ -8,6 +8,8 @@ import Title from '../../components/Title/Title'
 import Countdown from '../../components/Countdown/Countdown'
 import DisplayFact from '../../components/DisplayFact/DisplayFact'
 
+import ErrorSnackbar from '../../components/ErrorSnackbar'
+
 import { useUserContext } from '../../contexts/User'
 
 export default function WhoseFact({
@@ -17,6 +19,7 @@ export default function WhoseFact({
     secondsLeft,
     handleAnswer,
     currentChoiceId,
+    answerNotUpdatedError,
 }) {
     const {
         user: { playerId },
@@ -55,6 +58,12 @@ export default function WhoseFact({
                     })}
                 </div>
             </main>
+            {answerNotUpdatedError && (
+                <ErrorSnackbar
+                    errorMessage={answerNotUpdatedError}
+                    autoHideDuration={null}
+                />
+            )}
         </>
     )
 }

@@ -13,6 +13,8 @@ import FileCopyIcon from '@material-ui/icons/FileCopy'
 import CheckIcon from '@material-ui/icons/Check'
 import Tooltip from '@material-ui/core/Tooltip'
 
+import ErrorSnackbar from '../../components/ErrorSnackbar'
+
 const useStyles = makeStyles((theme) => ({
     root: {
         backgroundColor: '#d99444',
@@ -43,7 +45,12 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-function GameLobby({ gameId, secondsLeft }) {
+function GameLobby({
+    gameId,
+    secondsLeft,
+    playersInLobby,
+    gameNotStartedError,
+}) {
     const classes = useStyles()
     const [copied, setCopied] = React.useState(false)
 
@@ -106,6 +113,12 @@ function GameLobby({ gameId, secondsLeft }) {
                     </Button>
                 </Tooltip>
             </main>
+            {gameNotStartedError && (
+                <ErrorSnackbar
+                    errorMessage={gameNotStartedError}
+                    autoHideDuration={null}
+                />
+            )}
         </>
     )
 }

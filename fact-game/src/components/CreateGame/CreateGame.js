@@ -125,7 +125,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-export default function CreateNewGame({ handleCreate, serverSidedError }) {
+export default function CreateNewGame({ handleCreate, gameNotCreatedError }) {
     const [fact, setFact] = useState('')
     const [lie, setLie] = useState('')
     const [rounds, setRounds] = useState(1)
@@ -209,6 +209,16 @@ export default function CreateNewGame({ handleCreate, serverSidedError }) {
             isMounted.current = false
         }
     }, [])
+
+    /**
+     * Update error state
+     */
+    useEffect(() => {
+        if (gameNotCreatedError) {
+            setLoading(false)
+        }
+        setError(Boolean(gameNotCreatedError))
+    }, [gameNotCreatedError])
 
     const buttonEndIcon = loading ? (
         <CircularProgress size="2rem" className={classes.buttonProgress} />
@@ -395,7 +405,8 @@ export default function CreateNewGame({ handleCreate, serverSidedError }) {
                                     classes={{ root: classes.errorIcon }}
                                 />
                                 <span className={classes.errorMessage}>
-                                    Sorry, the game cannot be created right now.
+                                    {gameNotCreatedError ??
+                                        'Sorry, the game cannot be created right now.'}
                                 </span>
                             </div>
                         }
