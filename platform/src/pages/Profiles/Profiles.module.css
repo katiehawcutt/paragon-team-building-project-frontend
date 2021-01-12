@@ -31,6 +31,7 @@
     flex-wrap: wrap;
     width: 90vw;
     margin-top: 80px;
+    margin-bottom: 50px;
 }
 
 @media only screen and (max-width: 910px) {

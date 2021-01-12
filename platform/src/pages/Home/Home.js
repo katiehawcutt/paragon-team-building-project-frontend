@@ -3,14 +3,22 @@ import styles from './Home.module.css'
 import Button from '../../components/Button/Button'
 import Title from '../../components/Title/Title'
 
-import HomeImg from '../../Images_2/homepage-picture.png'
+import { LINK_TO_FACTS } from '../../constants/externalUrls'
 
 function Home() {
-    const factGameLink = 'https://the-fact-game.netlify.app'
     const buttonColor = '#FE4042'
 
-    const bio =
-        'This site is build with the primary objective of building teams, small and large, through the  medium of games. We have curated a list of the best games to harness an inclusive environment and build rapport. Check out our bespoke facts  game by clicking the link below!'
+    const intro1 = ` At School Of Code we believe that tech is a team sport and we like to introduce
+    our bootcampers to the practice of pair-programming and working in diverse teams from day one. 
+    Since our bootcamp is now fully remote it's more important than ever that our teams feel 
+    connected and able to build rapport, whilst solving problems effectively in a supportive 
+    environment.`
+
+    const intro2 = `To reinforce this idea we have created a bespoke game called Facts! from a highly 
+    requested energiser that allows bootcampers to get to know a little more about their team members. 
+    This sits within our collection of team building activities that promote engagement and 
+    encourage a positive working model. 
+    Click the button below to play Facts! now.`
 
     return (
         <>
@@ -20,18 +28,19 @@ function Home() {
                         text="Welcome Bootcampers!"
                         className={styles.title}
                     />
-                    <p className={styles.bio_section}>{bio}</p>
+                    <p className={styles.intro_section}>{intro1}</p>
+                    <p className={styles.intro_section}>{intro2}</p>
                     <div className={styles.button_container}>
                         <Button
                             text="Play Now"
                             color={buttonColor}
-                            link={factGameLink}
+                            link={LINK_TO_FACTS}
                         />
                     </div>
                 </div>
                 <img
                     className={styles.homeImg}
-                    src={HomeImg}
+                    src="./Images/homepage-picture.png"
                     alt="group of people working together"
                 />
             </div>
