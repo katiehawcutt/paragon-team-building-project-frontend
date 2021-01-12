@@ -7,7 +7,12 @@ import Round from '../Round'
 import Title from '../Title'
 import styles from './RevealTimer.module.css'
 
-export default function RevealTimer({ title, roundNumber, secondsLeft }) {
+export default function RevealTimer({
+    title,
+    roundNumber,
+    secondsLeft,
+    children,
+}) {
     return (
         <>
             <Header />
@@ -15,6 +20,7 @@ export default function RevealTimer({ title, roundNumber, secondsLeft }) {
                 <Round roundNumber={roundNumber} />
                 <Title text={title} />
                 <RevealCountdown secondsLeft={secondsLeft} />
+                {children}
             </main>
         </>
     )
