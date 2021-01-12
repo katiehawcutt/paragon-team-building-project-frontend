@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 }
 
 .bannerImage {
@@ -19,7 +20,7 @@
     z-index: 10;
     margin-top: 5vh;
     margin-right: 30px;
-    margin-left: 3px;
+    /* margin-left: 3px; */
 }
 
 .textContainer {
@@ -58,6 +59,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 }
 
 .textShowCaseContainer {
@@ -77,8 +79,8 @@
     width: auto; */
     /* max-width: 400px;
     max-height: 400px; */
-    width: 30vw;
-    height: 30vw;
+    max-width: 25vw;
+    max-height: 25vw;
     /* height: 25vw; */
     float: right;
     display: flex;
@@ -155,20 +157,19 @@
     }
     .showCaseImage {
         margin-top: 0px;
-        /* max-width: 60vw;
-        max-height: 53vh; */
     }
 }
 
 @media only screen and (max-width: 990px) {
     .showCaseImage {
         margin-top: 0px;
-        /* max-width: 55vw; */
+        max-width: 30vw;
+        max-height: 30vw;
     }
     .bannerImage {
         margin-top: 0px;
         margin-right: 0;
-        max-width: 55vw;
+        max-width: 65vw;
         margin-bottom: 50px;
     }
 
@@ -200,6 +201,7 @@
     .showCaseContainer {
         flex-direction: column-reverse;
         align-items: center;
+        justify-content: center;
     }
     .textShowCaseContainer {
         width: 80vw;
