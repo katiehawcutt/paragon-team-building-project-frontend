@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import cn from 'classnames'
 import styles from './WhichFact.module.css'
+
+import useSound from 'use-sound'
+import ticktock from '../../sounds/ticktock.mp3'
 
 import Header from '../../components/Header'
 import Round from '../../components/Round'
@@ -21,6 +24,15 @@ export default function WhichFact({
     const {
         user: { playerId },
     } = useUserContext()
+
+    const [tickingSound, { stop }] = useSound(ticktock)
+
+    useEffect(() => {
+        setTimeout(tickingSound, 5000)
+        return () => {
+            stop()
+        }
+    }, [tickingSound])
 
     return (
         <>

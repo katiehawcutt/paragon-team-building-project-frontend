@@ -1,11 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import cn from 'classnames'
 import styles from './GameStarting.module.css'
+
+import useSound from 'use-sound'
+import alert from '../../sounds/zenping.mp3'
 
 import Header from '../../components/Header'
 import Title from '../../components/Title'
 
 function GameStarting() {
+    const [pingAlert, { stop }] = useSound(alert)
+
+    useEffect(() => {
+        setTimeout(pingAlert, 100)
+        return () => {
+            stop()
+        }
+    }, [pingAlert])
+
     return (
         <>
             <Header />

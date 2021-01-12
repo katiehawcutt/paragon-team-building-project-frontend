@@ -1,5 +1,5 @@
 import React from 'react'
-import Round from './index.test'
+import Round from './index'
 
 export default {
     title: 'Round',
