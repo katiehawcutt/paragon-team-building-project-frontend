@@ -19,9 +19,9 @@ export const eventToComponentMap = {
     GUESS_WHO_TIMER: WhoseFact,
     REVEAL_WHO_TIMER: RevealWhoTimer,
     REVEAL_WHO: WhoseFactReveal,
-    GUESS_FAKE_FACT_TIMER: ChooseFalseFact,
-    REVEAL_FAKE_FACT_TIMER: RevealFactTimer,
-    REVEAL_FAKE_FACT: FalseFactReveal,
+    GUESS_WHICH_FACT_TIMER: ChooseFalseFact,
+    REVEAL_WHICH_FACT_TIMER: RevealFactTimer,
+    REVEAL_WHICH_FACT: FalseFactReveal,
     PODIUM: Podium,
 }
 
