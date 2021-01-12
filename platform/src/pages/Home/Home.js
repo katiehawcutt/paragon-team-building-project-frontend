@@ -14,11 +14,11 @@ function Home() {
     connected and able to build rapport, whilst solving problems effectively in a supportive 
     environment.`
 
-    const intro2 = `To reinforce this idea we built a team building platform that hosts a variety 
-    of activities that promote engagement and encourage a positive working model. 
-    We even built a bespoke game from a highly requested energiser from Cohort 4 that allows 
-    bootcampers to get to know a little more about their team members. 
-    Check it out by clicking the link below!`
+    const intro2 = `To reinforce this idea we have created a bespoke game called Facts! from a highly 
+    requested energiser that allows bootcampers to get to know a little more about their team members. 
+    This sits within our collection of team building activities that promote engagement and 
+    encourage a positive working model. 
+    Click the button below to play Facts! now.`
 
     return (
         <>

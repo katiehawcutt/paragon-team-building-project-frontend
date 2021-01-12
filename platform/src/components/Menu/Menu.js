@@ -1,4 +1,5 @@
 import React from 'react'
+import ProfileSettings from '../ProfileSettings'
 import styles from './Menu.module.css'
 
 import { useAwsCognitoHostedUi } from '../../hooks/useAwsCognitoHostedUi'
@@ -12,10 +13,16 @@ function Menu({ image }) {
                 <img src={image} className={styles.userPhoto} alt="user" />
             </button>
             <div className={styles.dropdownContent}>
-                <div>profile settings</div>
+
+               
+                <ProfileSettings />
+                
+
+                
                 <a
                     className={styles.logoutBtn}
                     href={getUrlForAwsCognitoLogout()}
+
                 >
                     log out
                 </a>

@@ -6,9 +6,10 @@ import revelation from '../../sounds/revelation.mp3'
 
 import Round from '../../components/Round'
 import Title from '../../components/Title'
+import Leaderboard from '../../components/Leaderboard'
 import styles from './WhichFactReveal.module.css'
 
-export default function WhichFactReveal({ displayName, roundNumber, fact }) {
+export default function WhichFactReveal({ displayName, roundNumber, fact, leaderboard }) {
     const [revelationSound, { stop }] = useSound(revelation)
 
     const timeoutId = useEffect(() => {
@@ -18,6 +19,7 @@ export default function WhichFactReveal({ displayName, roundNumber, fact }) {
             clearTimeout(timeoutId)
         }
     }, [revelationSound, stop])
+
     return (
         <>
             <Header />
@@ -25,6 +27,7 @@ export default function WhichFactReveal({ displayName, roundNumber, fact }) {
                 <Round roundNumber={roundNumber} />
                 <Title text={`${displayName}'s true fact is...`} />
                 <div className={styles.fact}>{fact}</div>
+                <Leaderboard leaderboard={leaderboard} />
             </main>
         </>
     )
