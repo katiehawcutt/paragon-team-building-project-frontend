@@ -27,7 +27,7 @@ export default function WhichFact({
             <Header />
             <main className={cn(styles.pageContainer, 'animateIn')}>
                 <Round roundNumber={roundNumber} />
-                <Title text={`Which is ${displayName}'s fake fact?`} />
+                <Title text={`Which is ${displayName}'s true fact?`} />
                 <Countdown secondsLeft={secondsLeft} />
                 <div className={styles.factContainer}>
                     {facts.map((fact) => {

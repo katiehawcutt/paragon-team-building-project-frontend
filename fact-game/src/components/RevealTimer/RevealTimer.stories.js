@@ -18,7 +18,7 @@ FirstStory.args = {
 
 export const SecondStory = Template.bind({})
 SecondStory.args = {
-    title: 'The fake fact is...',
+    title: 'The true fact is...',
     roundNumber: 1,
     secondsLeft: 10,
 }
