@@ -14,7 +14,7 @@ function Home() {
     connected and able to build rapport, whilst solving problems effectively in a supportive 
     environment.`
 
-    const intro2 = `To reinforce this idea we created a bespoke game called Facts! from a highly 
+    const intro2 = `To reinforce this idea we have created a bespoke game called Facts! from a highly 
     requested energiser that allows bootcampers to get to know a little more about their team members. 
     This sits within our collection of team building activities that promote engagement and 
     encourage a positive working model. 
