@@ -18,7 +18,7 @@ function Home() {
     requested energiser that allows bootcampers to get to know a little more about their team members. 
     This sits within our collection of team building activities that promote engagement and 
     encourage a positive working model. 
-    Click the button below to play Facts!`
+    Click the button below to play Facts! now.`
 
     return (
         <>
