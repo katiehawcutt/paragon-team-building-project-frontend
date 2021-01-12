@@ -9,8 +9,17 @@ import { LINK_TO_FACTS } from '../../constants/externalUrls'
 function Home() {
     const buttonColor = '#FE4042'
 
-    const bio =
-        'This site is build with the primary objective of building teams, small and large, through the  medium of games. We have curated a list of the best games to harness an inclusive environment and build rapport. Check out our bespoke facts  game by clicking the link below!'
+    const intro1 = ` At School Of Code we believe that tech is a team sport and we like to introduce
+    our bootcampers to the practise of pair-programming and working in diverse teams from day one. 
+    Since our bootcamp is now fully remote it's more important than ever that our teams feel 
+    connected and able to build rapport, whilst solving problems effectively in a supportive 
+    environment.`
+
+    const intro2 = `To reinforce this idea we built a team building platform that hosts a variety 
+    of activities that promote engagement and encourage a positive working model. 
+    We even built a bespoke game from a highly requested energiser from Cohort 4 that allows 
+    users to get to know a little more about their colleagues. 
+    Check it out by clicking the link below!`
 
     return (
         <>
@@ -20,7 +29,8 @@ function Home() {
                         text="Welcome Bootcampers!"
                         className={styles.title}
                     />
-                    <p className={styles.bio_section}>{bio}</p>
+                    <p className={styles.intro_section}>{intro1}</p>
+                    <p className={styles.intro_section}>{intro2}</p>
                     <div className={styles.button_container}>
                         <Button
                             text="Play Now"

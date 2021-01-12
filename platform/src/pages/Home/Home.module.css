@@ -16,32 +16,23 @@
 
 .title {
     margin-top: 20px;
+    margin-bottom: 20px;
     align-items: left;
     justify-content: left;
 }
 
-.bio_section {
+.intro_section {
     font-family: var(--primary-font);
     font-weight: lighter;
     display: flex;
     color: var(--grey);
+    text-align: justify;
     align-items: left;
     line-height: 4vh;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    margin-top: 1.5vh;
+    /* margin-bottom: 5vh; */
     margin-left: 0.6vw;
 }
-
-/* .subtitle {
-    font-family: var(--primary-font);
-    font-size: 40px;
-    margin-top: 2%;
-    padding: 1em 2em 0.5em 2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--grey);
-} */
 
 .homeImg {
     max-width: 42vw;
@@ -81,7 +72,7 @@
         width: 80vw;
         align-items: center;
     }
-    .bio_section {
+    .intro_section {
         align-items: center;
         text-align: center;
     }
