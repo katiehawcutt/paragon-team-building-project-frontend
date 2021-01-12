@@ -9,7 +9,7 @@ export default function RevealFactTimer({
 }) {
     return (
         <RevealTimer
-            title={`${displayName}'s fake fact is...`}
+            title={`${displayName}'s true fact is...`}
             roundNumber={roundNumber}
             secondsLeft={secondsLeft}
         />

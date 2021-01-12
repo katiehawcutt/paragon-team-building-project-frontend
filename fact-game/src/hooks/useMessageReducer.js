@@ -9,8 +9,8 @@ import WhoseFact from '../pages/WhoseFact'
 import RevealFactTimer from '../pages/RevealFactTimer'
 import RevealWhoTimer from '../pages/RevealWhoTimer'
 import WhoseFactReveal from '../pages/WhoseFactReveal'
-import ChooseFalseFact from '../pages/ChooseFalseFact'
-import FalseFactReveal from '../pages/FalseFactReveal'
+import WhichFact from '../pages/WhichFact'
+import WhichFactReveal from '../pages/WhichFactReveal'
 import Podium from '../pages/Podium'
 
 export const eventToComponentMap = {
@@ -19,9 +19,9 @@ export const eventToComponentMap = {
     GUESS_WHO_TIMER: WhoseFact,
     REVEAL_WHO_TIMER: RevealWhoTimer,
     REVEAL_WHO: WhoseFactReveal,
-    GUESS_FAKE_FACT_TIMER: ChooseFalseFact,
-    REVEAL_FAKE_FACT_TIMER: RevealFactTimer,
-    REVEAL_FAKE_FACT: FalseFactReveal,
+    GUESS_WHICH_FACT_TIMER: WhichFact,
+    REVEAL_WHICH_FACT_TIMER: RevealFactTimer,
+    REVEAL_WHICH_FACT: WhichFactReveal,
     PODIUM: Podium,
 }
 
@@ -45,11 +45,10 @@ const initialMessageState = {
 export default function useMessageReducer({ lastMessage }) {
     const [state, dispatch] = useReducer(messageReducer, initialMessageState)
 
-    const { action, ...properties } = lastMessage ?? {}
-
-    const ComponentToRender = eventToComponentMap[action]
-
     useEffect(() => {
+        const { action, ...properties } = lastMessage ?? {}
+        const ComponentToRender = eventToComponentMap[action]
+
         if (ComponentToRender) {
             dispatch({
                 type: actionTypes.SET_COMPONENT_TO_RENDER,
@@ -64,7 +63,6 @@ export default function useMessageReducer({ lastMessage }) {
                 payload: properties,
             })
         }
-        // eslint-disable-next-line
     }, [lastMessage])
 
     return state
