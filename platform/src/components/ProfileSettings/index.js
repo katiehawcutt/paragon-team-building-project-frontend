@@ -30,7 +30,6 @@ export default function ProfileSettings() {
                 width="100%"
                 fontWeight="light"
                 backgroundColor="#ffff"
-                color="#ffff"
                 borderRadius="0px"
                 border="none"
                 height="52px"
