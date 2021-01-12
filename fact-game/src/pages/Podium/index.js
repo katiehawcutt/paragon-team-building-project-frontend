@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import cn from 'classnames'
 
 import { makeStyles } from '@material-ui/core/styles'
 
 import styles from './Podium.module.css'
+
+import useSound from 'use-sound'
+import fanfare from '../../sounds/fanfare.mp3'
 
 import Header from '../../components/Header'
 import UserPic from '../../components/UserPic'
@@ -41,6 +44,16 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Podium({ leaderboard, winners }) {
     const classes = useStyles()
+
+    const [fanfareSound, { stop }] = useSound(fanfare)
+
+    useEffect(() => {
+        const timeoutId = setTimeout(fanfareSound, 200)
+        return () => {
+            stop()
+            clearTimeout(timeoutId)
+        }
+    }, [fanfareSound, stop])
 
     return (
         <>

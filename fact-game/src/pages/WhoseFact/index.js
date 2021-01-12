@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import cn from 'classnames'
 import styles from './WhoseFact.module.css'
+
+import useSound from 'use-sound'
+import ticktock from '../../sounds/ticktock.mp3'
+import ping from '../../sounds/selectAnswer.mp3'
 
 import Header from '../../components/Header'
 import Round from '../../components/Round'
@@ -24,6 +28,22 @@ export default function WhoseFact({
     const {
         user: { playerId },
     } = useUserContext()
+
+    const [ButtonSound] = useSound(ping)
+    const [tickingSound, { stop }] = useSound(ticktock)
+
+    useEffect(() => {
+        if (secondsLeft === 10) {
+            tickingSound()
+        }
+    }, [tickingSound, stop, secondsLeft])
+
+    useEffect(() => {
+        return () => {
+            stop()
+        }
+    }, [stop])
+
     return (
         <>
             <Header />
@@ -45,12 +65,13 @@ export default function WhoseFact({
                                         : styles.nameButton
                                 }
                                 key={participant.choiceId}
-                                onClick={() =>
+                                onClick={() => {
                                     handleAnswer({
                                         playerId,
                                         choice: participant.choiceId,
                                     })
-                                }
+                                    ButtonSound()
+                                }}
                             >
                                 {participant.text}
                             </button>

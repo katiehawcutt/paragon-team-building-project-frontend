@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import cn from 'classnames'
 import styles from './GameLobby.module.css'
 
@@ -14,6 +14,9 @@ import CheckIcon from '@material-ui/icons/Check'
 import Tooltip from '@material-ui/core/Tooltip'
 
 import ErrorSnackbar from '../../components/ErrorSnackbar'
+
+import useSound from 'use-sound'
+import elevatorMusic from '../../sounds/elevatorMusic.mp3'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -57,6 +60,16 @@ function GameLobby({
     const TOOLTIP_DURATION_IN_SECONDS = 1
 
     const timeoutId = React.useRef()
+
+    const [elevator, { stop }] = useSound(elevatorMusic)
+
+    useEffect(() => {
+        const timeoutId = setTimeout(elevator, 100)
+        return () => {
+            stop()
+            clearTimeout(timeoutId)
+        }
+    }, [elevator, stop])
 
     const handleClick = async () => {
         try {

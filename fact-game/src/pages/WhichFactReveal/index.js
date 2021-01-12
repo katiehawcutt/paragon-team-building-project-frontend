@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../../components/Header'
+
+import useSound from 'use-sound'
+import revelation from '../../sounds/revelation.mp3'
 
 import Round from '../../components/Round'
 import Title from '../../components/Title'
@@ -12,6 +15,16 @@ export default function WhichFactReveal({
     fact,
     leaderboard,
 }) {
+    const [revelationSound, { stop }] = useSound(revelation)
+
+    useEffect(() => {
+        const timeoutId = setTimeout(revelationSound, 200)
+        return () => {
+            stop()
+            clearTimeout(timeoutId)
+        }
+    }, [revelationSound, stop])
+
     return (
         <>
             <Header />
