@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './index.module.css'
+// import styles from './index.module.css'
 import ImageUpload from './ImageUpload'
 import {
     Button,
@@ -14,7 +14,7 @@ import {
     ModalFooter,
     ModalBody,
     ModalCloseButton,
-    Text,
+    // Text,
     Textarea,
     useDisclosure,
 } from '@chakra-ui/react'

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useRef } from 'react'
 
 const ImageUpload = () => {
     const uploadedImage = useRef(null)
@@ -49,6 +49,7 @@ const ImageUpload = () => {
                 onClick={() => imageUploader.current.click()}
             >
                 <img
+                    alt="user"
                     ref={uploadedImage}
                     style={{
                         maxWidth: '100%',
