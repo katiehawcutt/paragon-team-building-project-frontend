@@ -9,11 +9,16 @@ import Title from '../../components/Title'
 import Leaderboard from '../../components/Leaderboard'
 import styles from './WhichFactReveal.module.css'
 
-export default function WhichFactReveal({ displayName, roundNumber, fact, leaderboard }) {
+export default function WhichFactReveal({
+    displayName,
+    roundNumber,
+    fact,
+    leaderboard,
+}) {
     const [revelationSound, { stop }] = useSound(revelation)
 
-    const timeoutId = useEffect(() => {
-        setTimeout(revelationSound, 200)
+    useEffect(() => {
+        const timeoutId = setTimeout(revelationSound, 200)
         return () => {
             stop()
             clearTimeout(timeoutId)

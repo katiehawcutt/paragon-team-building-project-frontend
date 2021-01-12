@@ -32,13 +32,17 @@ export default function WhoseFact({
     const [ButtonSound] = useSound(ping)
     const [tickingSound, { stop }] = useSound(ticktock)
 
-    const timeoutId = useEffect(() => {
-        setTimeout(tickingSound, 10000)
+    useEffect(() => {
+        if (secondsLeft === 10) {
+            tickingSound()
+        }
+    }, [tickingSound, stop, secondsLeft])
+
+    useEffect(() => {
         return () => {
             stop()
-            clearTimeout(timeoutId)
         }
-    }, [tickingSound, stop])
+    }, [stop])
 
     return (
         <>
@@ -61,14 +65,13 @@ export default function WhoseFact({
                                         : styles.nameButton
                                 }
                                 key={participant.choiceId}
-                                onClick={
-                                    (() =>
-                                        handleAnswer({
-                                            playerId,
-                                            choice: participant.choiceId,
-                                        }),
-                                    ButtonSound())
-                                }
+                                onClick={() => {
+                                    handleAnswer({
+                                        playerId,
+                                        choice: participant.choiceId,
+                                    })
+                                    ButtonSound()
+                                }}
                             >
                                 {participant.text}
                             </button>

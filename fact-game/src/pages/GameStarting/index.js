@@ -11,8 +11,8 @@ import Title from '../../components/Title'
 function GameStarting() {
     const [pingAlert, { stop }] = useSound(alert)
 
-    const timeoutId = useEffect(() => {
-        setTimeout(pingAlert, 100)
+    useEffect(() => {
+        const timeoutId = setTimeout(pingAlert, 100)
         return () => {
             stop()
             clearTimeout(timeoutId)

@@ -10,7 +10,10 @@ export default function Fact({ factText, selected, handleClick }) {
     return (
         <button
             className={selected === true ? styles.selectedFact : styles.fact}
-            onClick={(handleClick, ButtonSound)}
+            onClick={() => {
+                handleClick()
+                ButtonSound()
+            }}
         >
             {factText}
         </button>

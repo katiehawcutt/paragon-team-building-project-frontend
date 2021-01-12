@@ -47,8 +47,8 @@ export default function Podium({ leaderboard, winners }) {
 
     const [fanfareSound, { stop }] = useSound(fanfare)
 
-    const timeoutId = useEffect(() => {
-        setTimeout(fanfareSound, 200)
+    useEffect(() => {
+        const timeoutId = setTimeout(fanfareSound, 200)
         return () => {
             stop()
             clearTimeout(timeoutId)
