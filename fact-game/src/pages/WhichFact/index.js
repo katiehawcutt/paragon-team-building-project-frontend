@@ -13,7 +13,7 @@ import { useUserContext } from '../../contexts/User'
 export default function WhichFact({
     roundNumber,
     displayName,
-    facts: [firstFact, secondFact],
+    facts,
     handleAnswer,
     secondsLeft,
     currentChoiceId,
@@ -21,6 +21,7 @@ export default function WhichFact({
     const {
         user: { playerId },
     } = useUserContext()
+
     return (
         <>
             <Header />
@@ -29,20 +30,21 @@ export default function WhichFact({
                 <Title text={`Which is ${displayName}'s fake fact?`} />
                 <Countdown secondsLeft={secondsLeft} />
                 <div className={styles.factContainer}>
-                    <FactButton
-                        factText={firstFact}
-                        selected={currentChoiceId === firstFact}
-                        handleClick={() => {
-                            handleAnswer({ playerId, choice: firstFact })
-                        }}
-                    />
-                    <FactButton
-                        factText={secondFact}
-                        selected={currentChoiceId === secondFact}
-                        handleClick={() => {
-                            handleAnswer({ playerId, choice: secondFact })
-                        }}
-                    />
+                    {facts.map((fact) => {
+                        return (
+                            <FactButton
+                                key={fact.choiceId}
+                                factText={fact.text}
+                                selected={currentChoiceId === fact.choiceId}
+                                handleClick={() => {
+                                    handleAnswer({
+                                        playerId,
+                                        choice: fact.choiceId,
+                                    })
+                                }}
+                            />
+                        )
+                    })}
                 </div>
             </main>
         </>
