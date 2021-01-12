@@ -1,6 +1,6 @@
 import React from 'react'
 import cn from 'classnames'
-import styles from './ChooseFalseFact.module.css'
+import styles from './WhichFact.module.css'
 
 import Header from '../../components/Header'
 import Round from '../../components/Round'
@@ -10,7 +10,7 @@ import FactButton from '../../components/FactButton'
 
 import { useUserContext } from '../../contexts/User'
 
-export default function ChooseFalseFact({
+export default function WhichFact({
     roundNumber,
     displayName,
     facts: [firstFact, secondFact],

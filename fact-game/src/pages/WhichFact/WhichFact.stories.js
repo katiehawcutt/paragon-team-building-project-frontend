@@ -1,12 +1,12 @@
 import React from 'react'
-import ChooseFalseFact from './index'
+import WhichFact from './index'
 
 export default {
-    title: 'ChooseFalseFact',
-    component: ChooseFalseFact,
+    title: 'WhichFact',
+    component: WhichFact,
 }
 
-const Template = (args) => <ChooseFalseFact {...args} />
+const Template = (args) => <WhichFact {...args} />
 
 export const FirstStory = Template.bind({})
 FirstStory.args = {
