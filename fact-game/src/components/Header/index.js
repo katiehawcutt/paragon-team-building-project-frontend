@@ -7,7 +7,7 @@ function Header() {
             <a
                 className={styles.x}
                 data-testid={'headerXButton'}
-                href="https://www.google.com"
+                href="https://paragon-team-building.netlify.app"
             >
                 X
             </a>
