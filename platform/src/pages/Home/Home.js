@@ -17,7 +17,7 @@ function Home() {
     const intro2 = `To reinforce this idea we built a team building platform that hosts a variety 
     of activities that promote engagement and encourage a positive working model. 
     We even built a bespoke game from a highly requested energiser from Cohort 4 that allows 
-    users to get to know a little more about their colleagues. 
+    bootcampers to get to know a little more about their team members. 
     Check it out by clicking the link below!`
 
     return (
