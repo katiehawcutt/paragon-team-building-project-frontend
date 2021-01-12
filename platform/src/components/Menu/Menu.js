@@ -1,4 +1,5 @@
 import React from 'react'
+import ProfileSettings from '../ProfileSettings'
 import styles from './Menu.module.css'
 
 function Menu({ image }) {
@@ -12,7 +13,8 @@ function Menu({ image }) {
                 <img src={image} className={styles.userPhoto} alt="user" />
             </button>
             <div className={styles.dropdownContent}>
-                <div>profile settings</div>
+                {/* <div>profile settings</div> */}
+                <ProfileSettings />
                 <button
                     className={styles.logoutBtn} /* onClick={handleClick} */
                 >
