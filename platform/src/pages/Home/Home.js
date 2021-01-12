@@ -9,7 +9,7 @@ function Home() {
     const buttonColor = '#FE4042'
 
     const intro1 = ` At School Of Code we believe that tech is a team sport and we like to introduce
-    our bootcampers to the practise of pair-programming and working in diverse teams from day one. 
+    our bootcampers to the practice of pair-programming and working in diverse teams from day one. 
     Since our bootcamp is now fully remote it's more important than ever that our teams feel 
     connected and able to build rapport, whilst solving problems effectively in a supportive 
     environment.`
