@@ -19,7 +19,7 @@ const getUrlForAwsCognitoLogin = () => {
  */
 const getUrlForAwsCognitoLogout = () => {
     const queryParams = new URLSearchParams([
-        ['client_id', '4717ed4sr9omajvh9kicrc3mbr'],
+        ['client_id', APP_CLIENT_ID],
         ['logout_uri', callbackUrls.LOGOUT_URL],
     ])
     return `${endpoints.LOGOUT_ENDPOINT}?${queryParams}`
