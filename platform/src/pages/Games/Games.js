@@ -17,6 +17,10 @@ function Games() {
     const spyfallLink = 'https://www.spyfall.app/'
     const secretHitlerLink = 'https://secrethitler.io/'
     const tabooLink = 'https://playtaboo.com/playpage'
+    const codeWars = 'https://www.codewars.com'
+    const cssDiner = 'https://flukeout.github.io'
+    const gridGarden = 'https://cssgridgarden.com'
+    const flexboxFroggy = 'https://flexboxfroggy.com'
 
     const pageBio =
         "We believe team building is an important factor when working together, whether it's having fun playing games, competing against each other, tackling puzzles together, or just having a friendly chat. We want you to build trust with your team mates, discover each others strengths and weaknesses and have fun getting to know each other in order to develop cohesive and effective teams. Here you'll find a selection of games and energisers to help you achieve this."
@@ -71,6 +75,11 @@ function Games() {
                         link={garticLink}
                     />
                     <GameCard
+                        text={'Codewars'}
+                        image={'./Images/codeWars.png'}
+                        link={codeWars}
+                    />
+                    <GameCard
                         text={'Among Us'}
                         image={'./Images/amongUs.png'}
                         link={amongUsLink}
@@ -91,6 +100,11 @@ function Games() {
                         link={mafiaLink}
                     />
                     <GameCard
+                        text={'Grid Garden'}
+                        image={'./Images/gridGarden.png'}
+                        link={gridGarden}
+                    />
+                    <GameCard
                         text={'Spyfall'}
                         image={'./Images/spyfall.jpg'}
                         link={spyfallLink}
@@ -101,9 +115,19 @@ function Games() {
                         link={secretHitlerLink}
                     />
                     <GameCard
+                        text={'Flexbox Froggy'}
+                        image={'./Images/flexboxFroggy.png'}
+                        link={flexboxFroggy}
+                    />
+                    <GameCard
                         text={'Taboo'}
                         image={'./Images/taboo.png'}
                         link={tabooLink}
+                    />
+                    <GameCard
+                        text={'CSS Diner'}
+                        image={'./Images/cssDiner.png'}
+                        link={cssDiner}
                     />
                 </div>
             </div>
