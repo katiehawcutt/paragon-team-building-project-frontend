@@ -8,6 +8,9 @@ function Button({ color, text, link }) {
     return (
         <ButtonChak
             data-testid="ButtonChak"
+            fontWeight="normal"
+            paddingLeft="2rem"
+            paddingRight="2rem"
             borderRadius="4"
             leftIcon={<FaGooglePlay />}
             colorScheme={color}

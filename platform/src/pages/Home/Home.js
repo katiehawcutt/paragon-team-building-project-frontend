@@ -2,7 +2,6 @@ import React from 'react'
 import styles from './Home.module.css'
 import Button from '../../components/Button/Button'
 import Title from '../../components/Title/Title'
-import HomeImg from '../../Images_2/homepage-picture.png'
 
 import { LINK_TO_FACTS } from '../../constants/externalUrls'
 
@@ -31,7 +30,7 @@ function Home() {
                 </div>
                 <img
                     className={styles.homeImg}
-                    src={HomeImg}
+                    src="./Images/homepage-picture.png"
                     alt="group of people working together"
                 />
             </div>
