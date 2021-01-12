@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-.fakeFact {
+.fact {
     width: 30vw;
     max-height: 30vh;
     padding: 2rem 3rem;
@@ -23,13 +23,13 @@
     margin: 30px;
     font-size: 20px;
     letter-spacing: 0.2rem;
-    animation-name: fakeFact;
+    animation-name: fact;
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
 }
 
-@keyframes fakeFact {
+@keyframes fact {
     0% {
         transform: scale(0.1);
     }

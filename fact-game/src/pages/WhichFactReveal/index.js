@@ -3,20 +3,16 @@ import Header from '../../components/Header'
 
 import Round from '../../components/Round'
 import Title from '../../components/Title'
-import styles from './FalseFactReveal.module.css'
+import styles from './WhichFactReveal.module.css'
 
-export default function FalseFactReveal({
-    displayName,
-    roundNumber,
-    fakeFact,
-}) {
+export default function WhichFactReveal({ displayName, roundNumber, fact }) {
     return (
         <>
             <Header />
             <main className={styles.pageContainer}>
                 <Round roundNumber={roundNumber} />
-                <Title text={`${displayName}'s fake fact is...`} />
-                <div className={styles.fakeFact}>{fakeFact[0]}</div>
+                <Title text={`${displayName}'s true fact is...`} />
+                <div className={styles.fact}>{fact}</div>
             </main>
         </>
     )

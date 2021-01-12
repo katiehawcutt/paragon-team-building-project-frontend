@@ -10,7 +10,7 @@ import RevealFactTimer from '../pages/RevealFactTimer'
 import RevealWhoTimer from '../pages/RevealWhoTimer'
 import WhoseFactReveal from '../pages/WhoseFactReveal'
 import ChooseFalseFact from '../pages/ChooseFalseFact'
-import FalseFactReveal from '../pages/FalseFactReveal'
+import WhichFactReveal from '../pages/WhichFactReveal'
 import Podium from '../pages/Podium'
 
 export const eventToComponentMap = {
@@ -21,7 +21,7 @@ export const eventToComponentMap = {
     REVEAL_WHO: WhoseFactReveal,
     GUESS_WHICH_FACT_TIMER: ChooseFalseFact,
     REVEAL_WHICH_FACT_TIMER: RevealFactTimer,
-    REVEAL_WHICH_FACT: FalseFactReveal,
+    REVEAL_WHICH_FACT: WhichFactReveal,
     PODIUM: Podium,
 }
 
