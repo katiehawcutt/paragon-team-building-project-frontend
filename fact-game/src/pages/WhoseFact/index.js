@@ -32,12 +32,13 @@ export default function WhoseFact({
     const [ButtonSound] = useSound(ping)
     const [tickingSound, { stop }] = useSound(ticktock)
 
-    useEffect(() => {
+    const timeoutId = useEffect(() => {
         setTimeout(tickingSound, 10000)
         return () => {
             stop()
+            clearTimeout(timeoutId)
         }
-    }, [tickingSound])
+    }, [tickingSound, stop])
 
     return (
         <>

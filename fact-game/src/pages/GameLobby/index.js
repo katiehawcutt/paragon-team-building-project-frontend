@@ -64,11 +64,12 @@ function GameLobby({
     const [elevator, { stop }] = useSound(elevatorMusic)
 
     useEffect(() => {
-        setTimeout(elevator, 100)
+        const timeoutId = setTimeout(elevator, 100)
         return () => {
             stop()
+            clearTimeout(timeoutId)
         }
-    }, [elevator])
+    }, [elevator, stop])
 
     const handleClick = async () => {
         try {

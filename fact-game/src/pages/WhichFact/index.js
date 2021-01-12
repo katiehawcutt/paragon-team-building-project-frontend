@@ -27,12 +27,13 @@ export default function WhichFact({
 
     const [tickingSound, { stop }] = useSound(ticktock)
 
-    useEffect(() => {
+    const timeoutId = useEffect(() => {
         setTimeout(tickingSound, 5000)
         return () => {
             stop()
+            clearTimeout(timeoutId)
         }
-    }, [tickingSound])
+    }, [tickingSound, stop])
 
     return (
         <>

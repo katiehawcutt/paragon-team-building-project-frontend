@@ -11,12 +11,13 @@ import styles from './WhichFactReveal.module.css'
 export default function WhichFactReveal({ displayName, roundNumber, fact }) {
     const [revelationSound, { stop }] = useSound(revelation)
 
-    useEffect(() => {
+    const timeoutId = useEffect(() => {
         setTimeout(revelationSound, 200)
         return () => {
             stop()
+            clearTimeout(timeoutId)
         }
-    }, [revelationSound])
+    }, [revelationSound, stop])
     return (
         <>
             <Header />
