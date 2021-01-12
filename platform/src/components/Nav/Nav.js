@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink as Link } from 'react-router-dom'
 import styles from './Nav.module.css'
 import Menu from '../Menu/Menu'
-import image from '../../Images_2/userIcon.png'
+// import image from '../../Images_2/userIcon.png'
 
 function Nav() {
     return (
@@ -41,7 +41,7 @@ function Nav() {
                         </Link>
                     </li>
                 </ul>
-                <Menu image={image} />
+                <Menu image="./Images/kh.png" />
             </div>
         </nav>
     )

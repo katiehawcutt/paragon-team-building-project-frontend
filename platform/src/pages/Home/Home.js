@@ -2,11 +2,11 @@ import React from 'react'
 import styles from './Home.module.css'
 import Button from '../../components/Button/Button'
 import Title from '../../components/Title/Title'
-
 import HomeImg from '../../Images_2/homepage-picture.png'
 
+import { LINK_TO_FACTS } from '../../constants/externalUrls'
+
 function Home() {
-    const factGameLink = 'https://the-fact-game.netlify.app'
     const buttonColor = '#FE4042'
 
     const bio =
@@ -25,7 +25,7 @@ function Home() {
                         <Button
                             text="Play Now"
                             color={buttonColor}
-                            link={factGameLink}
+                            link={LINK_TO_FACTS}
                         />
                     </div>
                 </div>

@@ -9,13 +9,13 @@
     justify-content: space-around;
 }
 
-.banner {
-    height: auto;
-    width: auto;
+.bannerImage {
+    /* height: auto;
+    width: auto; */
     float: left;
     display: flex;
-    max-width: 60vw;
-    max-height: 45vw;
+    width: 40vw;
+    height: 25vw;
     z-index: 10;
     margin-top: 5vh;
     margin-right: 30px;
@@ -35,11 +35,12 @@
     font-weight: lighter;
     font-size: 16px;
     display: flex;
-    align-items: left;
+    /* align-items: left; */
     color: var(--grey);
     line-height: 4vh;
     margin-top: 5vh;
     margin-bottom: 5vh;
+    text-align: justify;
 }
 
 .title {
@@ -50,9 +51,9 @@
 
 .showCaseContainer {
     margin-top: 10vh;
-    margin-left: 3vw;
+    margin-left: 4vw;
     margin-right: 3vw;
-    margin-bottom: 10vh;
+    margin-bottom: 0px;
     padding-bottom: 8vh;
     display: flex;
     flex-direction: row;
@@ -72,10 +73,13 @@
 }
 
 .showCaseImage {
-    height: auto;
-    width: auto;
-    max-width: 400px;
-    max-height: 400px;
+    /* height: auto;
+    width: auto; */
+    /* max-width: 400px;
+    max-height: 400px; */
+    width: 30vw;
+    height: 30vw;
+    /* height: 25vw; */
     float: right;
     display: flex;
     z-index: 1;
@@ -94,6 +98,7 @@
     line-height: 4vh;
     margin-top: 5vh;
     margin-bottom: 5vh;
+    text-align: justify;
 }
 
 /* ----------------------------------------------------- */
@@ -133,6 +138,7 @@
     flex-direction: row;
     justify-content: center;
     margin-top: 20px;
+    margin-bottom: 50px;
     flex-wrap: wrap;
 }
 .gameCardContainer:hover > div:hover {
@@ -144,34 +150,46 @@
 /* ----------------------------------------------------- */
 
 @media only screen and (max-width: 1000px) {
-    .banner {
+    .bannerImage {
         margin-right: 3vw;
     }
     .showCaseImage {
         margin-top: 0px;
-        max-width: 60vw;
-        max-height: 53vh;
+        /* max-width: 60vw;
+        max-height: 53vh; */
     }
 }
 
-@media only screen and (max-width: 910px) {
-    .banner {
+@media only screen and (max-width: 990px) {
+    .showCaseImage {
         margin-top: 0px;
-        max-width: 80vw;
-        max-height: 35vh;
+        /* max-width: 55vw; */
+    }
+    .bannerImage {
+        margin-top: 0px;
+        margin-right: 0;
+        max-width: 55vw;
+        margin-bottom: 50px;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .textContainer {
+        width: 70vw;
+        align-items: center;
     }
     .headerContainer {
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
+        margin-bottom: 40px;
+        padding-bottom: 0;
     }
     .mainContainer {
         align-items: center;
     }
     .subTitle {
-        width: 80vw;
-        align-items: center;
-    }
-    .text_container {
         width: 80vw;
         align-items: center;
     }
@@ -190,10 +208,12 @@
     .showCaseBio {
         align-items: center;
         text-align: center;
+        width: 70vw;
     }
     .showCaseImage {
         margin-top: 0px;
-        max-width: 50vw;
-        max-height: 36vh;
+        margin-bottom: 50px;
+        /* max-width: 50vw;
+        max-height: 36vh; */
     }
 }
