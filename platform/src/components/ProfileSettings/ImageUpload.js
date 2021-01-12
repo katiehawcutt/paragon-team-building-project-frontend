@@ -20,10 +20,12 @@ const ImageUpload = () => {
     return (
         <div
             style={{
+                fontFamily: 'var(--primary-font)',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
+                padding: '14px',
             }}
         >
             <input
@@ -33,7 +35,6 @@ const ImageUpload = () => {
                 ref={imageUploader}
                 style={{
                     display: 'none',
-                    border: 'none',
                 }}
             />
             <div
@@ -43,16 +44,24 @@ const ImageUpload = () => {
                     borderRadius: '100% !important',
                     backgroundImage: "url('./Images/userIcon.png')",
                     backgroundSize: 'cover',
-                    border: 'none',
+                    backgroundPosition: 'center',
                 }}
                 onClick={() => imageUploader.current.click()}
             >
                 <img
                     ref={uploadedImage}
                     style={{
-                        width: '100%',
-                        height: '100%',
-                        position: 'acsolute',
+                        maxWidth: '100%',
+                        maxHeight: '100%',
+                        position: 'absolute',
+                        height: '60px',
+                        width: '60px',
+                        borderRadius: '100%',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        border: 'none',
+                        backgroundPosition: 'center',
                     }}
                 />
             </div>

@@ -45,36 +45,42 @@ export default function ProfileSettings() {
             <Modal isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
                 <ModalContent>
-                    <ModalHeader>Edit Your Profile</ModalHeader>
+                    <ModalHeader fontFamily="var(--primary-font)">
+                        Edit Your Profile
+                    </ModalHeader>
                     <ModalCloseButton />
                     <ImageUpload />
-                    {/* <img
-                        className={styles.userButton}
-                        src={'./Images/userIcon.png'}
-                        // className={styles.userPhoto}
-                        alt="user"
-                    /> */}
 
                     <ModalBody pb={6}>
-                        {/* <FormControl>
-                            <FormLabel>Image</FormLabel>
-                            <Input placeholder="Image url..." />
-                        </FormControl> */}
                         <FormControl mt={4}>
-                            <FormLabel>Name</FormLabel>
-                            <Input placeholder="Name..." />
+                            <FormLabel fontFamily="var(--primary-font)">
+                                Name
+                            </FormLabel>
+                            <Input
+                                placeholder="Name..."
+                                fontFamily="var(--primary-font)"
+                            />
                         </FormControl>
 
                         <FormControl mt={4}>
-                            <FormLabel>Email</FormLabel>
-                            <Input type="email" placeholder="Email..." />
-                            <FormHelperText>
+                            <FormLabel fontFamily="var(--primary-font)">
+                                Email
+                            </FormLabel>
+                            <Input
+                                type="email"
+                                placeholder="Email..."
+                                fontFamily="var(--primary-font)"
+                            />
+                            <FormHelperText fontFamily="var(--primary-font)">
                                 Your email will not be shared with 3rd parties
                             </FormHelperText>
                         </FormControl>
                         <FormControl mt={4}>
-                            <FormLabel>Bio</FormLabel>
+                            <FormLabel fontFamily="var(--primary-font)">
+                                Bio
+                            </FormLabel>
                             <Textarea
+                                fontFamily="var(--primary-font)"
                                 value={value}
                                 onChange={handleChange}
                                 overflow="auto"
