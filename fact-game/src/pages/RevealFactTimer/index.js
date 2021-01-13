@@ -10,7 +10,7 @@ export default function RevealFactTimer({
     roundNumber,
     secondsLeft,
 }) {
-    const [volume] = useState(0.2)
+    const [volume] = useState(0.1)
     const [alertSound, { stop }] = useSound(alert, { volume })
 
     useEffect(() => {

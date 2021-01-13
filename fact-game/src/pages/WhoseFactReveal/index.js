@@ -14,7 +14,7 @@ export default function WhoseFactReveal({
     displayName,
     leaderboard,
 }) {
-    const [volume] = useState(0.2)
+    const [volume] = useState(0.1)
     const [revelationSound, { stop }] = useSound(revelation, { volume })
 
     useEffect(() => {
