@@ -57,7 +57,7 @@ const ImageUpload = () => {
                         border: 'none',
                         height: '60px',
                         width: '60px',
-                        // backgroundImage: "url('./Images/kh.png')",
+                        backgroundImage: "url('./Images/kh.png')",
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
