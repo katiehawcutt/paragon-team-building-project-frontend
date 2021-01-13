@@ -13,3 +13,9 @@
     text-shadow: var(--text-shadow);
     text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+    .loggingInMessage {
+        font-size: 2em;
+    }
+}
