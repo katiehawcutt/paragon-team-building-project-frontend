@@ -5,7 +5,7 @@ import useSound from 'use-sound'
 import ping from '../../sounds/selectAnswer.mp3'
 
 export default function Fact({ factText, selected, handleClick }) {
-    const [volume] = useState(0.1)
+    const [volume] = useState(0.5)
     const [ButtonSound] = useSound(ping, { volume })
 
     return (

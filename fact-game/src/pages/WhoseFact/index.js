@@ -29,7 +29,7 @@ export default function WhoseFact({
         user: { playerId },
     } = useUserContext()
 
-    const [volume] = useState(0.1)
+    const [volume] = useState(0.5)
     const [ButtonSound] = useSound(ping, { volume })
     const [tickingSound, { stop }] = useSound(ticktock, { volume })
 

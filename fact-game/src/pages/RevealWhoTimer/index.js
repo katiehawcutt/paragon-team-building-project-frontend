@@ -52,7 +52,7 @@ export default function RevealWhoTimer({
     secondsLeft,
     votePercentages,
 }) {
-    const [volume] = useState(0.1)
+    const [volume] = useState(0.5)
     const [alertSound, { stop }] = useSound(alert, { volume })
 
     useEffect(() => {

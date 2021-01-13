@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Podium({ leaderboard, winners }) {
     const classes = useStyles()
 
-    const [volume] = useState(0.1)
+    const [volume] = useState(0.5)
     const [fanfareSound, { stop }] = useSound(fanfare, { volume })
 
     useEffect(() => {

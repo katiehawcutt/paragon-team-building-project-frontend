@@ -9,7 +9,7 @@ import Header from '../../components/Header'
 import Title from '../../components/Title'
 
 function GameStarting() {
-    const [volume] = useState(0.1)
+    const [volume] = useState(0.5)
     const [pingAlert, { stop }] = useSound(alert, { volume })
 
     useEffect(() => {
