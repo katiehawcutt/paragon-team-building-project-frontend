@@ -30,8 +30,7 @@ export const HandleLogout = () => {
         <>
             <div className={styles.pageContainer}>
                 <p className={styles.loggingOutMessage}>
-                    You've been logged out. Looking forward to seeing you again
-                    soon!
+                    You've been logged out. See you soon!
                 </p>
                 <img
                     src="./Images/waving-team.png"
