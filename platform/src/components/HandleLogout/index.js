@@ -33,7 +33,7 @@ export const HandleLogout = () => {
                     You've been logged out. See you soon!
                 </p>
                 <img
-                    src="./Images/waving-team.png"
+                    src="./Images/waving-team.jpg"
                     alt="team wavng goodbye"
                     className={styles.wavingPicture}
                 />

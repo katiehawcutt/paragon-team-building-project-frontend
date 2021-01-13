@@ -1,5 +1,5 @@
 .pageContainer {
-    max-height: 100vh;
+    max-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +8,7 @@
 .loggingOutMessage {
     color: var(--dark-grey);
     font-family: var(--primary-font);
-    margin: 20px;
+    margin: 50px;
     font-size: 3em;
     text-shadow: var(--text-shadow);
     text-align: center;
