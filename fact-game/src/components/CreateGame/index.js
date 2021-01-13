@@ -405,7 +405,7 @@ export default function CreateNewGame({ handleCreate, gameNotCreatedError }) {
                                     classes={{ root: classes.errorIcon }}
                                 />
                                 <span className={classes.errorMessage}>
-                                    {gameNotCreatedError ??
+                                    {gameNotCreatedError ||
                                         'Sorry, the game cannot be created right now.'}
                                 </span>
                             </div>
