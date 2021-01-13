@@ -43,3 +43,12 @@
     border: none;
     transition: 0.3s;
 }
+
+@media only screen and (max-width: 700px) {
+    .fact {
+        width: 70vw;
+    }
+    .selectedFact {
+        width: 70vw;
+    }
+}
