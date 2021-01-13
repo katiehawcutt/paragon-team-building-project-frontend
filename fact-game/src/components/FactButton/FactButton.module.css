@@ -29,7 +29,7 @@
     padding: 1rem 3rem;
     text-align: center;
     font-family: var(--primary-font);
-    border-radius: 1rem;
+    border-radius: 2rem;
     overflow: auto;
     background-color: var(--green);
     color: white;
