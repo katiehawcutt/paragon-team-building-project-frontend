@@ -140,11 +140,25 @@
 
 @media only screen and (max-width: 500px) {
     .navLink {
-        font-size: 12px;
+        font-size: 14px;
         margin: 10px;
         margin-right: 0;
     }
 
+    /* .socLogo {
+        height: 25px;
+        width: 25px;
+    } */
+}
+
+@media only screen and (max-width: 500px) {
+    .socLogo {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
     .socLogo {
         display: none;
     }
