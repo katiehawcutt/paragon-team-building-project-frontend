@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
-
 .flipCard {
     width: 250px;
     height: 300px;
@@ -20,10 +18,12 @@
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .personName {
-    font-family: Sen;
+    font-family: var(--primary-font);
     font-weight: lighter;
     font-size: 24px;
     padding-top: 10px;
@@ -48,7 +48,7 @@
 }
 
 .flipCardBack {
-    font-family: Sen;
+    font-family: var(--primary-font);
     font-weight: lighter;
     padding-top: 10px;
     transform: rotateY(180deg);
