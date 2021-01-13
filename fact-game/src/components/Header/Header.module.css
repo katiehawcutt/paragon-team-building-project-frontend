@@ -23,3 +23,20 @@
 .x:hover {
     color: var(--gold);
 }
+
+@media only screen and (max-width: 1300px) {
+    .x {
+        margin-right: 3vw;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .x {
+        margin-right: 4vw;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .x {
+        margin-right: 5vw;
+    }
+}

@@ -13,11 +13,14 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '1.2rem',
         color: 'white',
         textShadow: '5px 3px 3px rgba(0, 0, 0, 0.25)',
-        letterSpacing: '0.2rem',
+        letterSpacing: '0.15rem',
     },
     tableContainer: {
         marginTop: '1rem',
+        marginBottom: '3rem',
         padding: '1rem',
+        paddingRight: '2rem',
+        paddingLeft: '2rem',
         borderRadius: '1rem',
         backgroundColor: '#6d44d9',
         display: 'flex',
@@ -27,17 +30,20 @@ const useStyles = makeStyles((theme) => ({
     },
     tableData: {
         color: 'white',
-        fontSize: '1rem',
+        fontSize: '1.1rem',
         textAlign: 'center',
         padding: '0.5rem',
         textShadow: '5px 3px 3px rgba(0, 0, 0, 0.25)',
-        letterSpacing: '0.2rem',
+        letterSpacing: '0.15rem',
     },
     tableHeader: {
         fontWeight: 'bold',
         textAlign: 'center',
         textShadow: '5px 3px 3px rgba(0, 0, 0, 0.25)',
         letterSpacing: '0.2rem',
+    },
+    percentage: {
+        color: '#fec057',
     },
 }))
 
@@ -90,7 +96,12 @@ export default function RevealWhoTimer({
                                     <td className={cn(classes.tableData)}>
                                         {displayName}
                                     </td>
-                                    <td className={cn(classes.tableData)}>
+                                    <td
+                                        className={cn(
+                                            classes.tableData,
+                                            classes.percentage
+                                        )}
+                                    >
                                         {displayPercentage}
                                     </td>
                                 </tr>

@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'grid',
         gridTemplateColumns: 'repeat(3, 1fr)',
         alignItems: 'flex-end',
-        columnGap: '1rem',
+        // columnGap: '1rem',
     },
     crown: {
         width: '75px',

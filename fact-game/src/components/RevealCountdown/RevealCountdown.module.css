@@ -14,6 +14,7 @@
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     margin: 30px;
+    margin-bottom: 3rem;
 }
 
 @keyframes countdown {
