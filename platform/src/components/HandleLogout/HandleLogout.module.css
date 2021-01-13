@@ -1,6 +1,7 @@
 .pageContainer {
     max-height: 80vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -15,5 +16,5 @@
 }
 
 .wavingPicture {
-    max-width: 35vh;
+    max-width: 45vh;
 }
