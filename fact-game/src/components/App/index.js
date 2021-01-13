@@ -5,10 +5,14 @@ import FactGame from '../FactGame'
 import { WEBSOCKET_URL } from '../../constants/websocket'
 
 import useFactsGame from '../../hooks/useFactsGame'
+import { useUserContext } from '../../contexts/User'
 
 export default function App() {
+    const { user } = useUserContext()
+
     const factsGame = useFactsGame({
         webSocketUrl: WEBSOCKET_URL,
+        accessToken: user.access_token,
     })
 
     if (factsGame.unknownError) {

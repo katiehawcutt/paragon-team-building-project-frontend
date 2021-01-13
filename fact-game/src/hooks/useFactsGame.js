@@ -9,13 +9,18 @@ const tryToParseJson = (json) => {
     }
 }
 
-export default function useFactsGame({ webSocketUrl, shouldConnect = true }) {
+export default function useFactsGame({
+    webSocketUrl,
+    accessToken,
+    shouldConnect = true,
+}) {
     /**
      * Build custom hook on top of hook.
      */
     const { sendJsonMessage, lastJsonMessage } = useWebSocket(
         webSocketUrl,
         {
+            protocols: ['default', accessToken],
             retryOnError: true,
             shouldReconnect: () => true,
             reconnectInterval: 1000,
