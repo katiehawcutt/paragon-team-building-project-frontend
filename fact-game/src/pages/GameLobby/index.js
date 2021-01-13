@@ -61,7 +61,7 @@ function GameLobby({
 
     const timeoutId = React.useRef()
 
-    const [volume] = useState(0.1)
+    const [volume] = useState(0.3)
     const [elevator, { stop }] = useSound(elevatorMusic, { volume })
 
     useEffect(() => {

@@ -25,7 +25,7 @@ export default function WhichFact({
         user: { playerId },
     } = useUserContext()
 
-    const [volume] = useState(0.1)
+    const [volume] = useState(0.5)
     const [tickingSound, { stop }] = useSound(ticktock, { volume })
 
     useEffect(() => {
