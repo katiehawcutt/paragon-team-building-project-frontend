@@ -16,5 +16,14 @@
 }
 
 .wavingPicture {
-    max-width: 45vh;
+    width: 45vh;
+}
+
+@media only screen and (max-width: 600px) {
+    .loggingOutMessage {
+        font-size: 2em;
+    }
+    .wavingPicture {
+        width: 15em;
+    }
 }
