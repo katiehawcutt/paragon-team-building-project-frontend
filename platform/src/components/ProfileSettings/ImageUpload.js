@@ -65,7 +65,7 @@ const ImageUpload = () => {
                 >
                     <img
                         onerror={{ display: 'none' }}
-                        alt="image"
+                        alt="user_profile"
                         ref={uploadedImage}
                         style={{
                             maxWidth: '100%',
