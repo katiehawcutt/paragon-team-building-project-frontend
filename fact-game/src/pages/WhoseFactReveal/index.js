@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import useSound from 'use-sound'
 import revelation from '../../sounds/revelation.mp3'
@@ -14,7 +14,8 @@ export default function WhoseFactReveal({
     displayName,
     leaderboard,
 }) {
-    const [revelationSound, { stop }] = useSound(revelation)
+    const [volume] = useState(0.2)
+    const [revelationSound, { stop }] = useSound(revelation, { volume })
 
     useEffect(() => {
         const timeoutId = setTimeout(revelationSound, 200)

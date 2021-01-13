@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from '../../components/Header'
 
 import useSound from 'use-sound'
@@ -15,7 +15,8 @@ export default function WhichFactReveal({
     fact,
     leaderboard,
 }) {
-    const [revelationSound, { stop }] = useSound(revelation)
+    const [volume] = useState(0.2)
+    const [revelationSound, { stop }] = useSound(revelation, { volume })
 
     useEffect(() => {
         const timeoutId = setTimeout(revelationSound, 200)

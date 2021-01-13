@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import cn from 'classnames'
 import styles from './WhichFact.module.css'
 
@@ -25,7 +25,8 @@ export default function WhichFact({
         user: { playerId },
     } = useUserContext()
 
-    const [tickingSound, { stop }] = useSound(ticktock)
+    const [volume] = useState(0.1)
+    const [tickingSound, { stop }] = useSound(ticktock, { volume })
 
     useEffect(() => {
         if (secondsLeft === 10) {

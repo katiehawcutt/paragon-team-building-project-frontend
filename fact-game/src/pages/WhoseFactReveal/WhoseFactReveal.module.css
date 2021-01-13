@@ -14,12 +14,11 @@
     background-color: var(--gold);
     box-shadow: var(--box-shadow);
     margin: 2rem;
-    margin-top: 2rem;
+    margin-bottom: 3rem;
     text-shadow: var(--text-shadow);
     color: white;
     font-size: 30px;
     letter-spacing: 0.2rem;
-    margin: 0.9rem;
     animation-name: name;
     animation-duration: 2s;
     animation-iteration-count: 1;

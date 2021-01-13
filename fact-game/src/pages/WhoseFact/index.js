@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import cn from 'classnames'
 import styles from './WhoseFact.module.css'
 
@@ -29,8 +29,9 @@ export default function WhoseFact({
         user: { playerId },
     } = useUserContext()
 
-    const [ButtonSound] = useSound(ping)
-    const [tickingSound, { stop }] = useSound(ticktock)
+    const [volume] = useState(0.1)
+    const [ButtonSound] = useSound(ping, { volume })
+    const [tickingSound, { stop }] = useSound(ticktock, { volume })
 
     useEffect(() => {
         if (secondsLeft === 10) {

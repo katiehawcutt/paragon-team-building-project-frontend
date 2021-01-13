@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import cn from 'classnames'
 import styles from './GameLobby.module.css'
 
@@ -61,7 +61,8 @@ function GameLobby({
 
     const timeoutId = React.useRef()
 
-    const [elevator, { stop }] = useSound(elevatorMusic)
+    const [volume] = useState(0.1)
+    const [elevator, { stop }] = useSound(elevatorMusic, { volume })
 
     useEffect(() => {
         const timeoutId = setTimeout(elevator, 100)

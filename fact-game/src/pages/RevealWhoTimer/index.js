@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import cn from 'classnames'
 
@@ -46,7 +46,8 @@ export default function RevealWhoTimer({
     secondsLeft,
     votePercentages,
 }) {
-    const [alertSound, { stop }] = useSound(alert)
+    const [volume] = useState(0.2)
+    const [alertSound, { stop }] = useSound(alert, { volume })
 
     useEffect(() => {
         const timeoutId = setTimeout(alertSound, 200)

@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './FactButton.module.css'
 
 import useSound from 'use-sound'
 import ping from '../../sounds/selectAnswer.mp3'
 
 export default function Fact({ factText, selected, handleClick }) {
-    const [ButtonSound] = useSound(ping)
+    const [volume] = useState(0.1)
+    const [ButtonSound] = useSound(ping, { volume })
 
     return (
         <button
