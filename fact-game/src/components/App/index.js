@@ -2,6 +2,8 @@ import '../../globals/global.css'
 
 import Home from '../../pages/Home'
 import FactGame from '../FactGame'
+import ErrorMessage from '../../pages/ErrorMessage'
+
 import { WEBSOCKET_URL } from '../../constants/websocket'
 
 import useFactsGame from '../../hooks/useFactsGame'
@@ -16,7 +18,7 @@ export default function App() {
     })
 
     if (factsGame.unknownError) {
-        return <p>An unknown error occcurred, please try again later.</p>
+        return <ErrorMessage />
     }
 
     if (
