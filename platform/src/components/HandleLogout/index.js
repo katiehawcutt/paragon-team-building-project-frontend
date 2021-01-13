@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import { useAwsCognitoHostedUi } from '../../hooks/useAwsCognitoHostedUi'
 
+import styles from './HandleLogout.module.css'
+
 import { useUserContext } from '../../contexts/User'
 
 export const HandleLogout = () => {
@@ -14,7 +16,24 @@ export const HandleLogout = () => {
     }, [redirectToAwsCognitoLogout, user, setUser])
 
     if (user) {
-        return <p>Just logging you out...</p>
+        return (
+            <>
+                <div className={styles.pageContainer}>
+                    <p className={styles.loggingOutMessage}>
+                        Just logging you out...
+                    </p>
+                </div>
+            </>
+        )
     }
-    return <p>You've been logged out! Come back soon!</p>
+    return (
+        <>
+            <div className={styles.pageContainer}>
+                <p className={styles.loggingOutMessage}>
+                    You've been logged out. Looking forward to seeing you again
+                    soon!
+                </p>
+            </div>
+        </>
+    )
 }

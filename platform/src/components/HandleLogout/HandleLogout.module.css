@@ -5,7 +5,7 @@
     align-items: center;
 }
 
-.loggingInMessage {
+.loggingOutMessage {
     color: var(--dark-grey);
     font-family: var(--primary-font);
     margin: 20px;
