@@ -1,0 +1,15 @@
+.pageContainer {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loggingOutMessage {
+    color: white;
+    font-family: var(--primary-font);
+    margin: 20px;
+    font-size: 3em;
+    text-shadow: var(--text-shadow);
+    text-align: center;
+}
