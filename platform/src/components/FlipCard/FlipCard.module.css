@@ -7,8 +7,8 @@
     margin: 20px;
     margin-bottom: 40px;
     border-radius: 10%;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
+    /* transition: transform 0.8s;
+    transform-style: preserve-3d; */
 }
 
 .flipCardInner {
@@ -18,8 +18,8 @@
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    /* -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; */
 }
 
 .personName {
@@ -31,7 +31,7 @@
     line-height: 1.3em;
 }
 
-.container:hover .flipCard {
+.flipCard:hover .flipCardInner {
     transform: rotateY(180deg);
 }
 
