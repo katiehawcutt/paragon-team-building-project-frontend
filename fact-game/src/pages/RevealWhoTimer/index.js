@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import cn from 'classnames'
+
+import useSound from 'use-sound'
+import alert from '../../sounds/alert.mp3'
+
 import RevealTimer from '../../components/RevealTimer'
 
 const useStyles = makeStyles((theme) => ({
@@ -42,6 +46,15 @@ export default function RevealWhoTimer({
     secondsLeft,
     votePercentages,
 }) {
+    const [alertSound, { stop }] = useSound(alert)
+
+    useEffect(() => {
+        const timeoutId = setTimeout(alertSound, 200)
+        return () => {
+            stop()
+            clearTimeout(timeoutId)
+        }
+    }, [alertSound, stop])
     const classes = useStyles()
 
     const percentagesTable = (
