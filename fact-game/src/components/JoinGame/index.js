@@ -384,7 +384,7 @@ export default function JoinExistingGame({ handleJoin, gameNotJoinedError }) {
                                     classes={{ root: classes.errorIcon }}
                                 />
                                 <span className={classes.errorMessage}>
-                                    {gameNotJoinedError ??
+                                    {gameNotJoinedError ||
                                         'Sorry, this game cannot be joined right now.'}
                                 </span>
                             </div>
