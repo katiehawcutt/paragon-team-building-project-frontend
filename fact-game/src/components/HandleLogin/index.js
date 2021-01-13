@@ -80,6 +80,7 @@ export const HandleLogin = () => {
                     ...prev,
                     playerId: userInfo.sub,
                     displayName: userInfo.name,
+                    ...token,
                 }))
             })
             .catch(console.error)
@@ -95,12 +96,10 @@ export const HandleLogin = () => {
     }
 
     return (
-        <>
-            <div className={styles.pageContainer}>
-                <p className={styles.loggingInMessage}>
-                    Just getting you logged in...
-                </p>
-            </div>
-        </>
+        <div className={styles.pageContainer}>
+            <p className={styles.loggingInMessage}>
+                Just getting you logged in...
+            </p>
+        </div>
     )
 }
