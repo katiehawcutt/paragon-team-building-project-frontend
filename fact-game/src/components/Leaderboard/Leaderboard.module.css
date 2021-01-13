@@ -81,3 +81,9 @@
     color: #6d44d9;
     margin-top: 80px;
 }
+
+@media only screen and (max-width: 500px) {
+    .leaderTable {
+        width: 300px;
+    }
+}
