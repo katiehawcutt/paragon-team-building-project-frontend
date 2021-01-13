@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import cn from 'classnames'
 
 import { makeStyles } from '@material-ui/core/styles'
@@ -45,7 +45,8 @@ const useStyles = makeStyles((theme) => ({
 export default function Podium({ leaderboard, winners }) {
     const classes = useStyles()
 
-    const [fanfareSound, { stop }] = useSound(fanfare)
+    const [volume] = useState(0.1)
+    const [fanfareSound, { stop }] = useSound(fanfare, { volume })
 
     useEffect(() => {
         const timeoutId = setTimeout(fanfareSound, 200)

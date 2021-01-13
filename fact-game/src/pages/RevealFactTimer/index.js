@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import useSound from 'use-sound'
 import alert from '../../sounds/alert.mp3'
@@ -10,7 +10,8 @@ export default function RevealFactTimer({
     roundNumber,
     secondsLeft,
 }) {
-    const [alertSound, { stop }] = useSound(alert)
+    const [volume] = useState(0.2)
+    const [alertSound, { stop }] = useSound(alert, { volume })
 
     useEffect(() => {
         const timeoutId = setTimeout(alertSound, 200)
