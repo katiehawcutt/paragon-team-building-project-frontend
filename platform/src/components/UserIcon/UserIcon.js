@@ -5,12 +5,20 @@ function UserIcon({ imageSrc }) {
     return (
         <>
             <div className={styles.userIconContainer}>
-                <img
+                {/* <img
                     data-testid="userTest"
                     className={styles.userPhoto}
                     src={imageSrc}
                     alt="user"
-                />
+                /> */}
+                <div
+                    className={styles.userPhoto}
+                    style={{
+                        backgroundImage: `url(${imageSrc})`,
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                    }}
+                ></div>
             </div>
         </>
     )
