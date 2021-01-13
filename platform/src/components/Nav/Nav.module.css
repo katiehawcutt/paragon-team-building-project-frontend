@@ -100,13 +100,13 @@
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 720px) {
     .navLink {
         margin: 14px;
         font-size: 15px;
     }
     .schoolOfCodeWords {
-        font-size: 18px;
+        display: none;
     }
     .userButton {
         height: 50px;
@@ -138,8 +138,28 @@
     }
 }
 
-@media only screen and (max-width: 530px) {
-    .schoolOfCodeWords {
+@media only screen and (max-width: 500px) {
+    .navLink {
+        font-size: 14px;
+        margin: 10px;
+        margin-right: 0;
+    }
+
+    /* .socLogo {
+        height: 25px;
+        width: 25px;
+    } */
+}
+
+@media only screen and (max-width: 500px) {
+    .socLogo {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .socLogo {
         display: none;
     }
 }
