@@ -80,6 +80,7 @@ export const HandleLogin = () => {
                     ...prev,
                     playerId: userInfo.sub,
                     displayName: userInfo.name,
+                    cognitoUserPool: token,
                 }))
             })
             .catch(console.error)

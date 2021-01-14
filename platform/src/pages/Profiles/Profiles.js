@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './Profiles.module.css'
 import FlipCard from '../../components/FlipCard/FlipCard'
 import Title from '../../components/Title/Title'
 
-const people = [
+import * as AWS from 'aws-sdk'
+import { useUserContext } from '../../contexts/User'
+
+export const people = [
     {
         personName: 'Katie Louise Hawcutt',
         imageSrc: './Images/kh.png',
@@ -30,7 +33,53 @@ const people = [
         bio: `I love playing the saxophone and being outdoors. I also really like eating cheese and drinking wine. Recently, I have come to love coding and I can't wait to become a web-developer.`,
     },
 ]
+
 function Profiles() {
+    const { user } = useUserContext()
+    const [users, setUsers] = useState([])
+
+    useEffect(() => {
+        const userPoolId = 'eu-west-1_deTxl6vNk'
+        const region = 'eu-west-1'
+        const idToken = user.cognitoUserPool.id_token
+
+        AWS.config.region = 'eu-west-1' // Region
+        AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+            IdentityPoolId: 'eu-west-1:9a2850ea-625e-433b-b14e-990895f2cc3a',
+            // See: https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-integrating-user-pools-with-identity-pools.html
+            // See: https://stackoverflow.com/a/51143970
+            Logins: {
+                [`cognito-idp.${region}.amazonaws.com/${userPoolId}`]: idToken,
+            },
+        })
+
+        AWS.config.credentials
+            .getPromise()
+            .then(() => {
+                const cognitoProvider = new AWS.CognitoIdentityServiceProvider({
+                    region: 'eu-west-1',
+                    apiVersion: '2016-04-18',
+                })
+
+                return cognitoProvider
+                    .listUsers({
+                        UserPoolId: userPoolId,
+                        Limit: 60,
+                    })
+                    .promise()
+            })
+            .then((response) => {
+                setUsers(response.Users)
+            })
+            .catch(console.error)
+    }, [user])
+
+    useEffect(() => {
+        if (users) {
+            console.log('users updated', users)
+        }
+    }, [users])
+
     return (
         <div className={styles.pageContainer}>
             <div className={styles.titleImageContainer}>
@@ -44,13 +93,21 @@ function Profiles() {
             </div>
 
             <div className={styles.flipCardContainer}>
-                {people.map((person, i) => {
+                {users.map((user, i) => {
+                    const name = user.Attributes.find(
+                        (attr) => 'name' === attr.Name
+                    )?.Value
+
+                    const bio = user.Attributes.find(
+                        (attr) => 'profile' === attr.Name
+                    )?.Value
+
                     return (
                         <FlipCard
                             key={i}
-                            personName={person.personName}
-                            imageSrc={person.imageSrc}
-                            bio={person.bio}
+                            personName={name}
+                            // imageSrc={person.imageSrc}
+                            bio={bio}
                         />
                     )
                 })}
