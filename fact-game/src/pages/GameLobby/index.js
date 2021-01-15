@@ -46,6 +46,9 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Questrial, sans-serif',
         textAlign: 'center',
     },
+    startButton: {
+        backgroundColor: '#8152ff',
+    },
 }))
 
 function GameLobby({
@@ -124,7 +127,7 @@ function GameLobby({
                     >
                         {/* Start game button */}
                         <Button
-                            className={classes.root}
+                            className={cn(classes.root, classes.startButton)}
                             onClick={() =>
                                 startGame({ gameId, playerId: user.playerId })
                             }
@@ -147,6 +150,11 @@ function GameLobby({
                         {gameId}
                     </Button>
                 </Tooltip>
+                <img
+                    className={styles.hourglassImage}
+                    src="./Images/hourglass.png"
+                    alt="spinning eggtimer"
+                />
             </main>
             {gameNotStartedError && (
                 <ErrorSnackbar

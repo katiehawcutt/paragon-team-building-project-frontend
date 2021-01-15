@@ -19,3 +19,33 @@
     width: 30px;
     margin-left: 20px;
 }
+
+.hourglassImage {
+    width: 10rem;
+    margin-top: 50px;
+    animation-name: hourglass;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes hourglass {
+    0% {
+        rotate: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .hourglassImage {
+        width: 8rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .hourglassImage {
+        width: 6rem;
+    }
+}
