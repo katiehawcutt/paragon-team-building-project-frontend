@@ -51,7 +51,7 @@ const ImageUpload = () => {
             >
                 <img
                     src="./Images/kh.png"
-                    onerror={{ display: 'none' }}
+                    // onError={{ display: 'none' }}
                     alt="user_profile"
                     ref={uploadedImage}
                     style={{

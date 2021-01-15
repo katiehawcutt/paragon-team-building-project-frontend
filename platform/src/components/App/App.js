@@ -15,14 +15,9 @@ function App() {
             <Router>
                 <Nav />
                 <Switch>
+                    <PrivateRoute path="/home" component={Home} />
                     <PrivateRoute path="/games" component={Games} />
-
-                    <Route path="/profiles">
-                        <Profiles />
-                    </Route>
-                    <Route path="/">
-                        <Home />
-                    </Route>
+                    <PrivateRoute path="/profiles" component={Profiles} />
                 </Switch>
             </Router>
         </>

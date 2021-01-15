@@ -21,7 +21,7 @@ import {
 
 export default function ProfileSettings() {
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const [value, setValue] = React.useState('')
+    const [setValue] = React.useState('') //add value back in
     const handleChange = (event) => setValue(event.target.value)
 
     return (
@@ -56,7 +56,8 @@ export default function ProfileSettings() {
                                 Name
                             </FormLabel>
                             <Input
-                                placeholder="Name..."
+                                // placeholder="Name..."
+                                defaultValue="Katie Hawcutt"
                                 fontFamily="var(--primary-font)"
                             />
                         </FormControl>
@@ -67,7 +68,8 @@ export default function ProfileSettings() {
                             </FormLabel>
                             <Input
                                 type="email"
-                                placeholder="Email..."
+                                // placeholder="Email..."
+                                defaultValue="katiehawcutt@gmail.com"
                                 fontFamily="var(--primary-font)"
                             />
                             <FormHelperText fontFamily="var(--primary-font)">
@@ -80,7 +82,8 @@ export default function ProfileSettings() {
                             </FormLabel>
                             <Textarea
                                 fontFamily="var(--primary-font)"
-                                value={value}
+                                // value={value}
+                                defaultValue="I love playing the saxophone and being outdoors. I also really like eating cheese and drinking wine. Recently, I have come to love coding and I can't wait to become a web-developer."
                                 onChange={handleChange}
                                 overflow="auto"
                                 placeholder="Bio..."
