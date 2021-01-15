@@ -33,7 +33,7 @@ export default function WhichFactReveal({
                 <Round roundNumber={roundNumber} />
                 <Title text={`${displayName}'s true fact is...`} />
                 <div className={styles.fact}>{fact}</div>
-                <Leaderboard leaderboard={leaderboard} />
+                {/* <Leaderboard leaderboard={leaderboard} /> */}
             </main>
         </>
     )
