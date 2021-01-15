@@ -18,7 +18,7 @@ function Nav() {
             <div className={styles.navContainer}>
                 <ul className={styles.ul}>
                     <li className={styles.li}>
-                        <Link to="/" className={styles.navLink}>
+                        <Link to="/home" className={styles.navLink}>
                             home
                         </Link>
                     </li>

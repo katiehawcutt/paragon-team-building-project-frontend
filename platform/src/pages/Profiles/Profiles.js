@@ -12,7 +12,8 @@ const people = [
     {
         personName: 'Natalie Posteraro',
         imageSrc: './Images/np.jpg',
-        bio: `I love playing the saxophone and being outdoors. I also really like eating cheese and drinking wine. Recently, I have come to love coding and I can't wait to become a web-developer.`,
+        bio: `I'm Natalie and my career has predominantly been in the beauty industry where I was delivering skincare & makeup solutions to my customers.
+        Now I use that passion to create solutions with technology.`,
     },
     {
         personName: 'Khang Khuat',
@@ -22,7 +23,7 @@ const people = [
     {
         personName: 'Bradley Arthur Bart Smith',
         imageSrc: './Images/bs.jpg',
-        bio: `I love playing the saxophone and being outdoors. I also really like eating cheese and drinking wine. Recently, I have come to love coding and I can't wait to become a web-developer.`,
+        bio: `Nothing more enjoyable than a sunset surf with friends. Other hobbies include kayaking, paddle-boarding and water-skiing, anything on the water basically!.`,
     },
     {
         personName: 'Arshi Sheikh',

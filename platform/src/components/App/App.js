@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../globals/global.css'
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch } from 'react-router-dom'
 
 import Home from '../../pages/Home/Home'
 import Games from '../../pages/Games/Games'
@@ -15,14 +15,9 @@ function App() {
             <Router>
                 <Nav />
                 <Switch>
+                    <PrivateRoute path="/home" component={Home} />
                     <PrivateRoute path="/games" component={Games} />
-
-                    <Route path="/profiles">
-                        <Profiles />
-                    </Route>
-                    <Route path="/">
-                        <Home />
-                    </Route>
+                    <PrivateRoute path="/profiles" component={Profiles} />
                 </Switch>
             </Router>
         </>
