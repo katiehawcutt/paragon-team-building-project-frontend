@@ -62,6 +62,16 @@ export default function useFactsGame({
                 player: { displayName, fact, lie, playerId },
             })
         },
+        startGame({ gameId, playerId }) {
+            if (!gameState.isCreator) {
+                return console.log('Game not started')
+            }
+            sendJsonMessage({
+                action: 'START_GAME',
+                playerId,
+                gameId,
+            })
+        },
         sendAnswer({ choice, playerId }) {
             sendJsonMessage({
                 action: 'ANSWER',
