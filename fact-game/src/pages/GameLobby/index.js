@@ -117,12 +117,12 @@ function GameLobby({
             <main className={cn(styles.pageContainer, 'animateIn')}>
                 {/* <Countdown secondsLeft={secondsLeft} /> */}
                 <Title text="Waiting for host to start the game..." />
-                <Tooltip
-                    title="Start the game when your team is ready to begin!"
-                    classes={{ tooltip: classes.tooltip }}
-                >
-                    {/* Start game button */}
-                    {isCreator && (
+                {isCreator && (
+                    <Tooltip
+                        title="Start the game when your team is ready to begin!"
+                        classes={{ tooltip: classes.tooltip }}
+                    >
+                        {/* Start game button */}
                         <Button
                             className={classes.root}
                             onClick={() =>
@@ -131,8 +131,8 @@ function GameLobby({
                         >
                             Start the game
                         </Button>
-                    )}
-                </Tooltip>
+                    </Tooltip>
+                )}
                 <h3 className={styles.gameIdLabel}>Game ID:</h3>
                 <Tooltip
                     title={tooltipText}
