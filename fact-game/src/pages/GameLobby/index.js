@@ -4,7 +4,6 @@ import styles from './GameLobby.module.css'
 
 import Header from '../../components/Header'
 import Title from '../../components/Title'
-import Countdown from '../../components/Countdown'
 
 import Button from '@material-ui/core/Button'
 import { makeStyles } from '@material-ui/core/styles'
@@ -17,6 +16,7 @@ import ErrorSnackbar from '../../components/ErrorSnackbar'
 
 import useSound from 'use-sound'
 import elevatorMusic from '../../sounds/elevatorMusic.mp3'
+import { useUserContext } from '../../contexts/User'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -50,10 +50,14 @@ const useStyles = makeStyles((theme) => ({
 
 function GameLobby({
     gameId,
+    isCreator,
     secondsLeft,
     playersInLobby,
     gameNotStartedError,
+    startGame,
 }) {
+    const { user } = useUserContext()
+
     const classes = useStyles()
     const [copied, setCopied] = React.useState(false)
 
@@ -111,13 +115,30 @@ function GameLobby({
         <>
             <Header />
             <main className={cn(styles.pageContainer, 'animateIn')}>
-                <Countdown secondsLeft={secondsLeft} />
-                <Title text="Waiting for other players to join..." />
+                {/* <Countdown secondsLeft={secondsLeft} /> */}
+                <Title text="Waiting for host to start the game..." />
+                <Tooltip
+                    title="Start the game when your team is ready to begin!"
+                    classes={{ tooltip: classes.tooltip }}
+                >
+                    {/* Start game button */}
+                    {isCreator && (
+                        <Button
+                            className={classes.root}
+                            onClick={() =>
+                                startGame({ gameId, playerId: user.playerId })
+                            }
+                        >
+                            Start the game
+                        </Button>
+                    )}
+                </Tooltip>
                 <h3 className={styles.gameIdLabel}>Game ID:</h3>
                 <Tooltip
                     title={tooltipText}
                     classes={{ tooltip: classes.tooltip }}
                 >
+                    {/* Copy button */}
                     <Button
                         className={classes.root}
                         onClick={handleClick}

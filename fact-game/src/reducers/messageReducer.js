@@ -12,6 +12,7 @@ export const messageReducer = (state, { type, payload }) => {
             return {
                 ...state,
                 gameId: payload.gameId,
+                isCreator: true,
                 gameNotCreatedError: false,
                 gameCreated: true,
             }
@@ -19,6 +20,7 @@ export const messageReducer = (state, { type, payload }) => {
             return {
                 ...state,
                 gameId: payload.gameId,
+                isCreator: false,
                 gameNotJoinedError: false,
                 gameJoined: true,
             }

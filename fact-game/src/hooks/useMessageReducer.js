@@ -27,6 +27,7 @@ export const eventToComponentMap = {
 
 const initialMessageState = {
     unknownError: false,
+    isCreator: false,
     gameNotCreatedError: false,
     gameNotJoinedError: false,
     gameNotStartedError: false,
