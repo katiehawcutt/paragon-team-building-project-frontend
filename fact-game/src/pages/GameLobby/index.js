@@ -48,6 +48,9 @@ const useStyles = makeStyles((theme) => ({
     },
     startButton: {
         backgroundColor: '#8152ff',
+        '&:hover': {
+            backgroundColor: '#9d79ff',
+        },
     },
 }))
 
@@ -120,6 +123,11 @@ function GameLobby({
             <main className={cn(styles.pageContainer, 'animateIn')}>
                 {/* <Countdown secondsLeft={secondsLeft} /> */}
                 <Title text="Waiting for host to start the game..." />
+                <img
+                    className={styles.hourglassImage}
+                    src="./Images/hourglass.png"
+                    alt="spinning eggtimer"
+                />
                 {isCreator && (
                     <Tooltip
                         title="Start the game when your team is ready to begin!"
@@ -132,7 +140,7 @@ function GameLobby({
                                 startGame({ gameId, playerId: user.playerId })
                             }
                         >
-                            Start the game
+                            Start game
                         </Button>
                     </Tooltip>
                 )}
@@ -150,11 +158,6 @@ function GameLobby({
                         {gameId}
                     </Button>
                 </Tooltip>
-                <img
-                    className={styles.hourglassImage}
-                    src="./Images/hourglass.png"
-                    alt="spinning eggtimer"
-                />
             </main>
             {gameNotStartedError && (
                 <ErrorSnackbar
