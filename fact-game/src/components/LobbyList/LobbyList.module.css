@@ -1,0 +1,21 @@
+.playerContainer {
+    background-color: var(--lightish-purple);
+    width: 200px;
+    border-radius: 2em;
+    padding: 1em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-family: var(--primary-font);
+    color: var(--yellow);
+    text-align: center;
+    margin: 18px;
+}
+
+.playerName {
+    color: white;
+    font-size: 18px;
+    font-family: var(--primary-font);
+}
