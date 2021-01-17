@@ -1,18 +1,16 @@
 import React from 'react'
-import GameLobby from './index'
+import LobbyList from './index'
 
 // This default export determines where your story goes in the story list
 export default {
-    title: 'GameLobby',
-    component: GameLobby,
+    title: 'LobbyList',
+    component: LobbyList,
 }
 
-const Template = (args) => <GameLobby {...args} />
+const Template = (args) => <LobbyList {...args} />
 
-export const FirstStory = Template.bind({})
-FirstStory.args = {
-    secondsLeft: 50,
-    gameId: '03216c1c',
+export const leaderBoardStory = Template.bind({})
+leaderBoardStory.args = {
     playersInLobby: [
         'Katie Hawcutt',
         'Khang',
