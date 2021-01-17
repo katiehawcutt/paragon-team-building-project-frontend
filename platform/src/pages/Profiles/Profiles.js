@@ -36,10 +36,7 @@ import useAwsUserPool from '../../hooks/useAwsUserPool'
 
 function Profiles() {
     const { user } = useUserContext()
-
-    const { users } = useAwsUserPool({
-        idToken: user?.cognitoUserPool.id_token,
-    })
+    const { users } = useAwsUserPool({ user })
 
     return (
         <div className={styles.pageContainer}>
@@ -63,7 +60,18 @@ function Profiles() {
                         (attr) => 'profile' === attr.Name
                     )?.Value
 
-                    return <FlipCard key={i} personName={name} bio={bio} />
+                    const imageSrc = user.Attributes.find(
+                        (attr) => 'picture' === attr.Name
+                    )?.Value
+
+                    return (
+                        <FlipCard
+                            key={i}
+                            personName={name}
+                            bio={bio}
+                            imageSrc={imageSrc}
+                        />
+                    )
                 })}
             </div>
         </div>

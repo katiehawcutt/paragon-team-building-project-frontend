@@ -1,20 +1,21 @@
 import React, { useRef } from 'react'
 
-const ImageUpload = () => {
+const ImageUpload = ({ imageSource, handleChange }) => {
     const uploadedImage = useRef(null)
     const imageUploader = useRef(null)
 
-    const handleImageUpload = (e) => {
-        const [file] = e.target.files
-        if (file) {
-            const reader = new FileReader()
-            const { current } = uploadedImage
-            current.file = file
-            reader.onload = (e) => {
-                current.src = e.target.result
-            }
-            reader.readAsDataURL(file)
+    const onChange = async (e) => {
+        const file = e.target.files?.[0]
+        if (!file) {
+            return
         }
+        uploadedImage.current.file = file
+        const reader = new FileReader()
+        reader.onload = (e) => {
+            uploadedImage.current.src = e.target.result
+        }
+        reader.readAsDataURL(file)
+        handleChange(file)
     }
 
     return (
@@ -26,12 +27,14 @@ const ImageUpload = () => {
                 alignItems: 'center',
                 justifyContent: 'center',
                 padding: '14px',
+                cursor: 'pointer',
             }}
+            onClick={() => imageUploader.current.click()}
         >
             <input
                 type="file"
                 accept="image/*"
-                onChange={handleImageUpload}
+                onChange={onChange}
                 ref={imageUploader}
                 style={{
                     display: 'none',
@@ -49,26 +52,26 @@ const ImageUpload = () => {
                     border: 'none',
                 }}
             >
-                <img
-                    src="./Images/kh.png"
-                    onerror={{ display: 'none' }}
-                    alt="user_profile"
-                    ref={uploadedImage}
-                    style={{
-                        maxWidth: '100%',
-                        maxHeight: '100%',
-                        position: 'absolute',
-                        height: '60px',
-                        width: '60px',
-                        borderRadius: '100%',
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        border: 'none',
-                        backgroundPosition: 'center',
-                    }}
-                    onClick={() => imageUploader.current.click()}
-                />
+                {imageSource && (
+                    <img
+                        src={imageSource}
+                        alt="user_profile"
+                        ref={uploadedImage}
+                        style={{
+                            maxWidth: '100%',
+                            maxHeight: '100%',
+                            position: 'absolute',
+                            height: '60px',
+                            width: '60px',
+                            borderRadius: '100%',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            border: 'none',
+                            backgroundPosition: 'center',
+                        }}
+                    />
+                )}
             </div>
             Click To Upload Image
         </div>

@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react'
 import { USER_POOL_ID } from '../constants/awsCognito'
 import * as AWS from 'aws-sdk'
+import { USERS_BUCKET_NAME } from '../constants/awsS3'
 
 const region = 'eu-west-1'
 const identityPoolId = 'eu-west-1:9a2850ea-625e-433b-b14e-990895f2cc3a'
 AWS.config.region = region // Region
 
-// const idToken = user.cognitoUserPool.id_token
-
-export default function useAwsUserPool({ idToken }) {
+export default function useAwsUserPool({ user, setUser }) {
     const [users, setUsers] = useState([])
+    const idToken = user?.cognitoUserPool.id_token
 
     AWS.config.credentials = new AWS.CognitoIdentityCredentials({
         IdentityPoolId: identityPoolId,
@@ -60,43 +60,99 @@ export default function useAwsUserPool({ idToken }) {
                 )
             })
             .catch(console.error)
-    }, [idToken])
+    }, [idToken, user])
 
-    const updateUser = ({ accessToken, name, email, bio }) => {
+    const updateUserAttributes = async ({
+        userSub,
+        accessToken,
+        name,
+        bio,
+        imageFile,
+    }) => {
         if (!accessToken) {
-            return console.warn('updateUser was called without access token')
+            return console.warn(
+                'updateUserAttributes was called without access token'
+            )
         }
 
-        return console.log('Yes, update user was called with', {
-            accessToken,
-            name,
-            email,
-            bio,
+        /**
+         * Initialise credentials.
+         */
+        await AWS.config.credentials.getPromise()
+
+        const cognitoProvider = new AWS.CognitoIdentityServiceProvider({
+            region,
+            apiVersion: '2016-04-18',
         })
 
-        AWS.config.credentials
-            .getPromise()
-            .then(() => {
-                const cognitoProvider = new AWS.CognitoIdentityServiceProvider({
-                    region,
-                    apiVersion: '2016-04-18',
+        let upload
+        if (imageFile) {
+            /**
+             * Prepare S3 key.
+             */
+            const fileExtension =
+                imageFile.name.match(/(?<fileExtension>\.[^.]+)$/)?.groups
+                    ?.fileExtension ?? ''
+
+            const key = `${userSub}-${Date.now()}${fileExtension}`
+
+            /**
+             * Upload the image.
+             *
+             * See: https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/s3-example-photo-album.html
+             */
+            upload = await new AWS.S3.ManagedUpload({
+                params: {
+                    Bucket: USERS_BUCKET_NAME,
+                    Key: key,
+                    Body: imageFile,
+                },
+            }).promise()
+        }
+
+        /**
+         * Update the user.
+         */
+        try {
+            await cognitoProvider
+                .updateUserAttributes({
+                    AccessToken: accessToken,
+                    UserAttributes: [
+                        { Name: 'name', Value: name },
+                        { Name: 'profile', Value: bio },
+                        { Name: 'picture', Value: upload?.Location },
+                    ].filter((attr) => undefined !== attr.Value),
                 })
-                return cognitoProvider
-                    .updateUserAttributes({
-                        AccessToken: accessToken,
-                        UserAttributes: [
-                            { Name: 'name', Value: name },
-                            { Name: 'email', Value: email },
-                            { Name: 'profile', Value: bio },
-                        ].filter((attr) => undefined !== attr.Value),
-                    })
-                    .promise()
+                .promise()
+
+            const { UserAttributes } = await cognitoProvider
+                .getUser({
+                    AccessToken: accessToken,
+                })
+                .promise()
+
+            const updatedAttributes = UserAttributes.reduce(
+                (acc, { Name, Value }) => {
+                    return {
+                        ...acc,
+                        [Name]: Value,
+                    }
+                },
+                {}
+            )
+
+            setUser((prev) => {
+                return {
+                    ...prev,
+                    cognitoUserInfo: {
+                        ...(prev.cognitoUserInfo ?? {}),
+                        ...updatedAttributes,
+                    },
+                }
             })
-            .then((response) => {
-                console.log('updateUser response', response)
-                return response
-            })
-            .catch(console.error)
+        } catch (e) {
+            return console.error(e)
+        }
     }
 
     return {
@@ -107,6 +163,6 @@ export default function useAwsUserPool({ idToken }) {
         /**
          * Update user
          */
-        updateUser,
+        updateUserAttributes,
     }
 }
