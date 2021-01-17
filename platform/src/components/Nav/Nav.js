@@ -2,9 +2,12 @@ import React from 'react'
 import { NavLink as Link } from 'react-router-dom'
 import styles from './Nav.module.css'
 import Menu from '../Menu/Menu'
+import { useUserContext } from '../../contexts/User'
 // import image from '../../Images_2/userIcon.png'
 
 function Nav() {
+    const { user } = useUserContext()
+
     return (
         <nav className={styles.nav}>
             <div className={styles.logoContainer}>
@@ -41,7 +44,7 @@ function Nav() {
                         </Link>
                     </li>
                 </ul>
-                <Menu image="./Images/kh.png" />
+                <Menu user={user} />
             </div>
         </nav>
     )

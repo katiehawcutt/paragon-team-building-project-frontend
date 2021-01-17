@@ -78,8 +78,8 @@ export const HandleLogin = () => {
             .then((userInfo) => {
                 setUser((prev) => ({
                     ...prev,
-                    playerId: userInfo.sub,
-                    displayName: userInfo.name,
+                    cognitoUserPool: token,
+                    cognitoUserInfo: userInfo,
                 }))
             })
             .catch(console.error)
@@ -95,12 +95,10 @@ export const HandleLogin = () => {
     }
 
     return (
-        <>
-            <div className={styles.pageContainer}>
-                <p className={styles.loggingInMessage}>
-                    Just getting you logged in...
-                </p>
-            </div>
-        </>
+        <div className={styles.pageContainer}>
+            <p className={styles.loggingInMessage}>
+                Just getting you logged in...
+            </p>
+        </div>
     )
 }
