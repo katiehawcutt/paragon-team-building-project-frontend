@@ -13,11 +13,5 @@ export const FirstStory = Template.bind({})
 FirstStory.args = {
     secondsLeft: 50,
     gameId: '03216c1c',
-    playersInLobby: [
-        'Katie Hawcutt',
-        'Khang',
-        'Natalie',
-        'Bradley Smith',
-        'Arshi',
-    ],
+    players: ['Katie Hawcutt'],
 }

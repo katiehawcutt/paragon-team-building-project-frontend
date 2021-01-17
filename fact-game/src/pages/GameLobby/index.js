@@ -59,7 +59,7 @@ function GameLobby({
     gameId,
     isCreator,
     secondsLeft,
-    playersInLobby,
+    players,
     gameNotStartedError,
     startGame,
 }) {
@@ -173,7 +173,7 @@ function GameLobby({
                         </Tooltip>
                     </div>
                     <div className={styles.rightContainer}>
-                        <LobbyList playersInLobby={playersInLobby} />
+                        <LobbyList playersInLobby={players} />
                     </div>
                 </div>
             </main>
