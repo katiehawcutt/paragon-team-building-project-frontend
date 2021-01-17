@@ -4,7 +4,7 @@ import styles from './GameLobby.module.css'
 
 import Header from '../../components/Header'
 import Title from '../../components/Title'
-import Countdown from '../../components/Countdown'
+import LobbyList from '../../components/LobbyList'
 
 import Button from '@material-ui/core/Button'
 import { makeStyles } from '@material-ui/core/styles'
@@ -17,6 +17,7 @@ import ErrorSnackbar from '../../components/ErrorSnackbar'
 
 import useSound from 'use-sound'
 import elevatorMusic from '../../sounds/elevatorMusic.mp3'
+import { useUserContext } from '../../contexts/User'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -46,14 +47,24 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Questrial, sans-serif',
         textAlign: 'center',
     },
+    startButton: {
+        backgroundColor: '#8152ff',
+        '&:hover': {
+            backgroundColor: '#9d79ff',
+        },
+    },
 }))
 
 function GameLobby({
     gameId,
+    isCreator,
     secondsLeft,
-    playersInLobby,
+    players,
     gameNotStartedError,
+    startGame,
 }) {
+    const { user } = useUserContext()
+
     const classes = useStyles()
     const [copied, setCopied] = React.useState(false)
 
@@ -111,21 +122,60 @@ function GameLobby({
         <>
             <Header />
             <main className={cn(styles.pageContainer, 'animateIn')}>
-                <Countdown secondsLeft={secondsLeft} />
-                <Title text="Waiting for other players to join..." />
-                <h3 className={styles.gameIdLabel}>Game ID:</h3>
-                <Tooltip
-                    title={tooltipText}
-                    classes={{ tooltip: classes.tooltip }}
-                >
-                    <Button
-                        className={classes.root}
-                        onClick={handleClick}
-                        endIcon={endIcon}
-                    >
-                        {gameId}
-                    </Button>
-                </Tooltip>
+                {/* <Countdown secondsLeft={secondsLeft} /> */}
+                <Title
+                    text="Waiting for host to start the game..."
+                    className={styles.title}
+                />
+                <div className={styles.flexContainer}>
+                    <div className={styles.leftContainer}></div>
+                    <div className={styles.centerContainer}>
+                        <img
+                            className={styles.hourglassImage}
+                            src="./Images/hourglass.png"
+                            alt="spinning eggtimer"
+                        />
+                        {isCreator && (
+                            <Tooltip
+                                title="Start the game when your team is ready to begin!"
+                                classes={{ tooltip: classes.tooltip }}
+                            >
+                                {/* Start game button */}
+                                <Button
+                                    className={cn(
+                                        classes.root,
+                                        classes.startButton
+                                    )}
+                                    onClick={() =>
+                                        startGame({
+                                            gameId,
+                                            playerId: user.playerId,
+                                        })
+                                    }
+                                >
+                                    Start game
+                                </Button>
+                            </Tooltip>
+                        )}
+                        <h3 className={styles.gameIdLabel}>Game ID:</h3>
+                        <Tooltip
+                            title={tooltipText}
+                            classes={{ tooltip: classes.tooltip }}
+                        >
+                            {/* Copy button */}
+                            <Button
+                                className={classes.root}
+                                onClick={handleClick}
+                                endIcon={endIcon}
+                            >
+                                {gameId}
+                            </Button>
+                        </Tooltip>
+                    </div>
+                    <div className={styles.rightContainer}>
+                        <LobbyList playersInLobby={players} />
+                    </div>
+                </div>
             </main>
             {gameNotStartedError && (
                 <ErrorSnackbar

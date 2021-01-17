@@ -6,6 +6,24 @@
     align-items: center;
 }
 
+.flexContainer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80vw;
+}
+
+.centerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rightContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .gameIdLabel {
     font-family: var(--primary-font);
     text-shadow: var(--text-shadow);
@@ -18,4 +36,46 @@
 .copyIcon {
     width: 30px;
     margin-left: 20px;
+}
+
+.hourglassImage {
+    width: 5rem;
+    margin-top: 35px;
+    margin-bottom: 45px;
+    animation-name: hourglass;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes hourglass {
+    0% {
+        rotate: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .flexContainer {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .title {
+        font-size: 30px;
+        margin: 20px;
+    }
+    .hourglassImage {
+        width: 3rem;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .gameIdLabel {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
 }

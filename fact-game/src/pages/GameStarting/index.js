@@ -26,10 +26,10 @@ function GameStarting() {
             <div className={cn(styles.pageContainer, 'animateIn')}>
                 <Title text="The game is about to start..." />
                 <img
-                    className={styles.hourglassImage}
-                    src="./Images/hourglass.png"
-                    alt="spinning eggtimer"
-                ></img>
+                    className={styles.playImage}
+                    src="./Images/playButton.png"
+                    alt="play icon"
+                />
             </div>
         </>
     )

@@ -1,10 +1,11 @@
 import React from 'react'
 import styles from './Title.module.css'
+import cn from 'classnames'
 
-function Title({ text }) {
+function Title({ text, className = '' }) {
     return (
         <div>
-            <h1 className={styles.title} data-testid={'Title'}>
+            <h1 className={cn(styles.title, className)} data-testid={'Title'}>
                 {text}
             </h1>
         </div>

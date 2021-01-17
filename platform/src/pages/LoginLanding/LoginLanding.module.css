@@ -1,0 +1,28 @@
+.pageContainer {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 3em;
+    margin: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+    line-height: 1.3em;
+}
+
+.socLogo {
+    height: 30vh;
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    .title {
+        font-size: 2em;
+    }
+    .socLogo {
+        height: 25vh;
+    }
+}
