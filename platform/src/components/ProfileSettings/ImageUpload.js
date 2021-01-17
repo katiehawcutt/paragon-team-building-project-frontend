@@ -52,26 +52,25 @@ const ImageUpload = ({ imageSource, handleChange }) => {
                     border: 'none',
                 }}
             >
-                {imageSource && (
-                    <img
-                        src={imageSource}
-                        alt="user_profile"
-                        ref={uploadedImage}
-                        style={{
-                            maxWidth: '100%',
-                            maxHeight: '100%',
-                            position: 'absolute',
-                            height: '60px',
-                            width: '60px',
-                            borderRadius: '100%',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            border: 'none',
-                            backgroundPosition: 'center',
-                        }}
-                    />
-                )}
+                <img
+                    src={imageSource ?? ''}
+                    alt="user_profile"
+                    onLoad={(e) => (e.target.style.display = 'flex')}
+                    onError={(e) => (e.target.style.display = 'none')}
+                    ref={uploadedImage}
+                    style={{
+                        maxWidth: '100%',
+                        maxHeight: '100%',
+                        position: 'absolute',
+                        height: '60px',
+                        width: '60px',
+                        borderRadius: '100%',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        border: 'none',
+                        backgroundPosition: 'center',
+                    }}
+                />
             </div>
             Click To Upload Image
         </div>
