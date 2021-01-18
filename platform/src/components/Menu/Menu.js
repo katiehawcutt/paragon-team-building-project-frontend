@@ -12,11 +12,14 @@ function Menu({ user }) {
         <div className={styles.dropdown}>
             <button className={styles.userButton}>
                 {imageSource && (
-                    <img
-                        src={imageSource}
+                    <div
                         className={styles.userPhoto}
-                        alt="user profile"
-                    />
+                        style={{
+                            backgroundImage: `url(${imageSource})`,
+                            backgroundPosition: 'center',
+                            backgroundSize: 'contain',
+                        }}
+                    ></div>
                 )}
             </button>
             <div className={styles.dropdownContent}>

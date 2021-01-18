@@ -3,13 +3,14 @@ import { NavLink as Link } from 'react-router-dom'
 import styles from './Nav.module.css'
 import Menu from '../Menu/Menu'
 import { useUserContext } from '../../contexts/User'
-// import image from '../../Images_2/userIcon.png'
+import BurgerMenu from '../BurgerMenu'
 
 function Nav() {
     const { user } = useUserContext()
 
     return (
         <nav className={styles.nav}>
+            <BurgerMenu className={styles.dropdown} />
             <div className={styles.logoContainer}>
                 <img
                     className={styles.socLogo}

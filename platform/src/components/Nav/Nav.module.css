@@ -145,13 +145,12 @@
         margin-right: 0;
     }
 
-    /* .socLogo {
-        height: 25px;
-        width: 25px;
-    } */
+    .dropdown {
+        display: inline-block;
+    }
 }
 
-@media only screen and (max-width: 500px) {
+/* @media only screen and (max-width: 500px) {
     .socLogo {
         height: 30px;
         width: 30px;
@@ -162,4 +161,4 @@
     .socLogo {
         display: none;
     }
-}
+} */
