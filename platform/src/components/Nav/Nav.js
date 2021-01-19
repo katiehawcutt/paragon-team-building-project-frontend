@@ -28,7 +28,7 @@ function Nav() {
                     </li>
                     <li className={styles.li}>
                         <Link
-                            to="/games"
+                            to="/teambuilding"
                             className={styles.navLink}
                             activeClassName={styles.activeLink}
                         >

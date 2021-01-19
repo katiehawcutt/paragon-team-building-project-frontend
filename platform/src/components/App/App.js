@@ -16,7 +16,7 @@ function App() {
                 <Nav />
                 <Switch>
                     <PrivateRoute path="/home" component={Home} />
-                    <PrivateRoute path="/games" component={Games} />
+                    <PrivateRoute path="/teambuilding" component={Games} />
                     <PrivateRoute path="/profiles" component={Profiles} />
                 </Switch>
             </Router>

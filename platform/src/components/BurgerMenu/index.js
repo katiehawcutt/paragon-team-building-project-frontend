@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './BurgerMenu.module.css'
 import cn from 'classnames'
+import { NavLink as Link } from 'react-router-dom'
 
 function BurgerMenu({ className = '' }) {
     return (
@@ -13,9 +14,21 @@ function BurgerMenu({ className = '' }) {
                 />
             </button>
             <div className={styles.dropdownContent}>
-                <a className={styles.link}>home</a>
-                <a className={styles.link}>team building</a>
-                <a className={styles.link}>profiles</a>
+                <p className={styles.link}>
+                    <Link to="/home" className={styles.navLink}>
+                        home
+                    </Link>
+                </p>
+                <p className={styles.link}>
+                    <Link to="/teambuilding" className={styles.navLink}>
+                        team building
+                    </Link>
+                </p>
+                <p className={styles.link}>
+                    <Link to="/profiles" className={styles.navLink}>
+                        profiles
+                    </Link>
+                </p>
             </div>
         </div>
     )
