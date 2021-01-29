@@ -71,7 +71,6 @@
 .navContainer {
     display: flex;
     align-items: center;
-    /* margin-right: 5vw; */
 }
 
 @media only screen and (min-width: 1600px) {
@@ -154,16 +153,3 @@
         display: none;
     }
 }
-
-/* @media only screen and (max-width: 500px) {
-    .socLogo {
-        height: 30px;
-        width: 30px;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .socLogo {
-        display: none;
-    }
-} */

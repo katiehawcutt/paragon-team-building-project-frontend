@@ -15,7 +15,6 @@
 .gameImage {
     width: 310px;
     height: 310px;
-    /* opacity: 0.6; */
     filter: brightness(60%);
 }
 

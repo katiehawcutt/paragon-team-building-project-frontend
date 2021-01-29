@@ -56,21 +56,7 @@ export default function UpdateProfile({ isOpen, onClose, onOpen }) {
                                 onChange={(e) => setName(e.target.value)}
                             />
                         </FormControl>
-                        {/* <FormControl mt={4}>
-                    <FormLabel fontFamily="var(--primary-font)">
-                        Email
-                    </FormLabel>
-                    <Input
-                        type="email"
-                        placeholder="Email..."
-                        fontFamily="var(--primary-font)"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <FormHelperText fontFamily="var(--primary-font)">
-                        Your email will not be shared with 3rd parties
-                    </FormHelperText>
-                </FormControl> */}
+
                         <FormControl mt={4}>
                             <FormLabel fontFamily="var(--primary-font)">
                                 Bio
