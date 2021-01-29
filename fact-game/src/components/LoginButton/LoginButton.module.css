@@ -1,0 +1,46 @@
+.button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    text-align: center;
+    font-family: var(--primary-font);
+    font-weight: lighter;
+    border-radius: 2rem;
+    background-color: var(--light-purple);
+    color: white;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 5px 3px 3px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+    border: none;
+    outline: none;
+    margin: auto;
+    transition: 0.3s;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: var(--gold);
+    opacity: 0.8;
+}
+
+.link {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 500px) {
+    .button {
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .button {
+        font-size: 1em;
+    }
+}

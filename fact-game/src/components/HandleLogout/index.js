@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useAwsCognitoHostedUi } from '../../hooks/useAwsCognitoHostedUi'
 
 import styles from './HandleLogout.module.css'
+import LoginButton from '../LoginButton'
 
 import { useUserContext } from '../../contexts/User'
 
@@ -30,9 +31,14 @@ export const HandleLogout = () => {
         <>
             <div className={styles.pageContainer}>
                 <p className={styles.loggingOutMessage}>
-                    You've been logged out. Looking forward to seeing you again
-                    soon!
+                    You've been logged out. See you soon!
                 </p>
+                <img
+                    src="./Images/wavingTeam.png"
+                    alt="team wavng goodbye"
+                    className={styles.wavingPicture}
+                />
+                <LoginButton text="Login again" />
             </div>
         </>
     )

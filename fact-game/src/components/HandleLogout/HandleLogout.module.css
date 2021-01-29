@@ -1,15 +1,30 @@
 .pageContainer {
-    min-height: 80vh;
+    height: 80vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .loggingOutMessage {
-    color: white;
+    color: var(--dark-grey);
     font-family: var(--primary-font);
-    margin: 20px;
+    margin: 50px;
     font-size: 3em;
     text-shadow: var(--text-shadow);
     text-align: center;
+    color: white;
+}
+
+.wavingPicture {
+    width: 70vh;
+}
+
+@media only screen and (max-width: 600px) {
+    .loggingOutMessage {
+        font-size: 2em;
+    }
+    .wavingPicture {
+        width: 15em;
+    }
 }
