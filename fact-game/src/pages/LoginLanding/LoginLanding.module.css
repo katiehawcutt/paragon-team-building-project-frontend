@@ -1,0 +1,38 @@
+.title {
+    font-size: 60px;
+}
+
+.pageContainer {
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.groupWavingImage {
+    width: 50vw;
+}
+
+@media only screen and (min-width: 1300px) {
+    .groupWavingImage {
+        width: 50vw;
+    }
+    .title {
+        font-size: 70px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .groupWavingImage {
+        width: 60vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .title {
+        font-size: 50px;
+    }
+    .groupWavingImage {
+        width: 70vw;
+    }
+}

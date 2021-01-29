@@ -92,7 +92,7 @@ export const HandleLogin = () => {
     }, [token, createRequestForUserInfo, setUser])
 
     if (user) {
-        return <Redirect to="/" />
+        return <Redirect to="/home" />
     }
 
     return (
