@@ -5,8 +5,11 @@ import styles from './Menu.module.css'
 import { useAwsCognitoHostedUi } from '../../hooks/useAwsCognitoHostedUi'
 
 function Menu({ user }) {
-    const { getUrlForAwsCognitoLogout } = useAwsCognitoHostedUi()
-    const imageSource = user?.cognitoUserInfo.picture
+    const {
+        getUrlForAwsCognitoLogout,
+        getUrlForAwsCognitoLogin,
+    } = useAwsCognitoHostedUi()
+    const imageSource = user?.cognitoUserInfo.picture || './Images/userIcon.png'
 
     return (
         <div className={styles.dropdown}>
@@ -23,14 +26,24 @@ function Menu({ user }) {
                 )}
             </button>
             <div className={styles.dropdownContent}>
-                <ProfileSettings />
+                {!user && (
+                    <a
+                        className={styles.logoutBtn}
+                        href={getUrlForAwsCognitoLogin()}
+                    >
+                        log in
+                    </a>
+                )}
+                {user && <ProfileSettings />}
 
-                <a
-                    className={styles.logoutBtn}
-                    href={getUrlForAwsCognitoLogout()}
-                >
-                    log out
-                </a>
+                {user && (
+                    <a
+                        className={styles.logoutBtn}
+                        href={getUrlForAwsCognitoLogout()}
+                    >
+                        log out
+                    </a>
+                )}
             </div>
         </div>
     )

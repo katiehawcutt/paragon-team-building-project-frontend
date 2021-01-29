@@ -17,7 +17,7 @@
     display: flex;
     width: 40vw;
     height: 25vw;
-    z-index: 10;
+    /* z-index: 10; */
     margin-top: 5vh;
     margin-right: 30px;
     /* margin-left: 3px; */
