@@ -18,7 +18,7 @@ function BurgerMenu({ className = '' }) {
             <div className={styles.dropdownContent}>
                 <a
                     className={styles.platformLink}
-                    href="https://paragon-team-building.netlify.app/home"
+                    href="https://paragon-team-building.netlify.app"
                 >
                     team-building platform
                 </a>
