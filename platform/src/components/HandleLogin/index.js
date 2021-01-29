@@ -91,7 +91,7 @@ export const HandleLogin = () => {
     }, [token, createRequestForUserInfo, setUser])
 
     if (user) {
-        return <Redirect to="/home" />
+        return <Redirect to="/profiles" />
     }
 
     return (

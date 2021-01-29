@@ -38,7 +38,7 @@ export const HandleLogout = () => {
                     alt="team wavng goodbye"
                     className={styles.wavingPicture}
                 />
-                <LoginButton text="Login again" />
+                <LoginButton text="Login" />
             </div>
         </>
     )
