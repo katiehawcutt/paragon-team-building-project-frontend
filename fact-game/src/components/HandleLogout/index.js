@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
-import { useAwsCognitoHostedUi } from '../../hooks/useAwsCognitoHostedUi'
 
 import styles from './HandleLogout.module.css'
+
 import LoginButton from '../LoginButton'
 
+import { useAwsCognitoHostedUi } from '../../hooks/useAwsCognitoHostedUi'
 import { useUserContext } from '../../contexts/User'
 
 export const HandleLogout = () => {

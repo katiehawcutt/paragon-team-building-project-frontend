@@ -4,11 +4,9 @@ import cn from 'classnames'
 
 function Title({ text, className = '' }) {
     return (
-        <div>
-            <h1 className={cn(styles.title, className)} data-testid={'Title'}>
-                {text}
-            </h1>
-        </div>
+        <h1 className={cn(styles.title, className)} data-testid={'Title'}>
+            {text}
+        </h1>
     )
 }
 

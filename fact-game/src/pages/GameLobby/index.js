@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react'
+
 import cn from 'classnames'
 import styles from './GameLobby.module.css'
+
+import useSound from 'use-sound'
+import elevatorMusic from '../../sounds/elevatorMusic.mp3'
 
 import Header from '../../components/Header'
 import Title from '../../components/Title'
 import LobbyList from '../../components/LobbyList'
+import ErrorSnackbar from '../../components/ErrorSnackbar'
 
-import Button from '@material-ui/core/Button'
 import { makeStyles } from '@material-ui/core/styles'
-
+import Button from '@material-ui/core/Button'
 import FileCopyIcon from '@material-ui/icons/FileCopy'
 import CheckIcon from '@material-ui/icons/Check'
 import Tooltip from '@material-ui/core/Tooltip'
 
-import ErrorSnackbar from '../../components/ErrorSnackbar'
-
-import useSound from 'use-sound'
-import elevatorMusic from '../../sounds/elevatorMusic.mp3'
 import { useUserContext } from '../../contexts/User'
 
 const useStyles = makeStyles((theme) => ({
@@ -122,7 +122,6 @@ function GameLobby({
         <>
             <Header />
             <main className={cn(styles.pageContainer, 'animateIn')}>
-                {/* <Countdown secondsLeft={secondsLeft} /> */}
                 <Title
                     text="Waiting for host to start the game..."
                     className={styles.title}

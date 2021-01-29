@@ -1,21 +1,18 @@
 import { useState, useRef, useEffect } from 'react'
 
-import { makeStyles } from '@material-ui/core/styles'
+import classnames from 'classnames'
 
+import { makeStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
-
 import Card from '@material-ui/core/Card'
 import FormControl from '@material-ui/core/FormControl'
-
 import CircularProgress from '@material-ui/core/CircularProgress'
 import Tooltip from '@material-ui/core/Tooltip'
 import Snackbar from '@material-ui/core/Snackbar'
-
 import HelpIcon from '@material-ui/icons/Help'
 import ErrorIcon from '@material-ui/icons/Error'
 
-import classnames from 'classnames'
 import { useUserContext } from '../../contexts/User'
 
 import {
@@ -26,7 +23,6 @@ import {
 
 const useStyles = makeStyles({
     card: {
-        // padding: '1rem',
         backgroundColor: 'transparent',
         boxShadow: 'none',
     },

@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
+
 import styles from './Home.module.css'
 import classnames from 'classnames'
 
 import Header from '../../components/Header'
 import Title from '../../components/Title'
-import Button from '@material-ui/core/Button'
 import CreateGame from '../../components/CreateGame'
 import JoinGame from '../../components/JoinGame'
+
+import Button from '@material-ui/core/Button'
 
 import {
     createMuiTheme,

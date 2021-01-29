@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { makeStyles } from '@material-ui/core/styles'
 import cn from 'classnames'
 
 import useSound from 'use-sound'
 import alert from '../../sounds/alert.mp3'
 
 import RevealTimer from '../../components/RevealTimer'
+import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
     tablePreface: {
