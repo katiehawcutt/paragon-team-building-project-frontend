@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import cn from 'classnames'
-
-import { makeStyles } from '@material-ui/core/styles'
 
 import styles from './Podium.module.css'
+import cn from 'classnames'
 
 import useSound from 'use-sound'
 import fanfare from '../../sounds/fanfare.mp3'
@@ -13,12 +11,13 @@ import UserPic from '../../components/UserPic'
 import Leaderboard from '../../components/Leaderboard'
 import PodiumStand from '../../components/PodiumStand'
 
+import { makeStyles } from '@material-ui/core/styles'
+
 const useStyles = makeStyles((theme) => ({
     podiumStandsContainer: {
         display: 'grid',
         gridTemplateColumns: 'repeat(3, 1fr)',
         alignItems: 'flex-end',
-        // columnGap: '1rem',
     },
     crown: {
         width: '75px',

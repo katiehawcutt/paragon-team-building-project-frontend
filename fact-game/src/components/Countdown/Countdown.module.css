@@ -27,19 +27,3 @@
         transform: scale(1);
     }
 }
-
-/* @media only screen and (max-width: 1000px) {
-    .countdown {
-        height: 120px;
-        width: 120px;
-        border: 3px var(--yellow) solid;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .countdown {
-        height: 120px;
-        width: 120px;
-        border: 3px var(--yellow) solid;
-    }
-} */

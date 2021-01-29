@@ -1,11 +1,12 @@
 import React from 'react'
+
+import styles from './RevealTimer.module.css'
 import cn from 'classnames'
 
 import Header from '../Header'
 import RevealCountdown from '../RevealCountdown'
 import Round from '../Round'
 import Title from '../Title'
-import styles from './RevealTimer.module.css'
 
 export default function RevealTimer({
     title,

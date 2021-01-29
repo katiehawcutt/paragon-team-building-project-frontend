@@ -11,7 +11,6 @@ import Round from '../../components/Round'
 import Title from '../../components/Title'
 import Countdown from '../../components/Countdown'
 import DisplayFact from '../../components/DisplayFact'
-
 import ErrorSnackbar from '../../components/ErrorSnackbar'
 
 import { useUserContext } from '../../contexts/User'

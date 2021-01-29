@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import Header from '../../components/Header'
+import styles from './WhichFactReveal.module.css'
 
 import useSound from 'use-sound'
 import revelation from '../../sounds/revelation.mp3'
 
+import Header from '../../components/Header'
 import Round from '../../components/Round'
 import Title from '../../components/Title'
 import Leaderboard from '../../components/Leaderboard'
-import styles from './WhichFactReveal.module.css'
 
 export default function WhichFactReveal({
     displayName,
