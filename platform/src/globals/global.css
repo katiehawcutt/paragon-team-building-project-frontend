@@ -20,3 +20,19 @@ body {
     box-sizing: border-box;
     font-family: var(--primary-font);
 }
+
+.animateIn {
+    animation-name: animateIn;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes animateIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
