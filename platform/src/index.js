@@ -7,6 +7,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 
 import { PrivateRoute } from './components/PrivateRoute'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+
 import { HandleLogin } from './components/HandleLogin'
 import { HandleLogout } from './components/HandleLogout'
 import { UserContextProvider } from './contexts/User'
